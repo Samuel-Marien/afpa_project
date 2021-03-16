@@ -8,8 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "bootstrap": "^4.6.0",
+    "eslint": "^7.21.0",
+    "i": "^0.3.6",
+    "jquery": "1.9.1",
     "next": "10.0.8",
+    "popper.js": "^1.16.1",
+    "prettier": "^2.2.1",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-bootstrap": "^1.5.1",
+    "react-dom": "17.0.1",
+    "react-icons": "^4.2.0"
   }
 }
