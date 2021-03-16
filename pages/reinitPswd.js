@@ -2,17 +2,20 @@ import PageHorizontal from '../components/PageHorizontal';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-const NewPswd = (props) => {
+const ReinitPaswd = (props) => {
   return (
     <PageHorizontal
-      title="New password"
-      pageTitle="New password"
-      imgUrl="/bed-1853907_1920.jpg "
+      title="Reset password"
+      pageTitle="Reset password"
+      imgUrl="/students-5372390_1920.jpg"
     >
       <div>
         <h5>Your new password must be different from the previous one</h5>
         <Form className="shadow p-3 rounded mt-3">
           <Form.Group controlId="formBasicPassword">
+            <Form.Control type="password" placeholder="Actual password" />
+          </Form.Group>
+          <Form.Group controlId="formBasicPassword" className="mt-5">
             <Form.Control type="password" placeholder="New password" />
           </Form.Group>
           <Form.Group controlId="formBasicPassword">
@@ -27,4 +30,4 @@ const NewPswd = (props) => {
   );
 };
 
-export default NewPswd;
+export default ReinitPaswd;
