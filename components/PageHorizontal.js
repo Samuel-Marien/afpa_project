@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 import BackButton from './BackButton';
 import { IoPeopleCircle } from 'react-icons/io5';
+import { GiCondorEmblem } from 'react-icons/gi';
 
 const PageHorizontal = (props) => {
   const { title, pageTitle, imgUrl, children } = props;
@@ -30,7 +31,7 @@ const PageHorizontal = (props) => {
               style={{ fontWeight: 700 }}
               className="mt-5"
             >
-              <IoPeopleCircle />
+              <GiCondorEmblem size="70" />
               AfpA 'Lumni
             </h1>
           </div>
