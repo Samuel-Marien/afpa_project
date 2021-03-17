@@ -1,8 +1,6 @@
 import Head from 'next/head';
-import styled from '@emotion/styled';
 import Image from 'next/image';
 import BackButton from './BackButton';
-import { IoPeopleCircle } from 'react-icons/io5';
 import { GiCondorEmblem } from 'react-icons/gi';
 
 const PageHorizontal = (props) => {
@@ -29,7 +27,7 @@ const PageHorizontal = (props) => {
             <h1
               fontFamily="Bitter"
               style={{ fontWeight: 700 }}
-              className="mt-5"
+              className="mt-5 text-secondary"
             >
               <GiCondorEmblem size="70" />
               AfpA 'Lumni
