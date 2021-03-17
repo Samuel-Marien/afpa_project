@@ -6,13 +6,9 @@ import { GiCondorEmblem } from 'react-icons/gi';
 const PageHorizontal = (props) => {
   const { title, pageTitle, imgUrl, children } = props;
   return (
-    <div>
+    <div className="text-secondary">
       <Head>
         <title>{title}</title>
-        <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,500;0,700;0,900;1,200;1,500;1,700;1,900&family=Roboto:wght@100&display=swap');
-        </style>
       </Head>
       <div className="d-flex">
         <div>
@@ -24,11 +20,7 @@ const PageHorizontal = (props) => {
             <BackButton buttonTitle="retour" />
           </div>
           <div>
-            <h1
-              fontFamily="Bitter"
-              style={{ fontWeight: 700 }}
-              className="mt-5 text-secondary"
-            >
+            <h1 className="mt-5 text-secondary font-weight-bold">
               <GiCondorEmblem size="70" />
               AfpA 'Lumni
             </h1>
