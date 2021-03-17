@@ -1,10 +1,7 @@
 import PageHorizontal from '../components/PageHorizontal';
-import { GiSpellBook, GiSuitcase, GiSchoolBag } from 'react-icons/gi';
 import CircleIconStudent from '../components/CircleIconStudent';
 import CircleIconTeacher from '../components/CircleIconTeacher';
 import CircleIconRecruiter from '../components/CircleIconRecruiter';
-
-// const CircleIconStudent;
 
 const SelectRole = (props) => {
   return (
