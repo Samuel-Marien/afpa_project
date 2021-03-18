@@ -1,26 +1,26 @@
 import PageHorizontal from '../components/PageHorizontal';
-import CircleIconRecruiter from '../components/CircleIconRecruiter';
-import SignUpForm from '../components/SignUpForm';
+import CircleIconTeacher from '../components/CircleIconTeacher';
+import SettingForm from '../components/SettingForm';
 
-import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
 
 const OptionForm = (props) => {
   return (
     <div>
       <Form.Row className="mt-2">
         <Col>
-          <Form.Control placeholder="Company*" required />
+          <Form.Control placeholder="Afpa center" required />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
-            Please provide a valid Company.
+            Please provide a valid Afpa Center.
           </Form.Control.Feedback>
         </Col>
         <Col>
-          <Form.Control placeholder="Current Job*" required />
+          <Form.Control placeholder="Speciality" required />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
-            Please provide a valid Job.
+            Please provide a valid Speciality.
           </Form.Control.Feedback>
         </Col>
          
@@ -51,19 +51,19 @@ const OptionForm = (props) => {
   );
 };
 
-const RecruiterInscription = (props) => {
+const TeacherInscription = (props) => {
   return (
     <PageHorizontal
-      title="Recruiter Inscription"
-      pageTitle="Sign Up"
-      imgUrl="/office-594132_1920.jpg"
+      title="Teacher setting"
+      pageTitle="Setting"
+      imgUrl="/school-1782427_1920.jpg"
     >
-      <CircleIconRecruiter />
-      <SignUpForm>
+      <CircleIconTeacher />
+      <SettingForm>
         <OptionForm />
-      </SignUpForm>
+      </SettingForm>
     </PageHorizontal>
   );
 };
 
-export default RecruiterInscription;
+export default TeacherInscription;
