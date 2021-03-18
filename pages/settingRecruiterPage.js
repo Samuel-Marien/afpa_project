@@ -10,25 +10,16 @@ const OptionForm = (props) => {
     <div>
       <Form.Row className="mt-2">
         <Col>
-          <Form.Control placeholder="Company" required />
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-          <Form.Control.Feedback type="invalid">
-            Please provide a valid Company.
-          </Form.Control.Feedback>
+          <Form.Control placeholder="Company" />
         </Col>
         <Col>
-          <Form.Control placeholder="Current Job" required />
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-          <Form.Control.Feedback type="invalid">
-            Please provide a valid Job.
-          </Form.Control.Feedback>
+          <Form.Control placeholder="Current Job" />
         </Col>
          
       </Form.Row>
       <Form.Row className="mt-2">
         <Col className="col-3">
           <Form.Control type="number" placeholder="Age" />
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Col>
         <Col className="col-3">
           <Form.Control
@@ -41,10 +32,6 @@ const OptionForm = (props) => {
             <option value="2">Female</option>
             <option value="3">Heu wait...</option>
           </Form.Control>
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-          <Form.Control.Feedback type="invalid">
-            Please provide a valid Gender.
-          </Form.Control.Feedback>
         </Col>
       </Form.Row>
     </div>

@@ -32,26 +32,14 @@ const SettingForm = (props) => {
         <Form.Row className="mt-1">
           <Col>
             <Form.Control placeholder="First name" />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid First name.
-            </Form.Control.Feedback>
           </Col>
           <Col>
             <Form.Control placeholder="Last name" />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid Last name.
-            </Form.Control.Feedback>
           </Col>
         </Form.Row>
         <Form.Row className="mt-2">
           <Col>
             <Form.Control type="email" placeholder="Enter email" />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid email.
-            </Form.Control.Feedback>
           </Col>
           <Col>
             <Form.Control type="tel" placeholder="Number phone" />
