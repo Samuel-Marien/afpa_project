@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 const SignUpForm = (props) => {
+  const { children } = props;
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -46,22 +47,6 @@ const SignUpForm = (props) => {
         </Form.Row>
         <Form.Row className="mt-2">
           <Col>
-            <Form.Control placeholder="Afpa center*" required />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid Afpa Center.
-            </Form.Control.Feedback>
-          </Col>
-          <Col>
-            <Form.Control placeholder="Speciality*" required />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid Speciality.
-            </Form.Control.Feedback>
-          </Col>
-        </Form.Row>
-        <Form.Row className="mt-2">
-          <Col>
             <Form.Control type="email" placeholder="Enter email*" required />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
@@ -72,46 +57,7 @@ const SignUpForm = (props) => {
             <Form.Control type="tel" placeholder="Number phone" />
           </Col>
         </Form.Row>
-        <Form.Row className="mt-2">
-          <Col className="col-3">
-            <Form.Control type="number" placeholder="Age" />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-          </Col>
-          <Col className="col-4">
-            <Form.Control
-              as="select"
-              id="inlineFormStatusSelect"
-              className="text-secondary"
-              required
-            >
-              <option value="0">Status...</option>
-              <option value="1">New student</option>
-              <option value="2">former students</option>
-              <option value="3">Tourist</option>
-            </Form.Control>
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid Status.
-            </Form.Control.Feedback>
-          </Col>
-
-          <Col className="col-3">
-            <Form.Control
-              as="select"
-              id="inlineFormGenderSelect"
-              className="text-secondary"
-            >
-              <option value="false">Gender</option>
-              <option value="1">Male</option>
-              <option value="2">Female</option>
-              <option value="3">Heu wait...</option>
-            </Form.Control>
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid Gender.
-            </Form.Control.Feedback>
-          </Col>
-        </Form.Row>
+        {children}
         <Form.Group className="mt-4 mb-0 d-flex justify-content-between">
           <Form.Group
             className="d-flex flex-column"
