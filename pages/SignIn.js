@@ -2,6 +2,8 @@ import PageHorizontal from '../components/PageHorizontal';
 import ConnectForm from '../components/ConnectForm';
 import Button from 'react-bootstrap/Button';
 
+import Link from 'next/link';
+
 const SignInPage = () => {
   return (
     <PageHorizontal
@@ -16,13 +18,17 @@ const SignInPage = () => {
           Create your customer area in just a few clicks... and come to your
           home
         </p>
-        <Button
-          variant="secondary"
-          type="submit"
-          className="w-100 rounded-pill "
-        >
-          Create a customer area
-        </Button>
+        <Link href="/selectRolePage">
+          <a>
+            <Button
+              variant="secondary"
+              type="submit"
+              className="w-100 rounded-pill"
+            >
+              Create a customer area
+            </Button>
+          </a>
+        </Link>
       </div>
     </PageHorizontal>
   );

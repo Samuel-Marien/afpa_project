@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import Link from 'next/link';
+
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
@@ -46,10 +48,11 @@ const SettingForm = (props) => {
           </Col>
         </Form.Row>
         {children}
-
-        <Button variant="secondary" className="w-100 mt-2 mb-2 mt-5">
-          Change password
-        </Button>
+        <Link href="/reinitPswd">
+          <Button variant="secondary" className="w-100 mt-2 mb-2 mt-5">
+            Change password
+          </Button>
+        </Link>
         <Button variant="secondary" type="submit" className="w-100 mt-2 mb-2">
           Update
         </Button>
