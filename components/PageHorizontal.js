@@ -20,13 +20,13 @@ const PageHorizontal = (props) => {
             <BackButton buttonTitle="retour" />
           </div>
           <div>
-            <h1 className="mt-5 text-secondary font-weight-bold">
+            <h1 className="mt-3 text-secondary font-weight-bold">
               <GiCondorEmblem size="70" />
               AfpA 'Lumni
             </h1>
           </div>
           <div>
-            <h1 className="mt-5">{pageTitle}</h1>
+            <h1 className="mt-3">{pageTitle}</h1>
           </div>
           <div className="mt-2">{children}</div>
         </div>
