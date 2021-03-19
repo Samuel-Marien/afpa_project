@@ -73,7 +73,7 @@ const StudentInscription = (props) => {
     <PageHorizontal
       title="Student setting"
       pageTitle="Setting"
-      imgUrl="/people-2583442_1920.jpg"
+      imgUrl="/students.jpg"
     >
       <CircleIconStudent />
       <SettingForm>

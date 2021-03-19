@@ -43,7 +43,7 @@ const RecruiterInscription = (props) => {
     <PageHorizontal
       title="Recruiter setting"
       pageTitle="Setting"
-      imgUrl="/office-594132_1920.jpg"
+      imgUrl="/tools-5669031_1920.jpg"
     >
       <CircleIconRecruiter />
       <SettingForm>
