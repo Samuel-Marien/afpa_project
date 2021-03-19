@@ -56,7 +56,7 @@ const RecruiterInscription = (props) => {
     <PageHorizontal
       title="Recruiter Inscription"
       pageTitle="Sign Up"
-      imgUrl="/office-594132_1920.jpg"
+      imgUrl="/writing-1149962_1920.jpg"
     >
       <CircleIconRecruiter />
       <SignUpForm>

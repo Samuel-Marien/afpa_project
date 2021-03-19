@@ -9,7 +9,7 @@ const CircleIconTeacher = (props) => {
         <a href="#">
           <GiSpellBook
             size="100"
-            className="border border-warning rounded-circle p-1 mx-5 text-secondary shadow"
+            className="rounded-circle p-1 mx-5 text-secondary shadow"
           />
         </a>
       </Link>

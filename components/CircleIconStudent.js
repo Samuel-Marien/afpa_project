@@ -9,7 +9,7 @@ const CircleIconStudent = (props) => {
         <a href="#">
           <GiSchoolBag
             size="100"
-            className="border border-info rounded-circle p-1 mx-5 text-secondary shadow"
+            className="rounded-circle p-1 mx-5 text-secondary shadow"
           />
         </a>
       </Link>

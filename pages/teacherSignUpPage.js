@@ -56,7 +56,7 @@ const TeacherInscription = (props) => {
     <PageHorizontal
       title="Teacher Inscription"
       pageTitle="Sign Up"
-      imgUrl="/school-1782427_1920.jpg"
+      imgUrl="/startup-593341_1920.jpg"
     >
       <CircleIconTeacher />
       <SignUpForm>

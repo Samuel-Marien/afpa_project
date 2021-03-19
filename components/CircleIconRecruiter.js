@@ -9,7 +9,7 @@ const CircleIconRecruiter = (props) => {
         <a href="#">
           <GiSuitcase
             size="100"
-            className="border border-danger rounded-circle p-1 mx-5 text-secondary shadow"
+            className="rounded-circle p-1 mx-5 text-secondary shadow"
           />
         </a>
       </Link>
