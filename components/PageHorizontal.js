@@ -1,8 +1,7 @@
 import Head from 'next/head';
 
 import BackButton from './BackButton';
-
-import { GiCondorEmblem } from 'react-icons/gi';
+import Logo from './Logo';
 
 const PageHorizontal = (props) => {
   const { title, pageTitle, imgUrl, children } = props;
@@ -17,16 +16,12 @@ const PageHorizontal = (props) => {
       <Head>
         <title>{title}</title>
       </Head>
-
       <div className="container d-flex flex-column align-items-center float-right">
         <div className="align-self-end mt-3">
           <BackButton buttonTitle="retour" />
         </div>
         <div>
-          <h1 className="mt-3 text-secondary font-weight-bold">
-            <GiCondorEmblem size="70" />
-            AfpA 'Lumni
-          </h1>
+          <Logo size="50" />
         </div>
         <div>
           <h1 className="mt-3 font-weight-light">{pageTitle}</h1>
