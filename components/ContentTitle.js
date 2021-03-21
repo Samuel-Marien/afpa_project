@@ -16,14 +16,14 @@ const ContentTitle = (props) => {
         <SignButton
           href={'/selectRolePage'}
           variant={'outline-info'}
-          className={'px-5 mr-5'}
+          className={'px-5 mr-5 shadow'}
         >
           Sign Up
         </SignButton>
         <SignButton
           href={'/SignIn'}
           variant={'outline-secondary'}
-          className={'px-5'}
+          className={'px-5 shadow'}
         >
           Sign In
         </SignButton>

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import NavBar from './NavBar';
 import Carousel from './Carousel';
 import ContentTitle from './ContentTitle';
+import JumberRole from './JumberRole';
 
 const PageVertical = (props) => {
   const { title } = props;
@@ -14,6 +15,7 @@ const PageVertical = (props) => {
       <NavBar />
       <Carousel />
       <ContentTitle />
+      <JumberRole />
     </div>
   );
 };
