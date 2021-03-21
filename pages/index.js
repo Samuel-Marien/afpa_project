@@ -4,7 +4,7 @@ import PageVertical from '../components/PageVertical';
 export default function Home() {
   return (
     <div>
-      <PageVertical />
+      <PageVertical title={'Welcome Page'} />
     </div>
   );
 }

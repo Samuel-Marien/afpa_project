@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 
 const JumberRole = (props) => {
   return (
-    <Jumbotron fluid className="mt-5 text-center">
+    <Jumbotron fluid className="mt-5 mb-0 text-center ">
       <Container>
         <h1 className="font-weight-bold">The importance of alumni</h1>
         <p>
