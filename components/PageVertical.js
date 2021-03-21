@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import NavBar from './NavBar';
 import Carousel from './Carousel';
+import ContentTitle from './ContentTitle';
 
 const PageVertical = (props) => {
   const { title } = props;
@@ -12,6 +13,7 @@ const PageVertical = (props) => {
       </div>
       <NavBar />
       <Carousel />
+      <ContentTitle />
     </div>
   );
 };

@@ -2,10 +2,10 @@ import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
 
 const SignButton = (props) => {
-  const { href, variant, children } = props;
+  const { href, variant, className, children } = props;
   return (
     <Link href={href}>
-      <Button variant={variant} className="mr-3 p-1">
+      <Button variant={variant} className={className}>
         {children}
       </Button>
     </Link>

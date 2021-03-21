@@ -27,10 +27,18 @@ const NavBar = (props) => {
         </Nav.Link>
       </Nav>
       <Form inline>
-        <SignButton href={'/selectRolePage'} variant={'outline-info'}>
+        <SignButton
+          href={'/selectRolePage'}
+          variant={'outline-info'}
+          className={'mr-3 p-1'}
+        >
           Sign Up
         </SignButton>
-        <SignButton href={'/SignIn'} variant={'outline-secondary'}>
+        <SignButton
+          href={'/SignIn'}
+          variant={'outline-secondary'}
+          className={'p-1'}
+        >
           Sign In
         </SignButton>
       </Form>

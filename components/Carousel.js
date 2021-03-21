@@ -61,21 +61,6 @@ const MyCarousel = (props) => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="carousel/rsz_light-bulb-4514505_1920.jpg"
-          alt="Five slide"
-          style={{ height: '600px' }}
-        />
-
-        <Carousel.Caption>
-          <h3>slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
           src="carousel/rsz_stock-1863880_1920.jpg"
           alt="Six slide"
           style={{ height: '600px' }}
