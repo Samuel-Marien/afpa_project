@@ -1,10 +1,12 @@
 import Head from 'next/head';
 
+import SignButton from './SignButton';
 import NavBar from './NavBar';
 import Carousel from './Carousel';
 import ContentTitle from './ContentTitle';
 import JumberRole from './JumberRole';
-import JumberHero from './JumberHero';
+import MiddleCarousel from './MiddleCarousel';
+import ContentCards from './ContentCards';
 
 const PageVertical = (props) => {
   const { title } = props;
@@ -16,9 +18,48 @@ const PageVertical = (props) => {
 
       <NavBar />
       <Carousel />
-      <ContentTitle />
+      <ContentTitle
+        title={"Let's build the network together"}
+        txt1={
+          'So that the alumni network meets your aspirations and your convictions,it is with you that we are building it.'
+        }
+        txt2={
+          "So that the Afpa community can act on the world, let's get involved together!"
+        }
+        option={
+          <div className="mt-5">
+            <SignButton
+              href={'/selectRolePage'}
+              variant={'outline-info'}
+              className={'px-5 mr-5 shadow'}
+            >
+              Sign Up
+            </SignButton>
+            <SignButton
+              href={'/SignIn'}
+              variant={'outline-secondary'}
+              className={'px-5 shadow'}
+            >
+              Sign In
+            </SignButton>
+          </div>
+        }
+      />
       <JumberRole />
-      <JumberHero src={'/businessmen.jpg'} alt={'cooperation picture'} />
+      <MiddleCarousel
+        src={'/businessmen.jpg'}
+        alt={'cooperation picture'}
+        src1={'/work-5382501_1920.jpg'}
+        alt1={'cooperation picture'}
+        src2={'/hong-kong-1990268_1920.jpg'}
+        alt2={'cooperation picture'}
+      />
+      <ContentTitle
+        title={'The Alumni network from yesterday to today'}
+        txt1={`To fully understand how much the Alumni network has evolved, let's first give its first definition. Basically, it was essentially an "association of former students, in which the latter, from the same school institute come together to continue to maintain the bonds of camaraderie forged during their studies".`}
+        txt2={`But now the Alumni network has many other uses, although it still refers to a group of alumni from the same school or training. Among other things, it has become a source of contacts for students and an invaluable source of candidates for recruiters. You should also know that today we can use this term to refer to a group of workers working in the same company.`}
+      />
+      <ContentCards />
     </div>
   );
 };
