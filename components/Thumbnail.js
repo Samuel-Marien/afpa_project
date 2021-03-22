@@ -7,11 +7,11 @@ import { IoIosMail, IoIosEye } from 'react-icons/io';
 const Thumbnail = (props) => {
   const { src, role, title, txt1, txt2, children } = props;
   return (
-    <Card style={{ width: '14rem' }} className="shadow bg-dark text-light mx-4">
+    <Card style={{ width: '16rem' }} className="shadow bg-dark text-light mx-4">
       <Card.Img
         variant="top"
         src={src}
-        style={{ height: '250px', width: 'auto' }}
+        style={{ height: '230px', width: 'auto' }}
       />
       <Card.ImgOverlay className="p-2">
         <div className="d-flex justify-content-between">

@@ -60,6 +60,33 @@ const PageVertical = (props) => {
         txt2={`But now the Alumni network has many other uses, although it still refers to a group of alumni from the same school or training. Among other things, it has become a source of contacts for students and an invaluable source of candidates for recruiters. You should also know that today we can use this term to refer to a group of workers working in the same company.`}
       />
       <ContentCards />
+      <ContentTitle
+        title={'Social capital is an inexhaustible resource'}
+        txt1={
+          'It must be remembered that behind the word alumni are professionals who have been involved in working life for several decades. Experienced individuals who are potentially looking for their future intern or collaborator. Through a well-organized directory, it is easy to find the right person to answer a specific question.'
+        }
+        txt2={
+          'Keeping the link with the alumni is a beneficial mission for all. Students are guided and their professional integration promoted. Alumni, on the other hand, acquire their future collaborator and are part of a real network of professionals. Finally, the school can only encourage this initiative to find qualified speakers and improve its brand image. Tempted by the project?'
+        }
+        option={
+          <div className="my-5">
+            <SignButton
+              href={'/selectRolePage'}
+              variant={'outline-info'}
+              className={'px-5 mr-5 shadow'}
+            >
+              Sign Up
+            </SignButton>
+            <SignButton
+              href={'/SignIn'}
+              variant={'outline-secondary'}
+              className={'px-5 shadow'}
+            >
+              Sign In
+            </SignButton>
+          </div>
+        }
+      />
     </div>
   );
 };

@@ -1,25 +1,24 @@
 import Thumbnail from './Thumbnail';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import { CardDeck } from 'react-bootstrap';
 
 const ContentCards = (props) => {
   return (
-    <Jumbotron className=" mt-5 px-5">
-      <CardDeck className="d-flex px-5 justify-content-between">
+    <Jumbotron className="mt-5">
+      <div className="d-flex justify-content-center">
         <Thumbnail
-          src={'/personaFemale.jpg'}
+          src={'/portraits/male-50.jpg'}
           title={'John Doe'}
           role={'Recruiter'}
           txt1={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
         ></Thumbnail>
         <Thumbnail
-          src={'/personaTeacher.jpg'}
+          src={'/portraits/teacher.jpg'}
           title={'John Doe'}
           role={'Teacher'}
           txt1={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
         />
         <Thumbnail
-          src={'/personaFemale3.jpg'}
+          src={'/portraits/male-5.jpg'}
           title={'John Doe'}
           role={'Student'}
           txt1={
@@ -27,26 +26,20 @@ const ContentCards = (props) => {
           }
         />
         <Thumbnail
-          src={'/personaFemale.jpg'}
+          src={'/portraits/male-6.jpg'}
           title={'John Doe'}
           role={'Recruiter'}
           txt1={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
         ></Thumbnail>
         <Thumbnail
-          src={'/personaTeacher.jpg'}
-          title={'John Doe'}
-          role={'Teacher'}
-          txt1={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
-        />
-        <Thumbnail
-          src={'/personaFemale3.jpg'}
+          src={'/portraits/female-102.jpg'}
           title={'John Doe'}
           role={'Student'}
           txt1={
             'Hello, graduated from AFPA, I am a NodeJS / HTML developer available in Nantes'
           }
         />
-      </CardDeck>
+      </div>
     </Jumbotron>
   );
 };

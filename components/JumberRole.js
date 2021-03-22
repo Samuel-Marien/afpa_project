@@ -13,28 +13,28 @@ const JumberRole = (props) => {
         </p>
         <div className="d-flex mt-5">
           <CircleIconEg
-            src={'/personaMale.jpg'}
+            src={'/portraits/male-5.jpg'}
             type={'Student'}
             txt={
               'While it is beneficial for students and training organizations, it is also beneficial for companies looking for talent. The Alumni network is a real catalyst towards employment thanks to organized events such as networking.'
             }
           />
           <CircleIconEg
-            src={'/personaTeacher.jpg'}
+            src={'/portraits/male-25.jpg'}
             type={'Teacher'}
             txt={
               'The Alumni network represents an asset when it comes to federating a community of students. Relations with graduates are consolidated thanks to lasting support.'
             }
           />
           <CircleIconEg
-            src={'/personaFemale.jpg'}
+            src={'/portraits/male-24.png'}
             type={'Recruiter'}
             txt={
               'Graduates are a major strategic asset in terms of professional integration. Thus, the Alumni network can be qualified as a catalyst towards employment and fostering the obtaining of a contract'
             }
           />
           <CircleIconEg
-            src={'/personaFemale2.jpg'}
+            src={'/portraits/female-20.jpeg'}
             type={'School'}
             txt={
               "The alumni community represents a panoply of employers of our students and addressing the needs of businesses by training directly employable graduates is a policy embedded in AFPA's DNA."
