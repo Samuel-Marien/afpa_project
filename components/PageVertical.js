@@ -7,6 +7,7 @@ import ContentTitle from './ContentTitle';
 import JumberRole from './JumberRole';
 import MiddleCarousel from './MiddleCarousel';
 import ContentCards from './ContentCards';
+import Footer from './Footer';
 
 const PageVertical = (props) => {
   const { title } = props;
@@ -87,6 +88,7 @@ const PageVertical = (props) => {
           </div>
         }
       />
+      <Footer />
     </div>
   );
 };
