@@ -8,7 +8,7 @@ const SelectRole = (props) => {
     <PageHorizontal
       title="Select role"
       pageTitle="You are..."
-      imgUrl="/compass-2646437_1920.jpg"
+      imgUrl="/startup-593341_1920.jpg"
     >
       <div className="container d-flex mt-5">
         <CircleIconStudent />

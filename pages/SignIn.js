@@ -9,7 +9,7 @@ const SignInPage = () => {
     <PageHorizontal
       title="Sign In"
       pageTitle="Sign in"
-      imgUrl="/influencer-4081842_1920.jpg"
+      imgUrl="/coffee-5132832_1920.jpg"
     >
       <ConnectForm />
       <div className="mt-5 text-center bg-light p-3 shadow rounded">
