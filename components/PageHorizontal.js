@@ -21,7 +21,7 @@ const PageHorizontal = (props) => {
           <BackButton buttonTitle="retour" />
         </div>
         <div>
-          <Logo size="50" />
+          <Logo size="50" titleStyle="h1 font-weight-bold" />
         </div>
         <div>
           <h1 className="mt-3 font-weight-light">{pageTitle}</h1>

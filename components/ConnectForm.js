@@ -1,6 +1,8 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+import Link from 'next/link';
+
 const ConnectForm = (props) => {
   return (
     <Form>
@@ -21,7 +23,9 @@ const ConnectForm = (props) => {
           Submit
         </Button>
         <Form.Text className="align-self-end">
-          <a href="#">Forgot password ?</a>
+          <Link href="/reinitPswd">
+            <a>Forgot password ?</a>
+          </Link>
         </Form.Text>
       </div>
     </Form>

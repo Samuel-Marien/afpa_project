@@ -1,5 +1,6 @@
-import { GiCondorEmblem } from 'react-icons/gi';
 import Link from 'next/link';
+
+import { GiCondorEmblem } from 'react-icons/gi';
 
 const Logo = (props) => {
   const { size, titleStyle } = props;
