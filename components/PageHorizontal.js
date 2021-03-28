@@ -4,7 +4,7 @@ import BackButton from './BackButton';
 import Logo from './Logo';
 
 const PageHorizontal = (props) => {
-  const { title, pageTitle, imgUrl, children } = props;
+  const { title, pageTitle, imgUrl, childrenSize = 'mt-2', children } = props;
   return (
     <div
       className="text-secondary"
@@ -21,12 +21,12 @@ const PageHorizontal = (props) => {
           <BackButton buttonTitle="retour" />
         </div>
         <div>
-          <Logo size="50" titleStyle="h1 font-weight-bold" />
+          <Logo size="50" titleStyle="h1 display-5 font-weight-bold" />
         </div>
         <div>
           <h1 className="mt-3 font-weight-light">{pageTitle}</h1>
         </div>
-        <div className="mt-2">{children}</div>
+        <div className={childrenSize}>{children}</div>
       </div>
     </div>
   );

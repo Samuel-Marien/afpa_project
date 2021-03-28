@@ -8,7 +8,7 @@ const Logo = (props) => {
   return (
     <Link href="/">
       <a className="text-decoration-none">
-        <div className="text-secondary font-weight-bold text-decoration-none text-muted">
+        <div className="text-secondary font-weight-bold text-decoration-none text-muted d-flex align-items-center">
           <GiCondorEmblem size={size} />
           <span className={titleStyle}>AfpA 'Lumni</span>
         </div>
