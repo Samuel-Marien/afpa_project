@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import React from 'react';
+
 import SignButton from './SignButton';
 import NavBar from './NavBar';
 import Carousel from './Carousel';
@@ -9,17 +11,19 @@ import MiddleCarousel from './MiddleCarousel';
 import ContentCards from './ContentCards';
 import Footer from './Footer';
 import ContentMiddle from './ContentMiddle';
+import MyModal from './MyModal';
 
 const PageVertical = (props) => {
   const { title } = props;
+  const [modalShow, setModalShow] = React.useState(false);
   return (
     <div>
       <Head>
         <title>{title}</title>
       </Head>
-
       <NavBar />
       <Carousel />
+      <MyModal show={modalShow} onHide={() => setModalShow(false)} />
       <ContentTitle
         title={"Let's build the network together"}
         txt1={
@@ -31,9 +35,10 @@ const PageVertical = (props) => {
         option={
           <div className="mt-5">
             <SignButton
-              href={'/selectRolePage'}
+              href="#"
               variant={'outline-info'}
               className={'px-5 mr-5 shadow'}
+              onClick={() => setModalShow(true)}
             >
               Sign Up
             </SignButton>
@@ -74,9 +79,10 @@ const PageVertical = (props) => {
         option={
           <div className="my-5">
             <SignButton
-              href={'/selectRolePage'}
+              href="#"
               variant={'outline-info'}
               className={'px-5 mr-5 shadow'}
+              onClick={() => setModalShow(true)}
             >
               Sign Up
             </SignButton>
