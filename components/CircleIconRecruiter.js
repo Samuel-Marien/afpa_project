@@ -1,6 +1,8 @@
-import Link from 'next/link';
+import React from 'react'
 
-import { GiSuitcase } from 'react-icons/gi';
+import Link from 'next/link'
+
+import { GiSuitcase } from 'react-icons/gi'
 
 const CircleIconRecruiter = (props) => {
   return (
@@ -16,7 +18,7 @@ const CircleIconRecruiter = (props) => {
 
       <h3 className="mt-2">Recruiter</h3>
     </div>
-  );
-};
+  )
+}
 
-export default CircleIconRecruiter;
+export default CircleIconRecruiter

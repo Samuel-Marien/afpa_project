@@ -1,6 +1,8 @@
-import Link from 'next/link';
+import React from 'react'
 
-import { GiSchoolBag } from 'react-icons/gi';
+import Link from 'next/link'
+
+import { GiSchoolBag } from 'react-icons/gi'
 
 const CircleIconStudent = (props) => {
   return (
@@ -15,7 +17,7 @@ const CircleIconStudent = (props) => {
       </Link>
       <h3 className="mt-2">Student</h3>
     </div>
-  );
-};
+  )
+}
 
-export default CircleIconStudent;
+export default CircleIconStudent

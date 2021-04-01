@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
 
-import Link from 'next/link';
+import Link from 'next/link'
 
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import Form from 'react-bootstrap/Form';
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Form from 'react-bootstrap/Form'
 
-import Logo from './Logo';
-import SignButton from './SignButton';
-import MyModal from './MyModal';
+import Logo from './Logo'
+import SignButton from './SignButton'
+// import MyModal from './MyModal'
 
-import { IoIosMail, IoIosSettings } from 'react-icons/io';
+import { IoIosMail, IoIosSettings } from 'react-icons/io'
 
 const NavBar = (props) => {
-  const [modalShow, setModalShow] = React.useState(false);
+  // const [modalShow, setModalShow] = React.useState(false)
   return (
     <Navbar
       bg="dark"
@@ -41,13 +41,12 @@ const NavBar = (props) => {
         </Nav>
 
         <Form inline>
-          <MyModal show={modalShow} onHide={() => setModalShow(false)} />
+          {/* <MyModal show={modalShow} onHide={() => setModalShow(false)} /> */}
           <SignButton
-            // href={'/selectRolePage'}
             href="#"
             variant={'outline-info'}
             className={'mr-3 p-1'}
-            onClick={() => setModalShow(true)}
+            // onClick={() => setModalShow(true)}
           >
             Sign Up
           </SignButton>
@@ -61,7 +60,7 @@ const NavBar = (props) => {
         </Form>
       </Navbar.Collapse>
     </Navbar>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

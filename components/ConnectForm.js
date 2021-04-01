@@ -1,7 +1,9 @@
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import React from 'react'
 
-import Link from 'next/link';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+
+import Link from 'next/link'
 
 const ConnectForm = (props) => {
   return (
@@ -29,7 +31,7 @@ const ConnectForm = (props) => {
         </Form.Text>
       </div>
     </Form>
-  );
-};
+  )
+}
 
-export default ConnectForm;
+export default ConnectForm

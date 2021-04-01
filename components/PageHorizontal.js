@@ -1,16 +1,19 @@
-import Head from 'next/head';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import BackButton from './BackButton';
-import Logo from './Logo';
+import Head from 'next/head'
+
+import BackButton from './BackButton'
+import Logo from './Logo'
 
 const PageHorizontal = (props) => {
-  const { title, pageTitle, imgUrl, childrenSize = 'mt-2', children } = props;
+  const { title, pageTitle, imgUrl, childrenSize = 'mt-2', children } = props
   return (
     <div
       className="text-secondary"
       style={{
         backgroundImage: `url(${imgUrl})`,
-        height: '100vh',
+        height: '100vh'
       }}
     >
       <Head>
@@ -29,7 +32,27 @@ const PageHorizontal = (props) => {
         <div className={childrenSize}>{children}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PageHorizontal;
+PageHorizontal.propTypes = {
+  title: PropTypes.string
+}
+
+PageHorizontal.propTypes = {
+  pageTitle: PropTypes.string
+}
+
+PageHorizontal.propTypes = {
+  imgUrl: PropTypes.string
+}
+
+PageHorizontal.propTypes = {
+  childrenSize: PropTypes.string
+}
+
+PageHorizontal.propTypes = {
+  children: PropTypes.node
+}
+
+export default PageHorizontal

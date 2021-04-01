@@ -1,7 +1,9 @@
-import PageHorizontal from '../components/PageHorizontal';
-import CircleIconStudent from '../components/CircleIconStudent';
-import CircleIconTeacher from '../components/CircleIconTeacher';
-import CircleIconRecruiter from '../components/CircleIconRecruiter';
+import React from 'react'
+
+import PageHorizontal from '../components/PageHorizontal'
+import CircleIconStudent from '../components/CircleIconStudent'
+import CircleIconTeacher from '../components/CircleIconTeacher'
+import CircleIconRecruiter from '../components/CircleIconRecruiter'
 
 const SelectRole = (props) => {
   return (
@@ -16,7 +18,7 @@ const SelectRole = (props) => {
         <CircleIconRecruiter />
       </div>
     </PageHorizontal>
-  );
-};
+  )
+}
 
-export default SelectRole;
+export default SelectRole

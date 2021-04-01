@@ -1,5 +1,7 @@
-import Thumbnail from './Thumbnail';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+import React from 'react'
+
+import Thumbnail from './Thumbnail'
+import Jumbotron from 'react-bootstrap/Jumbotron'
 
 const ContentCards = (props) => {
   return (
@@ -9,13 +11,17 @@ const ContentCards = (props) => {
           src={'/portraits/male-50.jpg'}
           title={'John Doe'}
           role={'Recruiter'}
-          txt1={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
+          txt1={
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          }
         ></Thumbnail>
         <Thumbnail
           src={'/portraits/teacher.jpg'}
           title={'John Doe'}
           role={'Teacher'}
-          txt1={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
+          txt1={
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          }
         />
         <Thumbnail
           src={'/portraits/male-5.jpg'}
@@ -29,7 +35,9 @@ const ContentCards = (props) => {
           src={'/portraits/male-6.jpg'}
           title={'John Doe'}
           role={'Recruiter'}
-          txt1={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
+          txt1={
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          }
         ></Thumbnail>
         <Thumbnail
           src={'/portraits/female-102.jpg'}
@@ -41,7 +49,7 @@ const ContentCards = (props) => {
         />
       </div>
     </Jumbotron>
-  );
-};
+  )
+}
 
-export default ContentCards;
+export default ContentCards

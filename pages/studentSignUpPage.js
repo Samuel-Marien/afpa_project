@@ -1,9 +1,11 @@
-import PageHorizontal from '../components/PageHorizontal';
-import CircleIconStudent from '../components/CircleIconStudent';
-import SignUpForm from '../components/SignUpForm';
+import React from 'react'
 
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
+import PageHorizontal from '../components/PageHorizontal'
+import CircleIconStudent from '../components/CircleIconStudent'
+import SignUpForm from '../components/SignUpForm'
+
+import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form'
 
 const OptionForm = (props) => {
   return (
@@ -23,7 +25,6 @@ const OptionForm = (props) => {
             Please provide a valid Speciality.
           </Form.Control.Feedback>
         </Col>
-         
       </Form.Row>
       <Form.Row className="mt-2">
         <Col className="col-3">
@@ -66,8 +67,8 @@ const OptionForm = (props) => {
         </Col>
       </Form.Row>
     </div>
-  );
-};
+  )
+}
 
 const StudentInscription = (props) => {
   return (
@@ -81,7 +82,7 @@ const StudentInscription = (props) => {
         <OptionForm />
       </SignUpForm>
     </PageHorizontal>
-  );
-};
+  )
+}
 
-export default StudentInscription;
+export default StudentInscription

@@ -1,24 +1,25 @@
-import { useState } from 'react';
+import { React, useState } from 'react'
+import PropTypes from 'prop-types'
 
-import Link from 'next/link';
+import Link from 'next/link'
 
-import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 
 const SettingForm = (props) => {
-  const { children } = props;
-  const [validated, setValidated] = useState(false);
+  const { children } = props
+  const [validated, setValidated] = useState(false)
 
   const handleSubmit = (event) => {
-    const form = event.currentTarget;
+    const form = event.currentTarget
     if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
+      event.preventDefault()
+      event.stopPropagation()
     }
 
-    setValidated(true);
-  };
+    setValidated(true)
+  }
 
   return (
     <div className="text-center">
@@ -58,7 +59,10 @@ const SettingForm = (props) => {
         </Button>
       </Form>
     </div>
-  );
-};
+  )
+}
 
-export default SettingForm;
+SettingForm.propTypes = {
+  children: PropTypes.node
+}
+export default SettingForm

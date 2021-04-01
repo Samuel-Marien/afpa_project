@@ -1,11 +1,14 @@
-import Link from 'next/link';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import Card from 'react-bootstrap/Card';
+import Link from 'next/link'
 
-import { IoIosMail, IoIosEye } from 'react-icons/io';
+import Card from 'react-bootstrap/Card'
+
+import { IoIosMail, IoIosEye } from 'react-icons/io'
 
 const Thumbnail = (props) => {
-  const { src, role, title, txt1, txt2, children } = props;
+  const { src, role, title, txt1 } = props
   return (
     <Card style={{ width: '16rem' }} className="shadow bg-dark text-light mx-4">
       <Card.Img
@@ -39,11 +42,32 @@ const Thumbnail = (props) => {
       </Card.ImgOverlay>
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">I'm {role}</Card.Subtitle>
+        <Card.Subtitle className="mb-2 text-muted">
+          I&aposm {role}
+        </Card.Subtitle>
         <Card.Text>{txt1}</Card.Text>
       </Card.Body>
     </Card>
-  );
-};
+  )
+}
 
-export default Thumbnail;
+Thumbnail.propTypes = {
+  children: PropTypes.node
+}
+Thumbnail.propTypes = {
+  src: PropTypes.string
+}
+
+Thumbnail.propTypes = {
+  role: PropTypes.string
+}
+
+Thumbnail.propTypes = {
+  title: PropTypes.string
+}
+
+Thumbnail.propTypes = {
+  txt1: PropTypes.string
+}
+
+export default Thumbnail

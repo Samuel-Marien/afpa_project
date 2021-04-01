@@ -1,7 +1,9 @@
-import CircleIconEg from '../components/CircleIconEg';
+import React from 'react'
 
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Container from 'react-bootstrap/Container';
+import CircleIconEg from '../components/CircleIconEg'
+
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Container from 'react-bootstrap/Container'
 
 const JumberRole = (props) => {
   return (
@@ -43,6 +45,6 @@ const JumberRole = (props) => {
         </div>
       </Container>
     </Jumbotron>
-  );
-};
-export default JumberRole;
+  )
+}
+export default JumberRole

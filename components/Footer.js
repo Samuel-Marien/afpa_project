@@ -1,21 +1,24 @@
-import Link from 'next/link';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import Logo from './Logo';
+import Link from 'next/link'
+
+import Logo from './Logo'
 
 import {
   IoLogoTwitter,
   IoLogoInstagram,
   IoLogoFacebook,
-  IoLogoLinkedin,
-} from 'react-icons/io5';
+  IoLogoLinkedin
+} from 'react-icons/io5'
 
 const MyLi = (props) => {
-  const { href, nameLink } = props;
+  const { href, nameLink } = props
   return (
     <li
       style={{
         fontSize: '.8rem',
-        listStyle: 'none',
+        listStyle: 'none'
       }}
       className="decoration-none"
     >
@@ -23,8 +26,16 @@ const MyLi = (props) => {
         <a className="text-secondary">{nameLink}</a>
       </Link>
     </li>
-  );
-};
+  )
+}
+
+MyLi.propTypes = {
+  href: PropTypes.string
+}
+
+MyLi.propTypes = {
+  nameLink: PropTypes.string
+}
 
 const Footer = (props) => {
   return (
@@ -82,7 +93,7 @@ const Footer = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

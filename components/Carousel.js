@@ -1,4 +1,6 @@
-import Carousel from 'react-bootstrap/Carousel';
+import React from 'react'
+
+import Carousel from 'react-bootstrap/Carousel'
 
 const MyCarousel = (props) => {
   return (
@@ -74,6 +76,6 @@ const MyCarousel = (props) => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-  );
-};
-export default MyCarousel;
+  )
+}
+export default MyCarousel

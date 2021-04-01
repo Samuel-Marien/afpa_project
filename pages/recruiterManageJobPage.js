@@ -1,21 +1,31 @@
-import Image from 'react-bootstrap/Image';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Image from 'react-bootstrap/Image'
 
-import PageHorizontal from '../components/PageHorizontal';
+import PageHorizontal from '../components/PageHorizontal'
 
-import { IoTrash } from 'react-icons/io5';
-import { FiEdit } from 'react-icons/fi';
+import { IoTrash } from 'react-icons/io5'
+import { FiEdit } from 'react-icons/fi'
 
 const MyP = (props) => {
-  const { className, children } = props;
+  const { className, children } = props
   return (
     <p style={{ fontSize: '.7rem' }} className={className}>
       {children}
     </p>
-  );
-};
+  )
+}
+
+MyP.propTypes = {
+  className: PropTypes.string
+}
+
+MyP.propTypes = {
+  children: PropTypes.node
+}
 
 const JobThumbnail = (props) => {
-  const { companyLogo = '/logos/logo-ibm.png' } = props;
+  const { companyLogo = '/logos/logo-ibm.png' } = props
   return (
     <div className="bg-light mt-4 p-3 d-flex rounded shadow">
       <div className=" d-flex flex-column justify-content-start">
@@ -38,14 +48,18 @@ const JobThumbnail = (props) => {
         <div>
           <p style={{ fontSize: '.9rem' }}>
             Is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the
+            Ipsum has been the industry&aposs standard dummy text ever since the
             1500...
           </p>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
+
+JobThumbnail.propTypes = {
+  companyLogo: PropTypes.string
+}
 
 const ManageJob = (props) => {
   return (
@@ -59,7 +73,7 @@ const ManageJob = (props) => {
       <JobThumbnail />
       <JobThumbnail />
     </PageHorizontal>
-  );
-};
+  )
+}
 
-export default ManageJob;
+export default ManageJob

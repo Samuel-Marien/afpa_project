@@ -1,6 +1,8 @@
-import PageHorizontal from '../components/PageHorizontal';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import React from 'react'
+
+import PageHorizontal from '../components/PageHorizontal'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 const Forgotpswd = (props) => {
   return (
@@ -40,7 +42,7 @@ const Forgotpswd = (props) => {
         </Button>
       </div>
     </PageHorizontal>
-  );
-};
+  )
+}
 
-export default Forgotpswd;
+export default Forgotpswd

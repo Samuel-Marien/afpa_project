@@ -1,14 +1,17 @@
-import Link from 'next/link';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image';
+import Link from 'next/link'
 
-import PageHorizontal from '../components/PageHorizontal';
+import Form from 'react-bootstrap/Form'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+import Image from 'react-bootstrap/Image'
+
+import PageHorizontal from '../components/PageHorizontal'
 
 const JobOffer = (props) => {
-  const { companyLogo = '/logos/logo-ibm.png' } = props;
+  const { companyLogo = '/logos/logo-ibm.png' } = props
   return (
     <PageHorizontal
       title="Recruiter Job offer"
@@ -30,7 +33,7 @@ const JobOffer = (props) => {
 
               <Link href="#">
                 <a className="text-info mt-2" style={{ fontSize: '.5rem' }}>
-                  change your company's logo?
+                  change your company&aposs logo?
                 </a>
               </Link>
             </Col>
@@ -80,7 +83,10 @@ const JobOffer = (props) => {
         </Form.Group>
       </Form>
     </PageHorizontal>
-  );
-};
+  )
+}
 
-export default JobOffer;
+JobOffer.propTypes = {
+  companyLogo: PropTypes.string
+}
+export default JobOffer

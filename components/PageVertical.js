@@ -1,21 +1,22 @@
-import Head from 'next/head';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import React from 'react';
+import Head from 'next/head'
 
-import SignButton from './SignButton';
-import NavBar from './NavBar';
-import Carousel from './Carousel';
-import ContentTitle from './ContentTitle';
-import JumberRole from './JumberRole';
-import MiddleCarousel from './MiddleCarousel';
-import ContentCards from './ContentCards';
-import Footer from './Footer';
-import ContentMiddle from './ContentMiddle';
-import MyModal from './MyModal';
+import SignButton from './SignButton'
+import NavBar from './NavBar'
+import Carousel from './Carousel'
+import ContentTitle from './ContentTitle'
+import JumberRole from './JumberRole'
+import MiddleCarousel from './MiddleCarousel'
+import ContentCards from './ContentCards'
+import Footer from './Footer'
+import ContentMiddle from './ContentMiddle'
+// import MyModal from './MyModal'
 
 const PageVertical = (props) => {
-  const { title } = props;
-  const [modalShow, setModalShow] = React.useState(false);
+  const { title } = props
+  // const [modalShow, setModalShow] = React.useState(false)
   return (
     <div>
       <Head>
@@ -23,7 +24,7 @@ const PageVertical = (props) => {
       </Head>
       <NavBar />
       <Carousel />
-      <MyModal show={modalShow} onHide={() => setModalShow(false)} />
+      {/* <MyModal show={modalShow} onHide={() => setModalShow(false)} /> */}
       <ContentTitle
         title={"Let's build the network together"}
         txt1={
@@ -38,7 +39,7 @@ const PageVertical = (props) => {
               href="#"
               variant={'outline-info'}
               className={'px-5 mr-5 shadow'}
-              onClick={() => setModalShow(true)}
+              // onClick={() => setModalShow(true)}
             >
               Sign Up
             </SignButton>
@@ -64,8 +65,12 @@ const PageVertical = (props) => {
 
       <ContentMiddle
         title={'The Alumni network from yesterday to today'}
-        txt1={`To fully understand how much the Alumni network has evolved, let's first give its first definition. Basically, it was essentially an "association of former students, in which the latter, from the same school institute come together to continue to maintain the bonds of camaraderie forged during their studies".`}
-        txt2={`But now the Alumni network has many other uses, although it still refers to a group of alumni from the same school or training. Among other things, it has become a source of contacts for students and an invaluable source of candidates for recruiters. You should also know that today we can use this term to refer to a group of workers working in the same company.`}
+        txt1={
+          "To fully understand how much the Alumni network has evolved, let's first give its first definition. Basically, it was essentially an association of former students, in which the latter, from the same school institute come together to continue to maintain the bonds of camaraderie forged during their studies."
+        }
+        txt2={
+          'But now the Alumni network has many other uses, although it still refers to a group of alumni from the same school or training. Among other things, it has become a source of contacts for students and an invaluable source of candidates for recruiters. You should also know that today we can use this term to refer to a group of workers working in the same company.'
+        }
       />
       <ContentCards />
       <ContentTitle
@@ -82,7 +87,7 @@ const PageVertical = (props) => {
               href="#"
               variant={'outline-info'}
               className={'px-5 mr-5 shadow'}
-              onClick={() => setModalShow(true)}
+              // onClick={() => setModalShow(true)}
             >
               Sign Up
             </SignButton>
@@ -98,6 +103,10 @@ const PageVertical = (props) => {
       />
       <Footer />
     </div>
-  );
-};
-export default PageVertical;
+  )
+}
+
+PageVertical.propTypes = {
+  title: PropTypes.string
+}
+export default PageVertical

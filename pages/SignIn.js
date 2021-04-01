@@ -1,8 +1,10 @@
-import PageHorizontal from '../components/PageHorizontal';
-import ConnectForm from '../components/ConnectForm';
-import Button from 'react-bootstrap/Button';
+import React from 'react'
 
-import Link from 'next/link';
+import PageHorizontal from '../components/PageHorizontal'
+import ConnectForm from '../components/ConnectForm'
+import Button from 'react-bootstrap/Button'
+
+import Link from 'next/link'
 
 const SignInPage = () => {
   return (
@@ -31,6 +33,6 @@ const SignInPage = () => {
         </Link>
       </div>
     </PageHorizontal>
-  );
-};
-export default SignInPage;
+  )
+}
+export default SignInPage

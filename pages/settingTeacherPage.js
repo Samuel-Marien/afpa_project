@@ -1,9 +1,11 @@
-import PageHorizontal from '../components/PageHorizontal';
-import CircleIconTeacher from '../components/CircleIconTeacher';
-import SettingForm from '../components/SettingForm';
+import React from 'react'
 
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
+import PageHorizontal from '../components/PageHorizontal'
+import CircleIconTeacher from '../components/CircleIconTeacher'
+import SettingForm from '../components/SettingForm'
+
+import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form'
 
 const OptionForm = (props) => {
   return (
@@ -23,7 +25,6 @@ const OptionForm = (props) => {
             Please provide a valid Speciality.
           </Form.Control.Feedback>
         </Col>
-         
       </Form.Row>
       <Form.Row className="mt-2">
         <Col className="col-3">
@@ -48,8 +49,8 @@ const OptionForm = (props) => {
         </Col>
       </Form.Row>
     </div>
-  );
-};
+  )
+}
 
 const TeacherInscription = (props) => {
   return (
@@ -63,7 +64,7 @@ const TeacherInscription = (props) => {
         <OptionForm />
       </SettingForm>
     </PageHorizontal>
-  );
-};
+  )
+}
 
-export default TeacherInscription;
+export default TeacherInscription

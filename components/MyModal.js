@@ -1,25 +1,26 @@
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import CircleIconStudent from '../components/CircleIconStudent';
-import CircleIconTeacher from '../components/CircleIconTeacher';
-import CircleIconRecruiter from '../components/CircleIconRecruiter';
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
+
+import CircleIconStudent from '../components/CircleIconStudent'
+import CircleIconTeacher from '../components/CircleIconTeacher'
+import CircleIconRecruiter from '../components/CircleIconRecruiter'
 
 const MyModal = (props) => {
   return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-      className="text-secondary"
-      // style={{
-      //   background: `url('/hong-kong-1990268_1920.jpg')center no-repeat `,
-      // }}
-    >
+    <>
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        className="text-secondary"
+      />
       <div
         style={{
-          background: `url('/hong-kong-1990268_1920.jpg')center no-repeat `,
+          background: "url('/hong-kong-1990268_1920.jpg')center no-repeat"
         }}
       >
         <Modal.Header closeButton>
@@ -46,8 +47,12 @@ const MyModal = (props) => {
           </Button>
         </Modal.Footer>
       </div>
-    </Modal>
-  );
-};
+      <Modal />
+    </>
+  )
+}
 
-export default MyModal;
+MyModal.propTypes = {
+  onHide: PropTypes.node
+}
+export default MyModal

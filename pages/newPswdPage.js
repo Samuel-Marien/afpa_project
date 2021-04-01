@@ -1,6 +1,8 @@
-import PageHorizontal from '../components/PageHorizontal';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import React from 'react'
+
+import PageHorizontal from '../components/PageHorizontal'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 const NewPswd = (props) => {
   return (
@@ -24,7 +26,7 @@ const NewPswd = (props) => {
         </Form>
       </div>
     </PageHorizontal>
-  );
-};
+  )
+}
 
-export default NewPswd;
+export default NewPswd

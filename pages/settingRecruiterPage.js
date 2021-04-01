@@ -1,9 +1,11 @@
-import PageHorizontal from '../components/PageHorizontal';
-import CircleIconRecruiter from '../components/CircleIconRecruiter';
-import SettingForm from '../components/SettingForm';
+import React from 'react'
 
-import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
+import PageHorizontal from '../components/PageHorizontal'
+import CircleIconRecruiter from '../components/CircleIconRecruiter'
+import SettingForm from '../components/SettingForm'
+
+import Form from 'react-bootstrap/Form'
+import Col from 'react-bootstrap/Col'
 
 const OptionForm = (props) => {
   return (
@@ -15,7 +17,6 @@ const OptionForm = (props) => {
         <Col>
           <Form.Control placeholder="Current Job" />
         </Col>
-         
       </Form.Row>
       <Form.Row className="mt-2">
         <Col className="col-3">
@@ -35,8 +36,8 @@ const OptionForm = (props) => {
         </Col>
       </Form.Row>
     </div>
-  );
-};
+  )
+}
 
 const RecruiterInscription = (props) => {
   return (
@@ -50,7 +51,7 @@ const RecruiterInscription = (props) => {
         <OptionForm />
       </SettingForm>
     </PageHorizontal>
-  );
-};
+  )
+}
 
-export default RecruiterInscription;
+export default RecruiterInscription

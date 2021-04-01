@@ -1,7 +1,9 @@
-import Image from 'next/image';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Image from 'next/image'
 
 const CircleIconEg = (props) => {
-  const { src, type, txt } = props;
+  const { src, type, txt } = props
   return (
     <div className="w-25 mx-3">
       <Image
@@ -15,7 +17,18 @@ const CircleIconEg = (props) => {
         {txt}
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default CircleIconEg;
+CircleIconEg.propTypes = {
+  src: PropTypes.node
+}
+
+CircleIconEg.propTypes = {
+  type: PropTypes.node
+}
+
+CircleIconEg.propTypes = {
+  txt: PropTypes.node
+}
+export default CircleIconEg
