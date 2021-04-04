@@ -8,6 +8,7 @@ import Form from 'react-bootstrap/Form'
 
 import Logo from './Logo'
 import SignButton from './SignButton'
+import DevTool from './DevTool'
 
 import { IoIosMail, IoIosSettings } from 'react-icons/io'
 
@@ -39,6 +40,7 @@ const NavBar = (props) => {
         </Nav>
 
         <Form inline>
+          <DevTool />
           <SignButton
             href="/selectRolePage"
             variant={'outline-info'}
