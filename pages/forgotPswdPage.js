@@ -9,7 +9,7 @@ const Forgotpswd = (props) => {
     <PageHorizontal
       title="forgot password"
       pageTitle="Forgot password ?"
-      imgUrl="/people-2583442_1920.jpg"
+      imgUrl="/tools-5669031_1920.jpg"
     >
       <div>
         <h5 className="mt-3">

@@ -17,7 +17,6 @@ const ManageJob = (props) => {
         <JobThumbnail />
         <JobThumbnail />
         <JobThumbnail />
-        <JobThumbnail />
       </div>
     </PageHorizontal>
   )

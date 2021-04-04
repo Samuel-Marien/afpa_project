@@ -9,7 +9,7 @@ const NewPswd = (props) => {
     <PageHorizontal
       title="New password"
       pageTitle="New password"
-      imgUrl="/bed-1853907_1920.jpg "
+      imgUrl="/tools-5669031_1920.jpg"
     >
       <div>
         <h5>Your new password must be different from the previous one</h5>
