@@ -8,12 +8,10 @@ import Form from 'react-bootstrap/Form'
 
 import Logo from './Logo'
 import SignButton from './SignButton'
-// import MyModal from './MyModal'
 
 import { IoIosMail, IoIosSettings } from 'react-icons/io'
 
 const NavBar = (props) => {
-  // const [modalShow, setModalShow] = React.useState(false)
   return (
     <Navbar
       bg="dark"
@@ -41,12 +39,10 @@ const NavBar = (props) => {
         </Nav>
 
         <Form inline>
-          {/* <MyModal show={modalShow} onHide={() => setModalShow(false)} /> */}
           <SignButton
-            href="#"
+            href="/selectRolePage"
             variant={'outline-info'}
             className={'mr-3 p-1'}
-            // onClick={() => setModalShow(true)}
           >
             Sign Up
           </SignButton>

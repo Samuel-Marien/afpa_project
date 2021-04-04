@@ -18,7 +18,7 @@ const OptionForm = (props) => {
           <Form.Control placeholder="Current Job" />
         </Col>
       </Form.Row>
-      <Form.Row className="mt-2">
+      {/* <Form.Row className="mt-2">
         <Col className="col-3">
           <Form.Control type="number" placeholder="Age" />
         </Col>
@@ -34,7 +34,7 @@ const OptionForm = (props) => {
             <option value="3">Heu wait...</option>
           </Form.Control>
         </Col>
-      </Form.Row>
+      </Form.Row> */}
     </div>
   )
 }
@@ -44,7 +44,7 @@ const RecruiterInscription = (props) => {
     <PageHorizontal
       title="Recruiter setting"
       pageTitle="Setting"
-      imgUrl="/tools-5669031_1920.jpg"
+      imgUrl="/writing-1149962_1920.jpg"
     >
       <CircleIconRecruiter />
       <SettingForm>

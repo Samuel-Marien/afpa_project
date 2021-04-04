@@ -13,7 +13,7 @@ const Logo = (props) => {
       <a className="text-decoration-none">
         <div className="text-secondary font-weight-bold text-decoration-none text-muted d-flex align-items-center">
           <GiCondorEmblem size={size} />
-          <span className={titleStyle}>AfpA &aposLumni</span>
+          <span className={titleStyle}>AfpA&apos; Lumni</span>
         </div>
       </a>
     </Link>

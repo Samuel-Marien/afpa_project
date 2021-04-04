@@ -8,18 +8,6 @@ const MyCarousel = (props) => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="carousel/rsz_1lamp-3489395_1920.jpg"
-          alt="First slide"
-          style={{ height: '600px' }}
-        />
-        <Carousel.Caption>
-          <h3>slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
           src="carousel/rsz_keyboard-5017973_1920.jpg"
           alt="Second slide"
           style={{ height: '600px' }}

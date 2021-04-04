@@ -21,9 +21,6 @@ const SignUpForm = (props) => {
 
   return (
     <div className="text-center">
-      <a href="#" className="text-info" style={{ fontSize: '.8rem' }}>
-        change your avatar
-      </a>
       <Form
         onSubmit={handleSubmit}
         noValidate
@@ -105,9 +102,9 @@ const SignUpForm = (props) => {
           style={{ fontSize: '.8rem' }}
         />
         <p className="mt-2" style={{ fontSize: '.7rem' }}>
-          By checking &aposAgree to terms and conditions&apos, you agree to ours
-          terms and that you have read our Data Policy, incuding our Cookies
-          Use.
+          By checking &apos;Agree to terms and conditions&apos;, you agree to
+          ours terms and that you have read our Data Policy, incuding our
+          Cookies Use.
         </p>
         <Button variant="secondary" type="submit" className="w-100 mt-2 mb-2">
           Submit

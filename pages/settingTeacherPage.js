@@ -26,7 +26,7 @@ const OptionForm = (props) => {
           </Form.Control.Feedback>
         </Col>
       </Form.Row>
-      <Form.Row className="mt-2">
+      {/* <Form.Row className="mt-2">
         <Col className="col-3">
           <Form.Control type="number" placeholder="Age" />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -47,7 +47,7 @@ const OptionForm = (props) => {
             Please provide a valid Gender.
           </Form.Control.Feedback>
         </Col>
-      </Form.Row>
+      </Form.Row> */}
     </div>
   )
 }
@@ -57,7 +57,7 @@ const TeacherInscription = (props) => {
     <PageHorizontal
       title="Teacher setting"
       pageTitle="Setting"
-      imgUrl="/school-1782427_1920.jpg"
+      imgUrl="/startup-593341_1920.jpg"
     >
       <CircleIconTeacher />
       <SettingForm>

@@ -27,10 +27,10 @@ const OptionForm = (props) => {
         </Col>
       </Form.Row>
       <Form.Row className="mt-2">
-        <Col className="col-3">
+        {/* <Col className="col-3">
           <Form.Control type="number" placeholder="Age" />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-        </Col>
+        </Col> */}
         <Col className="col-4">
           <Form.Control
             as="select"
@@ -48,7 +48,7 @@ const OptionForm = (props) => {
             Please provide a valid Status.
           </Form.Control.Feedback>
         </Col>
-        <Col className="col-3">
+        {/* <Col className="col-3">
           <Form.Control
             as="select"
             id="inlineFormGenderSelect"
@@ -63,7 +63,7 @@ const OptionForm = (props) => {
           <Form.Control.Feedback type="invalid">
             Please provide a valid Gender.
           </Form.Control.Feedback>
-        </Col>
+        </Col> */}
       </Form.Row>
     </div>
   )

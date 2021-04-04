@@ -1,7 +1,7 @@
 import React from 'react'
 
 import PageHorizontal from '../components/PageHorizontal'
-import CircleIconTeacher from '../components/CircleIconTeacher'
+// import CircleIconTeacher from '../components/CircleIconTeacher'
 import SignUpForm from '../components/SignUpForm'
 
 import Col from 'react-bootstrap/Col'
@@ -26,7 +26,7 @@ const OptionForm = (props) => {
           </Form.Control.Feedback>
         </Col>
       </Form.Row>
-      <Form.Row className="mt-2">
+      {/* <Form.Row className="mt-2">
         <Col className="col-3">
           <Form.Control type="number" placeholder="Age" />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -47,7 +47,7 @@ const OptionForm = (props) => {
             Please provide a valid Gender.
           </Form.Control.Feedback>
         </Col>
-      </Form.Row>
+      </Form.Row> */}
     </div>
   )
 }
@@ -59,7 +59,7 @@ const TeacherInscription = (props) => {
       pageTitle="Sign Up"
       imgUrl="/startup-593341_1920.jpg"
     >
-      <CircleIconTeacher />
+      {/* <CircleIconTeacher /> */}
       <SignUpForm>
         <OptionForm />
       </SignUpForm>

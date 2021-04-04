@@ -1,3 +1,5 @@
+// Test compo, not yet validate
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -53,6 +55,6 @@ const MyModal = (props) => {
 }
 
 MyModal.propTypes = {
-  onHide: PropTypes.node
+  onHide: PropTypes.func
 }
 export default MyModal
