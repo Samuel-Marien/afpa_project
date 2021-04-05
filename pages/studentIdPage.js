@@ -118,8 +118,8 @@ const SkillsRange = (props) => {
 const StudentId = (props) => {
   return (
     <PageHorizontal
-      title="Student id"
-      pageTitle="Student id"
+      title="Student id setting"
+      pageTitle="Student id setting"
       imgUrl="/tools-5669031_1920.jpg"
       childrenSize="w-75"
     >
