@@ -86,9 +86,17 @@ const MyLink = (props) => {
 
 const SkillsRange = (props) => {
   return (
-    <Form.Group className="d-flex w-75 mx-3">
-      <Form.Control type="text" placeholder="html" />
-      <Form.Control as="select" className="w-50">
+    <Form.Group className="d-flex w-100">
+      <Form.Control
+        type="text"
+        placeholder="html"
+        style={{ fontSize: '.8rem' }}
+      />
+      <Form.Control
+        as="select"
+        className="w-50 p-1 pl-1"
+        style={{ fontSize: '.8rem' }}
+      >
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -100,7 +108,7 @@ const SkillsRange = (props) => {
         <option>9</option>
         <option>10</option>
       </Form.Control>
-      <Button className="d-flex text-light ml-1 btn-info">
+      <Button className="d-flex text-light ml-1 mr-3 btn-info shadow-sm">
         <ImUpload size={20} />
       </Button>
     </Form.Group>
@@ -115,8 +123,8 @@ const StudentId = (props) => {
       imgUrl="/tools-5669031_1920.jpg"
       childrenSize="w-75"
     >
-      <Form className="bg-light p-2 rounded" style={{ opacity: '.5' }}>
-        <Form.Group className="d-flex ">
+      <Form className="bg-light p-2 rounded" style={{ opacity: '.7' }}>
+        <Form.Group className="d-flex">
           <div className="d-flex flex-column align-items-center w-25">
             <Link href="/studentSignUpPage">
               <a href="#">
@@ -133,7 +141,7 @@ const StudentId = (props) => {
               </a>
             </Link>
           </div>
-          <Form.Group className="d-flex flex-column w-100">
+          <Form.Group className="d-flex flex-column w-100 mb-0">
             <MyInput type={'Name'} defaultValue={'John'} readOnly={'readOnly'}>
               <MyLink />
             </MyInput>
@@ -167,11 +175,11 @@ const StudentId = (props) => {
             </MyInput>
           </Form.Group>
         </Form.Group>
-        <Form.Group>
+        <Form.Group className="border-top">
           <MyInput
             type={'Dreaming job:'}
             placeholder={'I have a dream...'}
-            className={'bg-white shadow-sm rounded p-1'}
+            className={'bg-white shadow-sm rounded p-1 mt-3'}
           />
           <MyInput
             type={'Current job:'}
@@ -191,6 +199,47 @@ const StudentId = (props) => {
             rows={6}
           />
         </Form.Group>
+        <Form.Group className="d-flex mb-0">
+          <div className="d-flex ml-3">
+            <Form.Label className="w-25 mr-4 ">Skills:</Form.Label>
+            <div className="d-flex ml-4 ">
+              <Form.Group className="mb-0">
+                <div>
+                  <SkillsRange />
+                </div>
+                <div>
+                  <SkillsRange />
+                </div>
+                <div>
+                  <SkillsRange />
+                </div>
+              </Form.Group>
+              <Form.Group>
+                <div>
+                  <SkillsRange />
+                </div>
+                <div>
+                  <SkillsRange />
+                </div>
+                <div>
+                  <SkillsRange />
+                </div>
+              </Form.Group>
+
+              <Form.Group>
+                <div>
+                  <SkillsRange />
+                </div>
+                <div>
+                  <SkillsRange />
+                </div>
+                <div>
+                  <SkillsRange />
+                </div>
+              </Form.Group>
+            </div>
+          </div>
+        </Form.Group>
         <Form.Group>
           <MyInput
             type={'My urls:'}
@@ -204,10 +253,14 @@ const StudentId = (props) => {
             </Button>
           </MyInput>
         </Form.Group>
-        <Form.Group className="d-flex  justify-content-end">
-          <SkillsRange />
-          <SkillsRange />
-          <SkillsRange />
+        <Form.Group className="d-flex justify-content-end  border-top">
+          <Button
+            variant="outline-info"
+            type="submit"
+            className="w-25 mt-3 shadow-sm"
+          >
+            Submit
+          </Button>
         </Form.Group>
       </Form>
     </PageHorizontal>
