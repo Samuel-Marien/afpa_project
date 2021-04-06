@@ -4,6 +4,8 @@ import PageHorizontal from '../components/PageHorizontal'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
+import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
+
 const Forgotpswd = (props) => {
   return (
     <PageHorizontal
@@ -11,6 +13,9 @@ const Forgotpswd = (props) => {
       pageTitle="Forgot password ?"
       imgUrl="/tools-5669031_1920.jpg"
     >
+      <div className="mt-5 pt-5">
+        <NavBarPageHorizontal />
+      </div>
       <div>
         <h5 className="mt-3">
           Enter the email address associated with your account

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import PageHorizontal from '../components/PageHorizontal'
-// import CircleIconStudent from '../components/CircleIconStudent'
+import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
 import SignUpForm from '../components/SignUpForm'
 
 import Col from 'react-bootstrap/Col'
@@ -49,22 +49,6 @@ const OptionForm = (props) => {
             Please provide a valid Status.
           </Form.Control.Feedback>
         </Col>
-        {/* <Col className="col-3">
-          <Form.Control
-            as="select"
-            id="inlineFormGenderSelect"
-            className="text-secondary"
-          >
-            <option value="0">Gender</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-            <option value="3">Heu wait...</option>
-          </Form.Control>
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-          <Form.Control.Feedback type="invalid">
-            Please provide a valid Gender.
-          </Form.Control.Feedback>
-        </Col> */}
       </Form.Row>
     </div>
   )
@@ -77,7 +61,9 @@ const StudentInscription = (props) => {
       pageTitle="Sign Up"
       imgUrl="/students.jpg"
     >
-      {/* <CircleIconStudent /> */}
+      <div className="mt-5 pt-5">
+        <NavBarPageHorizontal />
+      </div>
       <SignUpForm>
         <OptionForm />
       </SignUpForm>

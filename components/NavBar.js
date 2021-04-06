@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Link from 'next/link'
-
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Form from 'react-bootstrap/Form'
@@ -10,7 +8,7 @@ import Logo from './Logo'
 import SignButton from './SignButton'
 import DevTool from './DevTool'
 
-import { IoIosMail, IoIosSettings } from 'react-icons/io'
+import { IoIosMail, IoIosSettings, IoIosLogOut } from 'react-icons/io'
 
 const NavBar = (props) => {
   return (
@@ -28,10 +26,7 @@ const NavBar = (props) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Link href="/">
-            <Nav.Link>Home</Nav.Link>
-          </Link>
-          <Nav.Link href="#features">
+          <Nav.Link href="#">
             <IoIosMail size={25} />
           </Nav.Link>
           <Nav.Link href="/settingStudentPage">
@@ -55,6 +50,9 @@ const NavBar = (props) => {
           >
             Sign In
           </SignButton>
+          <Nav.Link href="/settingStudentPage">
+            <IoIosLogOut size={25} className="text-danger ml-4" />
+          </Nav.Link>
         </Form>
       </Navbar.Collapse>
     </Navbar>

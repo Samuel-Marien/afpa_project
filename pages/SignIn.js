@@ -1,10 +1,12 @@
 import React from 'react'
 
+import Link from 'next/link'
+
 import PageHorizontal from '../components/PageHorizontal'
 import ConnectForm from '../components/ConnectForm'
 import Button from 'react-bootstrap/Button'
 
-import Link from 'next/link'
+import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
 
 const SignInPage = () => {
   return (
@@ -13,6 +15,9 @@ const SignInPage = () => {
       pageTitle="Sign in"
       imgUrl="/coffee-5132832_1920.jpg"
     >
+      <div className="mt-5 pt-5">
+        <NavBarPageHorizontal />
+      </div>
       <ConnectForm />
       <div className="mt-5 text-center bg-light p-3 shadow rounded">
         <h5>I have no client space</h5>

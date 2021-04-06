@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 import PageHorizontal from '../components/PageHorizontal'
+import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
 
 import { IoIosSettings } from 'react-icons/io'
 import { GiSchoolBag } from 'react-icons/gi'
@@ -123,6 +124,9 @@ const StudentId = (props) => {
       imgUrl="/tools-5669031_1920.jpg"
       childrenSize="w-75"
     >
+      <div className="mt-4 pt-4">
+        <NavBarPageHorizontal />
+      </div>
       <Form className="bg-light p-2 rounded" style={{ opacity: '.7' }}>
         <Form.Group className="d-flex">
           <div className="d-flex flex-column align-items-center w-25">
@@ -210,14 +214,8 @@ const StudentId = (props) => {
                 <div>
                   <SkillsRange />
                 </div>
-                <div>
-                  <SkillsRange />
-                </div>
               </Form.Group>
               <Form.Group>
-                <div>
-                  <SkillsRange />
-                </div>
                 <div>
                   <SkillsRange />
                 </div>
@@ -227,9 +225,6 @@ const StudentId = (props) => {
               </Form.Group>
 
               <Form.Group>
-                <div>
-                  <SkillsRange />
-                </div>
                 <div>
                   <SkillsRange />
                 </div>

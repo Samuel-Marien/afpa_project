@@ -4,6 +4,8 @@ import PageHorizontal from '../components/PageHorizontal'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
+import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
+
 const NewPswd = (props) => {
   return (
     <PageHorizontal
@@ -11,6 +13,9 @@ const NewPswd = (props) => {
       pageTitle="New password"
       imgUrl="/tools-5669031_1920.jpg"
     >
+      <div className="mt-5 pt-5">
+        <NavBarPageHorizontal />
+      </div>
       <div>
         <h5>Your new password must be different from the previous one</h5>
         <Form className="shadow p-3 rounded mt-3">

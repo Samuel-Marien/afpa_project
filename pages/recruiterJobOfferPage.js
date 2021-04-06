@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 
 import PageHorizontal from '../components/PageHorizontal'
+import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
 
 const JobOffer = (props) => {
   const { companyLogo = '/logos/logo-ibm.png' } = props
@@ -19,6 +20,9 @@ const JobOffer = (props) => {
       imgUrl="/writing-1149962_1920.jpg"
       childrenSize="w-50"
     >
+      <div className="mt-5 pt-5">
+        <NavBarPageHorizontal />
+      </div>
       <Form
         className=" bg-light p-3 rounded shadow-sm mt-4"
         style={{ opacity: '.7' }}

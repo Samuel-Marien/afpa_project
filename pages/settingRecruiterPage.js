@@ -1,11 +1,12 @@
 import React from 'react'
 
+import Form from 'react-bootstrap/Form'
+import Col from 'react-bootstrap/Col'
+
 import PageHorizontal from '../components/PageHorizontal'
 import CircleIconRecruiter from '../components/CircleIconRecruiter'
 import SettingForm from '../components/SettingForm'
-
-import Form from 'react-bootstrap/Form'
-import Col from 'react-bootstrap/Col'
+import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
 
 const OptionForm = (props) => {
   return (
@@ -18,23 +19,6 @@ const OptionForm = (props) => {
           <Form.Control placeholder="Current Job" />
         </Col>
       </Form.Row>
-      {/* <Form.Row className="mt-2">
-        <Col className="col-3">
-          <Form.Control type="number" placeholder="Age" />
-        </Col>
-        <Col className="col-3">
-          <Form.Control
-            as="select"
-            id="inlineFormGenderSelect"
-            className="text-secondary"
-          >
-            <option value="0">Gender</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-            <option value="3">Heu wait...</option>
-          </Form.Control>
-        </Col>
-      </Form.Row> */}
     </div>
   )
 }
@@ -46,6 +30,9 @@ const RecruiterInscription = (props) => {
       pageTitle="Setting"
       imgUrl="/writing-1149962_1920.jpg"
     >
+      <div className="mt-5 pt-5">
+        <NavBarPageHorizontal />
+      </div>
       <CircleIconRecruiter />
       <SettingForm>
         <OptionForm />
