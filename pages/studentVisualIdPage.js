@@ -8,6 +8,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 import Button from 'react-bootstrap/Button'
 
 import PageHorizontal from '../components/PageHorizontal'
+import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
 
 import {
   AiFillGithub,
@@ -55,6 +56,10 @@ const VisualId = (props) => {
       imgUrl="/students.jpg"
       childrenSize={'w-100'}
     >
+      <div className="mt-5 pt-5">
+        <NavBarPageHorizontal />
+      </div>
+
       <div className="bg-light p-2 d-flex rounded">
         <div className="bg-dark w-25 p-2">
           <div>
@@ -164,15 +169,11 @@ const VisualId = (props) => {
                 <MyProgressBar now={100}>html</MyProgressBar>
                 <MyProgressBar now={75}>CSS</MyProgressBar>
                 <MyProgressBar now={50}>JavaScript</MyProgressBar>
-                <MyProgressBar now={90}>C++</MyProgressBar>
-                <MyProgressBar now={30}>Java</MyProgressBar>
               </div>
               <div className="w-50 pl-3 mt-4">
                 <MyProgressBar now={80}>Node.Js</MyProgressBar>
                 <MyProgressBar now={75}>React.Js</MyProgressBar>
                 <MyProgressBar now={50}>html</MyProgressBar>
-                <MyProgressBar now={75}>Bootstrap</MyProgressBar>
-                <MyProgressBar now={75}>Figma</MyProgressBar>
               </div>
             </div>
           </div>

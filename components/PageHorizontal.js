@@ -20,7 +20,7 @@ const PageHorizontal = (props) => {
         <title>{title}</title>
       </Head>
       <div className="container d-flex flex-column align-items-center float-right">
-        <div className="align-self-end mt-3">
+        {/* <div className="align-self-end mt-3">
           <BackButton buttonTitle="retour" />
         </div>
         <div>
@@ -28,7 +28,7 @@ const PageHorizontal = (props) => {
         </div>
         <div>
           <h1 className="mt-3 font-weight-light">{pageTitle}</h1>
-        </div>
+        </div> */}
         <div className={childrenSize}>{children}</div>
       </div>
     </div>

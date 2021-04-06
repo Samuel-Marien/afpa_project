@@ -3,12 +3,12 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 
 const BackButton = (props) => {
-  const { buttonTitle } = props
+  const { className = 'btn btn-secondary', buttonTitle } = props
 
   return (
     <Link href="/">
       <a>
-        <button className="btn btn-secondary">{buttonTitle}</button>
+        <button className={className}>{buttonTitle}</button>
       </a>
     </Link>
   )
@@ -16,6 +16,10 @@ const BackButton = (props) => {
 
 BackButton.propTypes = {
   buttonTitle: PropTypes.node
+}
+
+BackButton.propTypes = {
+  className: PropTypes.string
 }
 
 export default BackButton
