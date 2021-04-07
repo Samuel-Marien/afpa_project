@@ -7,8 +7,9 @@ import Form from 'react-bootstrap/Form'
 import Logo from './Logo'
 import SignButton from './SignButton'
 import DevTool from './DevTool'
+import LogOutBut from './LogOutBut'
 
-import { IoIosMail, IoIosSettings, IoIosLogOut } from 'react-icons/io'
+import { IoIosMail, IoIosSettings } from 'react-icons/io'
 
 const NavBar = (props) => {
   return (
@@ -50,8 +51,8 @@ const NavBar = (props) => {
           >
             Sign In
           </SignButton>
-          <Nav.Link href="/settingStudentPage">
-            <IoIosLogOut size={25} className="text-danger ml-4" />
+          <Nav.Link href="#">
+            <LogOutBut />
           </Nav.Link>
         </Form>
       </Navbar.Collapse>

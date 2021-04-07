@@ -4,13 +4,9 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
 import Logo from './Logo'
+import LogOutBut from './LogOutBut'
 
-import {
-  IoIosMail,
-  IoIosSettings,
-  IoIosHome,
-  IoIosLogOut
-} from 'react-icons/io'
+import { IoIosMail, IoIosSettings, IoIosHome } from 'react-icons/io'
 
 const NavBarPageHorizontal = (props) => {
   return (
@@ -38,8 +34,8 @@ const NavBarPageHorizontal = (props) => {
             <IoIosSettings size={25} className="text-info" />
           </Nav.Link>
         </Nav>
-        <Nav.Link href="/settingStudentPage">
-          <IoIosLogOut size={25} className="text-danger" />
+        <Nav.Link href="#">
+          <LogOutBut />
         </Nav.Link>
       </Navbar.Collapse>
     </Navbar>
