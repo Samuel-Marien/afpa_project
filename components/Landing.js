@@ -9,9 +9,12 @@ import ContentCards from './ContentCards'
 import ContentMiddle from './ContentMiddle'
 import PageVertical from './PageVertical'
 
+import NavBar from './NavBar'
+
 const Landing = (props) => {
   return (
     <PageVertical title={'Landing'}>
+      <NavBar />
       <ContentTitle
         title={"Let's build the network together"}
         txt1={

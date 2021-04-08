@@ -3,21 +3,21 @@ import PropTypes from 'prop-types'
 
 import Head from 'next/head'
 
-import NavBar from './NavBar'
 import Carousel from './Carousel'
 import Footer from './Footer'
 
 const PageVertical = (props) => {
-  const { title, children } = props
+  const { title, navBarType, className, children } = props
 
   return (
     <div>
       <Head>
         <title>{title}</title>
       </Head>
-      <NavBar />
+      {navBarType}
       <Carousel />
-      {children}
+      <div className={className}>{children}</div>
+
       <Footer />
     </div>
   )
@@ -27,6 +27,13 @@ PageVertical.propTypes = {
   title: PropTypes.string
 }
 PageVertical.propTypes = {
+  className: PropTypes.string
+}
+PageVertical.propTypes = {
   children: PropTypes.node
 }
+PageVertical.propTypes = {
+  navBarType: PropTypes.node
+}
+
 export default PageVertical

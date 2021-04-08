@@ -9,8 +9,6 @@ import SignButton from './SignButton'
 import DevTool from './DevTool'
 import LogOutBut from './LogOutBut'
 
-import { IoIosMail, IoIosSettings } from 'react-icons/io'
-
 const NavBar = (props) => {
   return (
     <Navbar
@@ -26,14 +24,7 @@ const NavBar = (props) => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#">
-            <IoIosMail size={25} />
-          </Nav.Link>
-          <Nav.Link href="/settingStudentPage">
-            <IoIosSettings size={25} className="text-info" />
-          </Nav.Link>
-        </Nav>
+        <Nav className="mr-auto"></Nav>
 
         <Form inline>
           <DevTool />

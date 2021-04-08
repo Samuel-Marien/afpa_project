@@ -51,7 +51,7 @@ const Footer = (props) => {
               <MyLi href={'#'} nameLink={'Microsoft store'} />
             </ul>
             <ul className="mr-4 ">
-              <h6>Communauty</h6>
+              <h6>Community</h6>
               <MyLi href={'#'} nameLink={'Twinter'} />
               <MyLi href={'#'} nameLink={'Linkedin'} />
               <MyLi href={'#'} nameLink={'Instagram'} />
