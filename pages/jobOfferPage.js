@@ -10,8 +10,12 @@ const JobOffer = (props) => {
   return (
     <PageVertical title={'Job Offers'} className={'w-100'}>
       <NavBar2 />
-      <SearchBar />
-      <ListJob />
+      <div className="py-5" style={{ background: '#d3dde7' }}>
+        <SearchBar />
+      </div>
+      <div className="py-5" style={{ background: '#ebf0f4' }}>
+        <ListJob />
+      </div>
     </PageVertical>
   )
 }

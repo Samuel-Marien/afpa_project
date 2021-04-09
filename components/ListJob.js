@@ -7,6 +7,8 @@ import Accordion from 'react-bootstrap/Accordion'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 
+import { CgArrowRightR } from 'react-icons/cg'
+
 const MyP = (props) => {
   const { className = 'mb-1', children } = props
   return (
@@ -25,64 +27,56 @@ MyP.propTypes = {
 }
 
 const JobThumbnail = (props) => {
-  const { companyLogo = '/logos/logo-ibm.png' } = props
+  const {
+    companyLogo = '/logos/logo-ibm.png',
+    city,
+    jobNumber,
+    date,
+    keyword1,
+    keyword2,
+    keyword3,
+    typeContrat,
+    jobTitle,
+    txt
+  } = props
 
   return (
-    <div className="bg-light d-flex pr-3 pl-1 rounded shadow">
+    <li className="bg-light mt-4 d-flex flex-column flex-md-row pr-3 pl-1 rounded shadow">
       <div className="d-flex flex-column">
         <Image src={companyLogo} rounded className="p-4 " />
         <MyP className=" text-center bg-dark text-info py-2 rounded">
-          Ville de Paris, France
+          {city}
         </MyP>
       </div>
       <div className="ml-4">
         <div className="d-flex justify-content-between">
-          <MyP>job-number:666</MyP>
-          <MyP>09.03.22</MyP>
+          <MyP>{jobNumber}</MyP>
+          <MyP>{date}</MyP>
         </div>
         <div className="d-flex mb-3">
           <Badge className="mr-1" variant="warning">
-            Frontend
+            {keyword1}
           </Badge>
           <Badge className="mr-1" variant="warning">
-            React
+            {keyword2}
           </Badge>
-          <Badge variant="info">CDI</Badge>
+          <Badge className="mr-1" variant="warning">
+            {keyword3}
+          </Badge>
+          <Badge variant="info">{typeContrat}</Badge>
         </div>
 
         <div>
           <div style={{ fontSize: '.9rem' }}>
-            <h3>Frontend Junior</h3>
-
-            <Accordion defaultActiveKey="0">
-              Is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsumbeen the industry&apos;s standard dummy text ever since
-              the 1500 Issly dnting and typesetting industry. Los simpmmy text
-              of the printing and typesetting industry. Lorem Ipsum
+            <h3>{jobTitle}</h3>
+            <Accordion defaultActiveKey="1">
+              {txt.slice(0, 263)}
               <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                ...
+                <CgArrowRightR />
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="0">
-                <Card.Body>
-                  Is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry&apos;s standard dummy text
-                  ever since the 1500.Is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry&apos;s
-                  standard dummy text ever since the 1500... Is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry&apos;s standard dummy text ever since the
-                  1500.Is simply dummy text of the printing and typesetting
-                  industry. Lorem Ipsum has been the industry&apos;s standard
-                  dummy text ever since the 1500... Is simply dummy text of the
-                  printing and typesetting industry. Lorem Ipsum has been the
-                  industry&apos;s standard dummy text ever since the 1500.Is
-                  simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry&apos;s standard dummy text
-                  ever since the 1500 printing and typesetting industry. Lorem
-                  Ipsum has been the industry&apos;s standard dummy text ever
-                  since the 1500.Is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry&apos;s
-                  standard dummy text ever since the 1500.
+                <Card.Body as="div" className="p-0">
+                  {txt}
                   <div className="d-flex justify-content-end">
                     <Button
                       variant="info"
@@ -98,19 +92,129 @@ const JobThumbnail = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </li>
   )
 }
 
 JobThumbnail.propTypes = {
   companyLogo: PropTypes.string
 }
+JobThumbnail.propTypes = {
+  city: PropTypes.string
+}
+JobThumbnail.propTypes = {
+  jobNumber: PropTypes.string
+}
+JobThumbnail.propTypes = {
+  date: PropTypes.string
+}
+JobThumbnail.propTypes = {
+  keyword1: PropTypes.string
+}
+JobThumbnail.propTypes = {
+  keyword2: PropTypes.string
+}
+JobThumbnail.propTypes = {
+  keyword3: PropTypes.string
+}
+JobThumbnail.propTypes = {
+  typeContrat: PropTypes.string
+}
+JobThumbnail.propTypes = {
+  jobTitle: PropTypes.string
+}
+JobThumbnail.propTypes = {
+  txt: PropTypes.string
+}
 
 const ListJob = (props) => {
   return (
-    <div className="w-50 my-5 mx-auto">
-      <JobThumbnail />
-    </div>
+    <ul className=" my-5 mx-auto container container-fluid">
+      <JobThumbnail
+        city={'Ville de Paris, France'}
+        jobNumber={'job-number:666'}
+        date={'09.03.22'}
+        keyword1={'Frontend'}
+        keyword2={'React'}
+        typeContrat={'CDI'}
+        jobTitle={'Frontend Developper Jr'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      />
+      <JobThumbnail
+        city={'Ville de Paris, France'}
+        jobNumber={'job-number:666'}
+        date={'09.03.22'}
+        keyword1={'Frontend'}
+        keyword2={'React'}
+        typeContrat={'CDI'}
+        jobTitle={'Frontend Developper Jr'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      />
+      <JobThumbnail
+        city={'Ville de Paris, France'}
+        jobNumber={'job-number:666'}
+        date={'09.03.22'}
+        keyword1={'Frontend'}
+        keyword2={'React'}
+        typeContrat={'CDI'}
+        jobTitle={'Frontend Developper Jr'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      />
+      <JobThumbnail
+        city={'Ville de Paris, France'}
+        jobNumber={'job-number:666'}
+        date={'09.03.22'}
+        keyword1={'Frontend'}
+        keyword2={'React'}
+        typeContrat={'CDI'}
+        jobTitle={'Frontend Developper Jr'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      />
+      <JobThumbnail
+        city={'Ville de Paris, France'}
+        jobNumber={'job-number:666'}
+        date={'09.03.22'}
+        keyword1={'Frontend'}
+        keyword2={'React'}
+        typeContrat={'CDI'}
+        jobTitle={'Frontend Developper Jr'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      />
+      <JobThumbnail
+        city={'Ville de Paris, France'}
+        jobNumber={'job-number:666'}
+        date={'09.03.22'}
+        keyword1={'Frontend'}
+        keyword2={'React'}
+        typeContrat={'CDI'}
+        jobTitle={'Frontend Developper Jr'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      />
+      <JobThumbnail
+        city={'Ville de Paris, France'}
+        jobNumber={'job-number:666'}
+        date={'09.03.22'}
+        keyword1={'Frontend'}
+        keyword2={'React'}
+        typeContrat={'CDI'}
+        jobTitle={'Frontend Developper Jr'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      />
+    </ul>
   )
 }
 

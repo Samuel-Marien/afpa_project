@@ -7,14 +7,13 @@ import Carousel from './Carousel'
 import Footer from './Footer'
 
 const PageVertical = (props) => {
-  const { title, navBarType, className, children } = props
+  const { title, className, children } = props
 
   return (
     <div>
       <Head>
         <title>{title}</title>
       </Head>
-      {navBarType}
       <Carousel />
       <div className={className}>{children}</div>
 
