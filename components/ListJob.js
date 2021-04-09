@@ -6,6 +6,8 @@ import Badge from 'react-bootstrap/Badge'
 import Accordion from 'react-bootstrap/Accordion'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
+import Modal from 'react-bootstrap/Modal'
+import Form from 'react-bootstrap/Form'
 
 import { CgArrowRightR } from 'react-icons/cg'
 
@@ -27,6 +29,7 @@ MyP.propTypes = {
 }
 
 const JobThumbnail = (props) => {
+  const [modalShow, setModalShow] = React.useState(false)
   const {
     companyLogo = '/logos/logo-ibm.png',
     city,
@@ -82,9 +85,15 @@ const JobThumbnail = (props) => {
                       variant="info"
                       type="submit"
                       className="w-25 mt-4 mb-1 align-self-end"
+                      onClick={() => setModalShow(true)}
                     >
                       Contact
                     </Button>
+
+                    <ResponseModal
+                      show={modalShow}
+                      onHide={() => setModalShow(false)}
+                    />
                   </div>
                 </Card.Body>
               </Accordion.Collapse>
@@ -127,6 +136,63 @@ JobThumbnail.propTypes = {
   txt: PropTypes.string
 }
 
+const ResponseModal = (props) => {
+  const { src = '/logos/logo-ibm.png' } = props
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Image src={'/undraw_Processing_re_tbdu.svg'} style={{ opacity: '.5' }} />
+      <Modal.Header closeButton>
+        <Modal.Title
+          id="contained-modal-title-vcenter"
+          className="d-flex align-items-center"
+        >
+          <Image src={src} rounded className="p-1 " />
+          <div className="ml-3">
+            <h3 className="text-secondary ">Catch this job!</h3>
+            <h6>
+              <Badge variant="info">Job-Offer: 666</Badge>
+            </h6>
+          </div>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Control
+            readOnly
+            plaintext
+            type="text"
+            placeholder="Object Job-Offer: 666"
+          ></Form.Control>
+          <Form.Control
+            as="textarea"
+            placeholder="Your message..."
+            rows={8}
+            className={'mt-2'}
+          />
+        </Form.Group>
+      </Modal.Body>
+      <Modal.Footer className="d-flex justify-content-between">
+        <Button variant="danger" onClick={props.onHide}>
+          Back
+        </Button>
+        <Button variant="dark">Send</Button>
+      </Modal.Footer>
+    </Modal>
+  )
+}
+
+ResponseModal.propTypes = {
+  onHide: PropTypes.func
+}
+ResponseModal.propTypes = {
+  src: PropTypes.string
+}
+
 const ListJob = (props) => {
   return (
     <ul className=" my-5 mx-auto container container-fluid">
@@ -143,6 +209,7 @@ const ListJob = (props) => {
         }
       />
       <JobThumbnail
+        companyLogo={'/logos/logo-hp.png'}
         city={'Ville de Paris, France'}
         jobNumber={'job-number:666'}
         date={'09.03.22'}
@@ -155,6 +222,7 @@ const ListJob = (props) => {
         }
       />
       <JobThumbnail
+        companyLogo={'/logos/logo-google.png'}
         city={'Ville de Paris, France'}
         jobNumber={'job-number:666'}
         date={'09.03.22'}
@@ -167,6 +235,7 @@ const ListJob = (props) => {
         }
       />
       <JobThumbnail
+        companyLogo={'/logos/logo-microsoft.png'}
         city={'Ville de Paris, France'}
         jobNumber={'job-number:666'}
         date={'09.03.22'}
@@ -179,6 +248,7 @@ const ListJob = (props) => {
         }
       />
       <JobThumbnail
+        companyLogo={'/logos/logo-vector-graphics.png'}
         city={'Ville de Paris, France'}
         jobNumber={'job-number:666'}
         date={'09.03.22'}
@@ -191,6 +261,7 @@ const ListJob = (props) => {
         }
       />
       <JobThumbnail
+        companyLogo={'/logos/logo-google.png'}
         city={'Ville de Paris, France'}
         jobNumber={'job-number:666'}
         date={'09.03.22'}

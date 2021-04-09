@@ -26,7 +26,9 @@ const SearchBar = (props) => {
         </DropdownButton>
 
         <InputGroup.Append>
-          <Button variant="outline-info">search</Button>
+          <Button className="px-5" type="submit" variant="outline-info">
+            search
+          </Button>
         </InputGroup.Append>
       </InputGroup>
     </div>

@@ -14,6 +14,7 @@ const PageVertical = (props) => {
       <Head>
         <title>{title}</title>
       </Head>
+
       <Carousel />
       <div className={className}>{children}</div>
 

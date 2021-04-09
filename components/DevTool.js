@@ -38,6 +38,7 @@ const DevTool = (props) => {
       <Dropdown.Item href="/studentIdPage">student Id setting</Dropdown.Item>
       <Dropdown.Item href="/studentVisualIdPage">student Id</Dropdown.Item>
       <Dropdown.Item href="/jobOfferPage">job Offer</Dropdown.Item>
+      <Dropdown.Item href="/messagePage">message Page</Dropdown.Item>
     </DropdownButton>
   )
 }

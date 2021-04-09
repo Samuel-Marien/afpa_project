@@ -61,10 +61,10 @@ const NavBar2 = (props) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <MyLink href={'/settingStudentPage'}>
+          <MyLink href={'/messagePage'}>
             <IoIosMail size={25} />
           </MyLink>
-          <MyLink href={'/settingStudentPage'}>
+          <MyLink href={'/jobOfferPage'}>
             <IoIosBriefcase size={25} />
           </MyLink>
           <MyLink
