@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import Image from 'react-bootstrap/Image'
@@ -6,10 +6,13 @@ import Accordion from 'react-bootstrap/Accordion'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
+import Modal from 'react-bootstrap/Modal'
 
 import { CgArrowRightR } from 'react-icons/cg'
+import { IoTrash } from 'react-icons/io5'
 
 const MessageThumnail = (props) => {
+  const [show, setShow] = useState(false)
   const { src, firstName, lastName, date, txt, children } = props
 
   return (
@@ -17,7 +20,6 @@ const MessageThumnail = (props) => {
       <div className="w-25 bg-dark p-1 d-none d-lg-block rounded">
         <Image src={src} roundedCircle fluid className="border border-info" />
       </div>
-
       <div className="ml-2 flex-column flex-sm-row d-flex border border-dark rounded px-3 py-2">
         <div>
           <div className="d-flex flex-sm-column flex-row mr-5">
@@ -38,6 +40,16 @@ const MessageThumnail = (props) => {
         </div>
 
         <div className="mt-2">
+          <div className="d-flex justify-content-end mb-3">
+            <Button
+              variant="link"
+              className="p-0 m-0 text-danger"
+              onClick={() => setShow(true)}
+            >
+              <IoTrash />
+            </Button>
+          </div>
+          <MyModal show={show} onHide={() => setShow(false)} />
           <div style={{ fontSize: '.9rem' }}>
             <Accordion defaultActiveKey="1">
               {txt.slice(0, 240)}
@@ -132,6 +144,46 @@ const ResponseBlock = (props) => {
       </div>
     </div>
   )
+}
+
+const MyModal = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className="text-secondary"
+    >
+      <Modal.Header closeButton>
+        <Modal.Title
+          id="contained-modal-title-vcenter"
+          className="font-weight-bold"
+          style={{ fontSize: '.9rem' }}
+        >
+          Are you sure to delete this message ?
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <p style={{ fontSize: '.9rem' }}>
+          Are you sure you want to permanently delete this message from your
+          message list?
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide} variant="outline-info">
+          Back
+        </Button>
+        <Button variant="danger" type="submit">
+          Delete
+        </Button>
+      </Modal.Footer>
+    </Modal>
+  )
+}
+
+MyModal.propTypes = {
+  onHide: PropTypes.func
 }
 
 const ListMessage = (props) => {
