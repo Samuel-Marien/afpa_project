@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Link from 'next/link'
-
 import Card from 'react-bootstrap/Card'
 
 import { IoIosMail, IoIosEye, IoIosPersonAdd } from 'react-icons/io'
@@ -67,55 +65,100 @@ ResponseModal.propTypes = {
   src: PropTypes.string
 }
 
+const InvitModal = (props) => {
+  const { src = '/portraits/male-50.jpg' } = props
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Body>
+        <div className="w-25">
+          <Button
+            variant="outline-info"
+            className="d-flex justify-content-between align-items-center"
+          >
+            <p className="h2 mr-4">Invitation</p>
+            <Image
+              src={src}
+              roundedCircle
+              fluid
+              className="w-25 shadow border border-info m-0"
+            />
+          </Button>
+        </div>
+
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Control
+            as="textarea"
+            placeholder="Send a message with your invitation?"
+            rows={3}
+            className={'mt-2'}
+          />
+        </Form.Group>
+      </Modal.Body>
+      <Modal.Footer className="d-flex justify-content-between">
+        <Button variant="danger" onClick={props.onHide}>
+          Back
+        </Button>
+        <Button variant="outline-info">Invitation</Button>
+      </Modal.Footer>
+    </Modal>
+  )
+}
+
+InvitModal.propTypes = {
+  onHide: PropTypes.func
+}
+InvitModal.propTypes = {
+  src: PropTypes.string
+}
+
 const Thumbnail = (props) => {
   const [modalShow, setModalShow] = React.useState(false)
+  const [invitModalShow, setInvitModalShow] = React.useState(false)
+
   const { src, role, title, txt1 } = props
   return (
     <Card
       style={{ width: '16rem' }}
       className="shadow bg-dark text-light mx-4 mb-4"
     >
-      <Card.Img
-        variant="top"
-        src={src}
-        style={{ height: '230px', width: 'auto' }}
-      />
-      <Card.ImgOverlay className="p-2 d-flex flex-column">
-        <div className="d-flex justify-content-between">
-          <a
-            role="button"
-            className="text-secondary shadow px-2 rounded shadow bg-light"
-            style={{ opacity: '.6' }}
-          >
-            <IoIosMail size={25} onClick={() => setModalShow(true)} />
-          </a>
-          <a
-            role="button"
-            className="text-secondary shadow px-2 rounded shadow bg-light"
-            style={{ opacity: '.6' }}
-          >
-            <IoIosPersonAdd size={25} onClick={() => setModalShow(true)} />
-          </a>
-          <ResponseModal show={modalShow} onHide={() => setModalShow(false)} />
-          <Link href="/studentVisualIdPage">
-            <a className="text-secondary">
-              <div
-                className="px-2 ml-3 rounded shadow bg-light"
-                style={{ opacity: '.6' }}
-              >
-                <IoIosEye size={25} />
-              </div>
-            </a>
-          </Link>
-        </div>
-      </Card.ImgOverlay>
-      <Card.Body className="pt-0">
+      <Card.Img variant="top" src={src} />
+      <Card.Body className="pt-2">
         <Card.Title>{title}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">
           I&apos;m {role}
         </Card.Subtitle>
         <Card.Text>{txt1}</Card.Text>
       </Card.Body>
+
+      <Card.Footer>
+        <div className="d-flex justify-content-between">
+          <IoIosMail
+            className="text-info"
+            role="button"
+            size={25}
+            onClick={() => setModalShow(true)}
+          />
+          <IoIosPersonAdd
+            className="text-info"
+            role="button"
+            size={25}
+            onClick={() => setInvitModalShow(true)}
+          />
+          <ResponseModal show={modalShow} onHide={() => setModalShow(false)} />
+          <InvitModal
+            show={invitModalShow}
+            onHide={() => setInvitModalShow(false)}
+          />
+          <a href="/studentVisualIdPage">
+            <IoIosEye size={25} role="button" className="text-info" />
+          </a>
+        </div>
+      </Card.Footer>
     </Card>
   )
 }
