@@ -10,24 +10,12 @@ import Form from 'react-bootstrap/Form'
 import { CgArrowRightR } from 'react-icons/cg'
 
 const MessageThumnail = (props) => {
-  const {
-    avatarFace = '/portraits/female-20.jpeg',
-    firstName,
-    lastName,
-    date,
-    txt,
-    children
-  } = props
+  const { src, firstName, lastName, date, txt, children } = props
 
   return (
     <li className="mt-4 d-flex  pr-3 pl-1 rounded ">
       <div className="w-25 bg-dark p-1 d-none d-lg-block rounded">
-        <Image
-          src={avatarFace}
-          roundedCircle
-          fluid
-          className="border border-info"
-        />
+        <Image src={src} roundedCircle fluid className="border border-info" />
       </div>
 
       <div className="ml-2 flex-column flex-sm-row d-flex border border-dark rounded px-3 py-2">
@@ -35,7 +23,7 @@ const MessageThumnail = (props) => {
           <div className="d-flex flex-sm-column flex-row mr-5">
             <div className="w-50 p-1 d-sm-block d-lg-none rounded">
               <Image
-                src={avatarFace}
+                src={src}
                 roundedCircle
                 fluid
                 className="border border-info"
@@ -60,15 +48,6 @@ const MessageThumnail = (props) => {
                 <Card.Body as="div" className="p-0">
                   {txt}
                   {children}
-                  <div className="d-flex justify-content-end">
-                    <Button
-                      variant="info"
-                      type="submit"
-                      className="w-25 mt-4 mb-1 align-self-end"
-                    >
-                      Contact
-                    </Button>
-                  </div>
                 </Card.Body>
               </Accordion.Collapse>
             </Accordion>
@@ -80,7 +59,7 @@ const MessageThumnail = (props) => {
 }
 
 MessageThumnail.propTypes = {
-  avatarFace: PropTypes.string
+  src: PropTypes.string
 }
 MessageThumnail.propTypes = {
   firstName: PropTypes.string
@@ -137,10 +116,29 @@ AnswerBlock.propTypes = {
   date: PropTypes.string
 }
 
+const ResponseBlock = (props) => {
+  return (
+    <div
+      className="bg-light mt-5 p-4 border-info"
+      style={{ borderTop: '3px solid ' }}
+    >
+      <Form.Group controlId="exampleForm.ControlTextarea1">
+        <Form.Control as="textarea" rows={6} placeholder="Enter your text..." />
+      </Form.Group>
+      <div className="d-flex justify-content-end">
+        <Button variant="info" type="submit" className="w-25 align-self-end">
+          Send
+        </Button>
+      </div>
+    </div>
+  )
+}
+
 const ListMessage = (props) => {
   return (
     <ul className=" my-5 mx-auto container container-fluid">
       <MessageThumnail
+        src={'/portraits/female-20.jpeg'}
         date={'09.03.22'}
         firstName={'Janne'}
         lastName={'Doe'}
@@ -167,6 +165,187 @@ const ListMessage = (props) => {
           date={'15.03.22'}
           txt={'Sed ut perspiciatis unde  ?'}
         />
+        <ResponseBlock />
+      </MessageThumnail>
+      <MessageThumnail
+        src={'/portraits/female-69.jpg'}
+        date={'09.03.22'}
+        firstName={'Janne'}
+        lastName={'Doe'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      >
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'12.03.22'}
+          txt={
+            'Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/female-20.jpeg'}
+          date={'13.03.22'}
+          txt={
+            'Sed ut  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'15.03.22'}
+          txt={'Sed ut perspiciatis unde  ?'}
+        />
+        <ResponseBlock />
+      </MessageThumnail>
+      <MessageThumnail
+        src={'/portraits/female-102.jpg'}
+        date={'09.03.22'}
+        firstName={'Janne'}
+        lastName={'Doe'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      >
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'12.03.22'}
+          txt={
+            'Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/female-20.jpeg'}
+          date={'13.03.22'}
+          txt={
+            'Sed ut  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'15.03.22'}
+          txt={'Sed ut perspiciatis unde  ?'}
+        />
+        <ResponseBlock />
+      </MessageThumnail>
+      <MessageThumnail
+        src={'/portraits/male-6.jpg'}
+        date={'09.03.22'}
+        firstName={'Janne'}
+        lastName={'Doe'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      >
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'12.03.22'}
+          txt={
+            'Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/female-20.jpeg'}
+          date={'13.03.22'}
+          txt={
+            'Sed ut  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'15.03.22'}
+          txt={'Sed ut perspiciatis unde  ?'}
+        />
+        <ResponseBlock />
+      </MessageThumnail>
+      <MessageThumnail
+        src={'/portraits/male-24.png'}
+        date={'09.03.22'}
+        firstName={'Janne'}
+        lastName={'Doe'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      >
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'12.03.22'}
+          txt={
+            'Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/female-20.jpeg'}
+          date={'13.03.22'}
+          txt={
+            'Sed ut  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'15.03.22'}
+          txt={'Sed ut perspiciatis unde  ?'}
+        />
+        <ResponseBlock />
+      </MessageThumnail>
+      <MessageThumnail
+        src={'/portraits/male-25.jpg'}
+        date={'09.03.22'}
+        firstName={'Janne'}
+        lastName={'Doe'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      >
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'12.03.22'}
+          txt={
+            'Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/female-20.jpeg'}
+          date={'13.03.22'}
+          txt={
+            'Sed ut  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'15.03.22'}
+          txt={'Sed ut perspiciatis unde  ?'}
+        />
+        <ResponseBlock />
+      </MessageThumnail>
+      <MessageThumnail
+        src={'/portraits/male-50.jpg'}
+        date={'09.03.22'}
+        firstName={'Janne'}
+        lastName={'Doe'}
+        txt={
+          'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+        }
+      >
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'12.03.22'}
+          txt={
+            'Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/female-20.jpeg'}
+          date={'13.03.22'}
+          txt={
+            'Sed ut  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
+          }
+        />
+        <AnswerBlock
+          src={'/portraits/male-5.jpg'}
+          date={'15.03.22'}
+          txt={'Sed ut perspiciatis unde  ?'}
+        />
+        <ResponseBlock />
       </MessageThumnail>
     </ul>
   )
