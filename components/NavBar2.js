@@ -74,7 +74,7 @@ const NavBar2 = (props) => {
           >
             <IoIosContacts size={25} />
           </MyLink>
-          <MyLink href={'/settingStudentPage'} text={'People'}>
+          <MyLink href={'/directoryPage'} text={'People'}>
             <IoIosPeople size={25} />
           </MyLink>
           <MyLink href={'/settingStudentPage'} text={'Group'}>
