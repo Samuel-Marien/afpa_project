@@ -69,7 +69,7 @@ const NavBar2 = (props) => {
           </MyLink>
           <MyLink
             className={'mb-0 ml-5'}
-            href={'/settingStudentPage'}
+            href={'/networksPage'}
             text={'Networks'}
           >
             <IoIosContacts size={25} />

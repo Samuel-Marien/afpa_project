@@ -19,7 +19,7 @@ const SearchBarDirectory = (props) => {
           </InputGroup.Append>
         </InputGroup>
       </InputGroup>
-      <InputGroup className="d-flex justify-content-between align-items-start p-0">
+      <InputGroup className="w-75 d-flex justify-content-between align-items-start p-0">
         <Form.Check type="checkbox" label="All" id="" />
         <Form.Check type="checkbox" label="Student" id="" />
         <Form.Check type="checkbox" label="Alumni" id="" />

@@ -17,7 +17,7 @@ const BoardMessage = (props) => {
   return (
     <div className="border border-info p-3 rounded m-3 w-100">
       <div className="d-flex justify-content-between">
-        <p>My messages</p>
+        <p>All my contacts</p>
         <p>{totalMessage}</p>
       </div>
       <div className="d-flex justify-content-between">
@@ -48,14 +48,13 @@ BoardMessage.propTypes = {
   recruiterMessage: PropTypes.number
 }
 
-const SearchBarMessage = (props) => {
+const SearchBarNetworks = (props) => {
   return (
     <div className="w-50 d-flex mx-auto rounded shadow-sm text-light bg-dark p-2">
       <div>
         <BoardMessage />
       </div>
       <div className="ml-5 w-75 border border-info p-3 rounded m-3">
-        <h2>Mailboxes</h2>
         <InputGroup>
           <InputGroup className="mb-3 mt-3">
             <FormControl placeholder="What are you looking for?" />
@@ -78,4 +77,4 @@ const SearchBarMessage = (props) => {
   )
 }
 
-export default SearchBarMessage
+export default SearchBarNetworks
