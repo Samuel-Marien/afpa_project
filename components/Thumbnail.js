@@ -12,11 +12,11 @@ import Badge from 'react-bootstrap/Badge'
 import Button from 'react-bootstrap/Button'
 
 const ResponseModal = (props) => {
-  const { src = '/portraits/male-50.jpg' } = props
+  const { src = '/portraits/male-50.jpg', firstName, lastName } = props
   return (
     <Modal
       {...props}
-      size="lg"
+      size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -31,10 +31,14 @@ const ResponseModal = (props) => {
           className="d-flex align-items-center"
         >
           <Image src={src} roundedCircle fluid className="p-1 w-25 shadow" />
-          <div className="ml-3">
-            <h6>
-              <Badge variant="info">Recruiter</Badge>
-            </h6>
+          <div className="ml-1 d-flex flex-column">
+            <h3>
+              {firstName}John{' '}
+              <span className="text-secondary">Doe{lastName}</span>
+            </h3>
+            <Badge variant="info w-50" style={{ fontSize: '.7rem' }}>
+              Recruiter
+            </Badge>
           </div>
         </Modal.Title>
       </Modal.Header>
@@ -63,6 +67,12 @@ ResponseModal.propTypes = {
 }
 ResponseModal.propTypes = {
   src: PropTypes.string
+}
+ResponseModal.propTypes = {
+  firstName: PropTypes.string
+}
+ResponseModal.propTypes = {
+  lastName: PropTypes.string
 }
 
 const InvitModal = (props) => {
