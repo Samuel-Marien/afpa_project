@@ -15,7 +15,7 @@ const BoardMessage = (props) => {
   } = props
 
   return (
-    <div className="border border-info p-3 rounded m-3 w-100">
+    <div className="shadow p-3 rounded m-3 w-100">
       <div className="d-flex justify-content-between">
         <p>All my contacts</p>
         <p>{totalMessage}</p>
@@ -54,7 +54,8 @@ const SearchBarNetworks = (props) => {
       <div>
         <BoardMessage />
       </div>
-      <div className="ml-5 w-75 border border-info p-3 rounded m-3">
+      <div className="ml-5 w-75 shadow p-3 rounded m-3">
+        <h2>Your networks</h2>
         <InputGroup>
           <InputGroup className="mb-3 mt-3">
             <FormControl placeholder="What are you looking for?" />

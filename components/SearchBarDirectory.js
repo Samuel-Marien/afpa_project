@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form'
 
 const SearchBarDirectory = (props) => {
   return (
-    <div className="w-50 ml-5 border border-info p-3 rounded m-3 bg-dark text-light mx-auto">
+    <div className="w-50 ml-5 p-3 rounded m-3 bg-dark text-light mx-auto">
       <h2>Talent&apos;s Directory</h2>
       <InputGroup>
         <InputGroup className="mb-3 mt-3">
