@@ -8,9 +8,15 @@ import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import InputGroup from 'react-bootstrap/InputGroup'
+import Dropdown from 'react-bootstrap/Dropdown'
+import Badge from 'react-bootstrap/Badge'
+import Alert from 'react-bootstrap/Alert'
 
 import { IoTrash } from 'react-icons/io5'
 import { FiEdit } from 'react-icons/fi'
+import { ImUpload } from 'react-icons/im'
 
 const MyP = (props) => {
   const { className, children } = props
@@ -70,6 +76,7 @@ MyModal.propTypes = {
 }
 
 const MyEditModal = (props) => {
+  const [show, setShow] = useState(false)
   const { companyLogo = '/logos/logo-ibm.png' } = props
   return (
     <Modal
@@ -90,72 +97,146 @@ const MyEditModal = (props) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form
-          className=" bg-light p-3 rounded shadow mt-4"
-          style={{ opacity: '.7' }}
-        >
-          <Form.Group>
-            <Form.Row>
-              <Col
-                xs={5}
-                className="bg-white d-flex flex-column justify-content-center align-items-center shadow-sm rounded"
+        <Form.Group>
+          <Form.Row>
+            <Col
+              sm={12}
+              md={4}
+              className="bg-white d-flex flex-column justify-content-center align-items-center shadow-sm rounded"
+            >
+              <Image src={companyLogo} rounded className="p-2 m-4" />
+
+              <Link href="#">
+                <a className="text-info mt-2" style={{ fontSize: '.5rem' }}>
+                  change your company&apos;s logo?
+                </a>
+              </Link>
+            </Col>
+            <Col
+              sm={12}
+              md={5}
+              className="ml-2 mt-4 mt-md-0 text-center text-md-left"
+            >
+              <h2 className="font-bold">John doe</h2>
+              <h6>Tech Recruiter</h6>
+              <Link href="#">
+                <a className="text-info" style={{ fontSize: '.7rem' }}>
+                  Johndoe@joboffer.com
+                </a>
+              </Link>
+            </Col>
+          </Form.Row>
+        </Form.Group>
+        <Form.Group>
+          <Col className="px-0">
+            <Form.Control type="text" placeholder="Job title*" />
+          </Col>
+          <Col className="mt-2 px-0">
+            <Form.Control
+              type="text"
+              as="textarea"
+              rows={9}
+              placeholder="Description*"
+            />
+          </Col>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Row className="my-3">
+            <Col xs={12} md={4}>
+              <InputGroup>
+                <Form.Control placeholder="Key word" />
+                <InputGroup.Append>
+                  <InputGroup.Text role="button" className="text-light bg-info">
+                    <ImUpload />
+                  </InputGroup.Text>
+                </InputGroup.Append>
+              </InputGroup>
+              <h6 className="text-center">
+                <Badge variant="warning">Frontend</Badge>
+              </h6>
+            </Col>
+            <Col xs={12} md={4}>
+              <InputGroup>
+                <Form.Control placeholder="Key word" />
+                <InputGroup.Append>
+                  <InputGroup.Text role="button" className="text-light bg-info">
+                    <ImUpload />
+                  </InputGroup.Text>
+                </InputGroup.Append>
+              </InputGroup>
+              <h6 className="text-center">
+                <Badge variant="warning">React.Js</Badge>
+              </h6>
+            </Col>
+            <Col xs={12} md={4}>
+              <InputGroup>
+                <Form.Control placeholder="Key word" />
+                <InputGroup.Append>
+                  <InputGroup.Text role="button" className="text-light bg-info">
+                    <ImUpload />
+                  </InputGroup.Text>
+                </InputGroup.Append>
+              </InputGroup>
+              <h6 className="text-center">
+                <Badge variant="info">Node/Sql</Badge>
+              </h6>
+            </Col>
+          </Form.Row>
+
+          <Form.Row>
+            <Col xs={2} className="my-1">
+              <DropdownButton
+                variant="secondary"
+                title="contrat"
+                id="input-group-dropdown-1"
               >
-                <Image src={companyLogo} rounded />
-
-                <Link href="#">
-                  <a className="text-info mt-2" style={{ fontSize: '.5rem' }}>
-                    change your company&aposs logo?
-                  </a>
-                </Link>
-              </Col>
-              <Col xs={5} className="ml-2">
-                <h2 className="font-bold">John doe</h2>
-                <h6>Tech Recruiter</h6>
-                <Link href="#">
-                  <a className="text-info" style={{ fontSize: '.7rem' }}>
-                    Johndoe@joboffer.com
-                  </a>
-                </Link>
-              </Col>
-            </Form.Row>
-          </Form.Group>
-          <Form.Group>
-            <Col className="px-0">
-              <Form.Control type="text" placeholder="Job title*" />
+                <Dropdown.Item href="#">CDI</Dropdown.Item>
+                <Dropdown.Item href="#">CDD</Dropdown.Item>
+                <Dropdown.Item href="#">Stage</Dropdown.Item>
+                <Dropdown.Item href="#">Alternance</Dropdown.Item>
+              </DropdownButton>
             </Col>
-            <Col className="mt-2 px-0">
-              <Form.Control
-                type="text"
-                as="textarea"
-                rows={9}
-                placeholder="Description*"
-              />
+            <Col xs={12} md={5} className="my-1">
+              <Form.Control placeholder="City" />
             </Col>
-          </Form.Group>
+            <Col xs={12} md={5} className="my-1">
+              <Form.Control placeholder="Salary" />
+            </Col>
+          </Form.Row>
+        </Form.Group>
 
-          <Form.Group>
-            <Form.Row>
-              <Col xs={3}>
-                <Form.Control placeholder="Contrat" />
-              </Col>
-              <Col xs={5}>
-                <Form.Control placeholder="City" />
-              </Col>
-              <Col>
-                <Form.Control placeholder="Salary" />
-              </Col>
-            </Form.Row>
-          </Form.Group>
-
-          <Form.Group className="d-flex justify-content-end">
-            <Button type="submit" className="w-25 shadow bg-info">
-              Update
-            </Button>
-          </Form.Group>
-        </Form>
+        <Form.Group className="d-flex justify-content-end">
+          <Button type="submit" className="w-25 shadow bg-info">
+            Update!
+          </Button>
+        </Form.Group>
       </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide} variant="outline-info">
+      <Modal.Footer className="d-flex flex-column flex-lg-row justify-content-between">
+        <Alert show={show} variant="danger">
+          <Alert.Heading>Are you sure to delete this job?</Alert.Heading>
+          <p style={{ fontSize: '.8rem' }}>
+            Are you sure you want to permanently delete this job posting from
+            your job list?
+          </p>
+          <hr />
+          <div className="d-flex justify-content-end">
+            <Button
+              onClick={() => setShow(false)}
+              variant="outline-danger w-100"
+            >
+              Delete this job!
+            </Button>
+          </div>
+        </Alert>
+
+        {!show && (
+          <Button variant="outline-danger" onClick={() => setShow(true)}>
+            Delete this job
+          </Button>
+        )}
+
+        <Button onClick={props.onHide} variant="outline-info w-25">
           Back
         </Button>
       </Modal.Footer>
@@ -176,13 +257,13 @@ const JobThumbnail = (props) => {
   const { companyLogo = '/logos/logo-ibm.png' } = props
 
   return (
-    <div className="bg-light mt-4 p-3 d-flex rounded shadow">
-      <div className=" d-flex flex-column justify-content-start">
+    <div className="bg-light mt-4 p-3 d-flex flex-column flex-sm-row rounded shadow">
+      <div className="d-flex flex-column justify-content-start">
         <Image src={companyLogo} rounded />
         <MyP className="mt-2">Ville de Paris, France</MyP>
       </div>
       <div className="ml-4">
-        <div className="d-flex justify-content-between">
+        <div className="border-bottom border-info mb-2 d-flex justify-content-between align-items-baseline">
           <MyP>job-number:666</MyP>
           <MyP>09.03.22</MyP>
           <div className="d-flex">
