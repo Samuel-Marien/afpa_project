@@ -14,8 +14,17 @@ const PageVertical = (props) => {
       <Head>
         <title>{title}</title>
       </Head>
-
-      <Carousel />
+      <div className="d-none d-md-block">
+        <Carousel />
+      </div>
+      <div>
+        <img
+          className="w-100 d-block d-md-none"
+          src="carousel/rsz_keyboard-5017973_1920.jpg"
+          alt="Fourd slide"
+          style={{ height: '300px' }}
+        />
+      </div>
       <div className={className}>{children}</div>
 
       <Footer />

@@ -14,7 +14,7 @@ const NavBar = (props) => {
     <Navbar
       bg="dark"
       variant="dark"
-      className="m-0 py-0"
+      className="mb-2 py-0"
       expand="lg"
       fixed="top"
       style={{ opacity: '.9' }}
@@ -26,7 +26,7 @@ const NavBar = (props) => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto"></Nav>
 
-        <Form inline>
+        <Form inline className="d-flex  align-items-start">
           <DevTool />
           <SignButton
             href="/selectRolePage"

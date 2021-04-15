@@ -24,18 +24,18 @@ const Landing = (props) => {
           "So that the Afpa community can act on the world, let's get involved together!"
         }
         option={
-          <div className="mt-5">
+          <div className="mt-5 w-50 mx-auto d-flex flex-column flex-md-row justify-content-around">
             <SignButton
               href="/selectRolePage"
               variant={'outline-info'}
-              className={'px-5 mr-5 shadow'}
+              className={'px-4 shadow'}
             >
               Sign Up
             </SignButton>
             <SignButton
               href={'/SignIn'}
               variant={'outline-secondary'}
-              className={'px-5 shadow'}
+              className={'px-4 shadow mt-3 mt-md-0'}
             >
               Sign In
             </SignButton>
