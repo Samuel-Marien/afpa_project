@@ -14,8 +14,8 @@ const SignInPage = () => {
       <div className="mt-5 pt-5">
         <NavBar />
       </div>
-      <div className="bg-light p-4 rounded shadow">
-        <div className="d-flex justify-content-center h1 border-bottom border-info pb-3 mb-3">
+      <div className="bg-light p-4 rounded shadow my-3 my-md-1">
+        <div className="d-flex justify-content-center h2 border-bottom border-info pb-3 mb-3">
           Sign-In
         </div>
         <ConnectForm />

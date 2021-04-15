@@ -6,8 +6,7 @@ import Head from 'next/head'
 const PageHorizontal = (props) => {
   const { title, pageTitle, imgUrl, childrenSize = 'mt-2', children } = props
   return (
-    <body
-      // <div
+    <div
       className="text-secondary"
       style={{
         backgroundImage: `url(${imgUrl})`,
@@ -21,7 +20,7 @@ const PageHorizontal = (props) => {
         <h1 className="text-dark">{pageTitle}</h1>
         <div className={childrenSize}>{children}</div>
       </div>
-    </body>
+    </div>
   )
 }
 

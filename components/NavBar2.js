@@ -68,7 +68,7 @@ const NavBar2 = (props) => {
             <IoIosBriefcase size={25} />
           </MyLink>
           <MyLink
-            className={'mb-0 ml-5'}
+            className={'mb-0 ml-0 ml-md-5'}
             href={'/networksPage'}
             text={'Networks'}
           >
