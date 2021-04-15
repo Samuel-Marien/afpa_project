@@ -16,7 +16,7 @@ const PageHorizontal = (props) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="container d-flex flex-column align-items-center float-right">
+      <div className="container d-flex flex-column align-items-center">
         <h1 className="text-dark">{pageTitle}</h1>
         <div className={childrenSize}>{children}</div>
       </div>

@@ -25,17 +25,17 @@ const SignUpForm = (props) => {
         onSubmit={handleSubmit}
         noValidate
         validated={validated}
-        className="w-75 m-auto shadow rounded bg-light p-2"
+        className="m-auto shadow rounded bg-light p-2"
       >
         <Form.Row className="mt-1">
-          <Col>
+          <Col xs={12} sm={6}>
             <Form.Control placeholder="First name*" required />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               Please provide a valid First name.
             </Form.Control.Feedback>
           </Col>
-          <Col>
+          <Col xs={12} sm={6}>
             <Form.Control placeholder="Last name*" required />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
@@ -44,7 +44,7 @@ const SignUpForm = (props) => {
           </Col>
         </Form.Row>
         <Form.Row className="mt-2">
-          <Col>
+          <Col xs={12} sm={6}>
             <Form.Control type="email" placeholder="Enter email*" required />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
@@ -56,7 +56,7 @@ const SignUpForm = (props) => {
           </Col>
         </Form.Row>
         {children}
-        <Form.Group className="mt-4 mb-0 d-flex justify-content-between">
+        <Form.Group className="mt-4 mb-0 d-flex flex-column flex-sm-row justify-content-between">
           <Form.Group
             className="d-flex flex-column"
             controlId="formBasicPassword"
