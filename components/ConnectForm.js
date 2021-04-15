@@ -21,7 +21,7 @@ const ConnectForm = (props) => {
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
       <div className="d-flex justify-content-between">
-        <Button variant="secondary" type="submit">
+        <Button variant="info" type="submit">
           Submit
         </Button>
         <Form.Text className="align-self-end">
