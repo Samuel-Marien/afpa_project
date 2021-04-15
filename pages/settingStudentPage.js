@@ -3,7 +3,7 @@ import React from 'react'
 import PageHorizontal from '../components/PageHorizontal'
 import CircleIconStudent from '../components/CircleIconStudent'
 import SettingForm from '../components/SettingForm'
-import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
+import NavBar2 from '../components/NavBar2'
 
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
@@ -12,7 +12,7 @@ const OptionForm = (props) => {
   return (
     <div>
       <Form.Row className="mt-2">
-        <Col>
+        <Col xs={12} sm={6}>
           <Form.Control placeholder="Afpa center" />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
@@ -28,7 +28,7 @@ const OptionForm = (props) => {
         </Col>
       </Form.Row>
       <Form.Row className="mt-2">
-        <Col className="col-4">
+        <Col xs={12} sm={6}>
           <Form.Control
             as="select"
             id="inlineFormStatusSelect"
@@ -52,18 +52,19 @@ const OptionForm = (props) => {
 
 const StudentInscription = (props) => {
   return (
-    <PageHorizontal
-      title="Student setting"
-      pageTitle="Setting"
-      imgUrl="/students.jpg"
-    >
+    <PageHorizontal title="Student setting" imgUrl="/students.jpg">
       <div className="mt-5 pt-5">
-        <NavBarPageHorizontal />
+        <NavBar2 />
       </div>
-      <CircleIconStudent />
-      <SettingForm>
-        <OptionForm />
-      </SettingForm>
+      <div className="bg-light p-4 rounded shadow my-3 my-md-1">
+        <div className="d-flex justify-content-center h2 border-bottom border-info pb-3 mb-3">
+          Settings
+        </div>
+        <CircleIconStudent />
+        <SettingForm>
+          <OptionForm />
+        </SettingForm>
+      </div>
     </PageHorizontal>
   )
 }
