@@ -22,7 +22,7 @@ const SettingForm = (props) => {
   }
 
   return (
-    <div className="text-center">
+    <div className="text-center container">
       <a href="#" className="text-info" style={{ fontSize: '.8rem' }}>
         change your avatar
       </a>
@@ -30,10 +30,10 @@ const SettingForm = (props) => {
         onSubmit={handleSubmit}
         noValidate
         validated={validated}
-        className="w-75 m-auto shadow rounded bg-light p-2"
+        className="w-100 m-auto shadow rounded bg-light p-3"
       >
         <Form.Row className="mt-1">
-          <Col>
+          <Col xs={12} sm={6}>
             <Form.Control placeholder="First name" />
           </Col>
           <Col>
@@ -41,7 +41,7 @@ const SettingForm = (props) => {
           </Col>
         </Form.Row>
         <Form.Row className="mt-2">
-          <Col>
+          <Col xs={12} sm={6}>
             <Form.Control type="email" placeholder="Enter email" />
           </Col>
           <Col>
@@ -54,7 +54,7 @@ const SettingForm = (props) => {
             Change password
           </Button>
         </Link>
-        <Button variant="secondary" type="submit" className="w-100 mt-2 mb-2">
+        <Button variant="info" type="submit" className="w-100 mt-2 mb-2">
           Update
         </Button>
       </Form>
