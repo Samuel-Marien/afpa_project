@@ -41,10 +41,10 @@ const Footer = (props) => {
   return (
     <div className="bg-dark text-light d-flex justify-content-center p-3">
       <div className="w-75 d-flex flex-column">
-        <div className=" d-flex justify-content-between py-5 border-bottom border-info mb-5 mt-2">
+        <div className=" d-flex flex-column flex-md-row justify-content-between py-5 border-bottom border-info mb-5 mt-2">
           <Logo size={80} titleStyle="h1 font-weight-bold ml-3" />
-          <div className="d-flex justify-content-between">
-            <ul className="mr-4 ">
+          <div className="d-flex justify-content-between mt-5 mt-md-0">
+            <ul className="mr-4">
               <h6>Mobile App</h6>
               <MyLi href={'#'} nameLink={'App store'} />
               <MyLi href={'#'} nameLink={'Goole play'} />
@@ -65,7 +65,7 @@ const Footer = (props) => {
             </ul>
           </div>
         </div>
-        <div className="text-secondary d-flex justify-content-between">
+        <div className="text-secondary d-flex flex-column flex-md-row justify-content-between">
           <p>© Afpa ‘Lumni’IT 2021. We love our users!</p>
           <div className="text-secondary d-flex justify-content-between">
             <p className="mr-3">Follow us !</p>

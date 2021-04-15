@@ -6,7 +6,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 const ContentCards = (props) => {
   return (
     <Jumbotron className="mt-5">
-      <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center">
+      <div className="d-flex flex-column flex-xl-row justify-content-center align-items-center">
         <div className="d-flex flex-column  flex-sm-row">
           <Thumbnail
             src={'/portraits/male-50.jpg'}

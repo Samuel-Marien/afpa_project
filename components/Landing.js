@@ -80,18 +80,18 @@ const Landing = (props) => {
           'Keeping the link with the alumni is a beneficial mission for all. Students are guided and their professional integration promoted. Alumni, on the other hand, acquire their future collaborator and are part of a real network of professionals. Finally, the school can only encourage this initiative to find qualified speakers and improve its brand image. Tempted by the project?'
         }
         option={
-          <div className="my-5">
+          <div className="mt-5 mb-5 w-50 mx-auto d-flex flex-column flex-md-row justify-content-around">
             <SignButton
               href="/selectRolePage"
               variant={'outline-info'}
-              className={'px-5 mr-5 shadow'}
+              className={'px-4 shadow'}
             >
               Sign Up
             </SignButton>
             <SignButton
               href={'/SignIn'}
               variant={'outline-secondary'}
-              className={'px-5 shadow'}
+              className={'px-4 shadow mt-3 mt-md-0'}
             >
               Sign In
             </SignButton>
