@@ -43,15 +43,24 @@ const Landing = (props) => {
         }
       />
       <JumberRole />
-      <MiddleCarousel
-        src={'/businessmen.jpg'}
-        alt={'cooperation picture'}
-        src1={'/work-5382501_1920.jpg'}
-        alt1={'cooperation picture'}
-        src2={'/hong-kong-1990268_1920.jpg'}
-        alt2={'cooperation picture'}
-      />
-
+      <div className="d-none d-md-block">
+        <MiddleCarousel
+          src={'/businessmen.jpg'}
+          alt={'cooperation picture'}
+          src1={'/work-5382501_1920.jpg'}
+          alt1={'cooperation picture'}
+          src2={'/hong-kong-1990268_1920.jpg'}
+          alt2={'cooperation picture'}
+        />
+      </div>
+      <div>
+        <img
+          className="w-100 d-block d-md-none"
+          src="/hong-kong-1990268_1920.jpg"
+          alt="Fourd slide"
+          style={{ height: '250px' }}
+        />
+      </div>
       <ContentMiddle
         title={'The Alumni network from yesterday to today'}
         txt1={
