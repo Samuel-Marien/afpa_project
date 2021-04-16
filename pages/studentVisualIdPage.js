@@ -8,7 +8,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 import Button from 'react-bootstrap/Button'
 
 import PageHorizontal from '../components/PageHorizontal'
-import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
+import NavBar2 from '../components/NavBar2'
 
 import {
   AiFillGithub,
@@ -50,19 +50,14 @@ MyProgressBar.propTypes = {
 
 const VisualId = (props) => {
   return (
-    <PageHorizontal
-      title="Student Id"
-      // pageTitle="Student Id"
-      imgUrl="/students.jpg"
-      childrenSize={'w-100'}
-    >
+    <PageHorizontal title="Student Id" imgUrl="/students.jpg">
       <div className="mt-5 pt-5">
-        <NavBarPageHorizontal />
+        <NavBar2 />
       </div>
 
-      <div className="bg-light p-2 d-flex rounded">
-        <div className="bg-dark w-25 p-2">
-          <div>
+      <div className=" bg-light shadow d-flex flex-column flex-lg-row rounded">
+        <div className="bg-dark px-2">
+          <div className="container fluid d-flex justify-content-center pt-2">
             <Image
               src="/portraits/female-102.jpg"
               roundedCircle
@@ -71,69 +66,95 @@ const VisualId = (props) => {
             />
           </div>
 
-          <div className="mt-4">
+          <div className="mt-4 mb-2">
             <Link href="#">
-              <a className="text-info">
-                <IoIosMail size={23} />
-                <span className="ml-2">john_doe@doe.com</span>
+              <a className="text-info d-flex">
+                <IoIosMail size={15} />
+                <span className="ml-2" style={{ fontSize: '.8rem' }}>
+                  john_doe@doe.com
+                </span>
               </a>
             </Link>
-            <p className="text-info">
-              <AiOutlinePhone size={25} />
-              <span className="ml-2">06.06.06.06.06</span>
+            <p className="text-info d-flex">
+              <AiOutlinePhone size={15} />
+              <span className="ml-2" style={{ fontSize: '.8rem' }}>
+                06.06.06.06.06
+              </span>
             </p>
             <div className="border-top border-info pt-3">
               <Link href="#">
-                <a className="text-info">
-                  <AiFillGithub size={25} />
-                  <span className="ml-2">gitub.com/john_doe</span>
+                <a className="text-info d-flex">
+                  <AiFillGithub size={15} />
+                  <span className="ml-2" style={{ fontSize: '.8rem' }}>
+                    gitub.com/john_doe
+                  </span>
                 </a>
               </Link>
             </div>
             <div className="mt-2">
               <Link href="#">
-                <a className="text-info">
-                  <AiFillTwitterCircle size={25} />
-                  <span className="ml-2">twitter.com/john_doe</span>
+                <a className="text-info d-flex">
+                  <AiFillTwitterCircle size={15} />
+                  <span className="ml-2" style={{ fontSize: '.8rem' }}>
+                    twitter.com/john_doe
+                  </span>
                 </a>
               </Link>
             </div>
             <div className="mt-2">
               <Link href="#">
-                <a className="text-info">
-                  <AiFillLinkedin size={25} />
-                  <span className="ml-2">linkedin.com/john_doe</span>
+                <a className="text-info d-flex">
+                  <AiFillLinkedin size={15} />
+                  <span className="ml-2" style={{ fontSize: '.8rem' }}>
+                    linkedin.com/john_doe
+                  </span>
                 </a>
               </Link>
             </div>
           </div>
         </div>
-        <div className=" bg-secondary text-light w-75 p-2 ">
+        <div className=" bg-secondary text-light p-2 ">
           <div>
-            <h1
-              className="font-weight-bold mb-0 text-dark d-flex justify-content-center align-items-baseline"
-              style={{ fontSize: '7rem' }}
-            >
-              John{' '}
-              <span
-                className="font-weight-light text-light"
+            <div className="d-none d-md-block">
+              <h1
+                className="font-weight-bold mb-0 text-dark d-flex justify-content-center align-items-baseline"
+                style={{ fontSize: '7rem' }}
+              >
+                Janne
+                <span
+                  className="font-weight-light text-light"
+                  style={{ fontSize: '4rem' }}
+                >
+                  Doe
+                </span>
+              </h1>
+            </div>
+            <div className="d-block d-md-none">
+              <h1
+                className="font-weight-bold mb-0 text-dark d-flex justify-content-center align-items-baseline"
                 style={{ fontSize: '4rem' }}
               >
-                Doe
-              </span>
-            </h1>
+                Janne
+                <span
+                  className="font-weight-light text-light"
+                  style={{ fontSize: '2rem' }}
+                >
+                  Doe
+                </span>
+              </h1>
+            </div>
             <h6 className="d-flex justify-content-center">
-              Is simply dummy text of the printing and typesetting industry.
+              Is simply dummy text of the printing industry.
             </h6>
             <h2 className="text-dark d-flex justify-content-center font-weight-bold mb-5">
               Looking for fullstack job
             </h2>
             <h2
-              className="font-weight-bold text-info"
+              className="font-weight-bold text-info d-none d-md-block"
               style={{
                 fontSize: '2rem',
                 position: 'absolute',
-                transform: 'rotate(-90deg) translateY(-80%) translateX(-55px)'
+                transform: 'rotate(-90deg) translateY(-120%) translateX(-45px)'
               }}
             >
               Who{' '}
@@ -145,7 +166,7 @@ const VisualId = (props) => {
               </span>
             </h2>
             <div className="d-flex justify-content-center">
-              <p className="w-75 ">
+              <p className="w-100 pl-0 pl-md-5">
                 Is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry&apos;s standard dummy text
                 ever since the 1500. Is simply dummy text of the printing and
@@ -162,15 +183,17 @@ const VisualId = (props) => {
               style={{ transform: 'translateY(35%)' }}
               className=" bg-secondary w-25 border-right border-left border-info rounded align-self-center"
             >
-              <h2 className="text-center text-dark font-weight-bold">Skills</h2>
+              <h2 className="text-center text-dark font-weight-bold h3">
+                Skills
+              </h2>
             </div>
-            <div className="d-flex justify-content-between border-top border-info">
-              <div className="w-50 pr-3 mt-4">
+            <div className="container d-flex flex-column flex-md-row justify-content-between border-top border-info">
+              <div className="w-100 pr-0 pr-md-3 mt-4">
                 <MyProgressBar now={100}>html</MyProgressBar>
                 <MyProgressBar now={75}>CSS</MyProgressBar>
                 <MyProgressBar now={50}>JavaScript</MyProgressBar>
               </div>
-              <div className="w-50 pl-3 mt-4">
+              <div className="w-100 pl-0 pl-md-3 mt-0 mt-md-4">
                 <MyProgressBar now={80}>Node.Js</MyProgressBar>
                 <MyProgressBar now={75}>React.Js</MyProgressBar>
                 <MyProgressBar now={50}>html</MyProgressBar>
