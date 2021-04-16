@@ -1,7 +1,7 @@
 import React from 'react'
 
 import PageHorizontal from '../components/PageHorizontal'
-import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
+import NavBar from '../components/NavBar'
 import SignUpForm from '../components/SignUpForm'
 
 import Col from 'react-bootstrap/Col'
@@ -11,7 +11,7 @@ const OptionForm = (props) => {
   return (
     <div>
       <Form.Row className="mt-2">
-        <Col>
+        <Col xs={12} sm={6}>
           <Form.Control placeholder="Afpa center*" required />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
@@ -34,15 +34,19 @@ const TeacherInscription = (props) => {
   return (
     <PageHorizontal
       title="Teacher Inscription"
-      pageTitle="Sign Up"
       imgUrl="/startup-593341_1920.jpg"
     >
       <div className="mt-5 pt-5">
-        <NavBarPageHorizontal />
+        <NavBar />
       </div>
-      <SignUpForm>
-        <OptionForm />
-      </SignUpForm>
+      <div className="bg-transaparent p-4 rounded shadow my-3 my-md-1">
+        <div className="d-flex justify-content-center h2 border-bottom border-info pb-3 mb-3">
+          Sign Up
+        </div>
+        <SignUpForm>
+          <OptionForm />
+        </SignUpForm>
+      </div>
     </PageHorizontal>
   )
 }

@@ -5,9 +5,11 @@ import Link from 'next/link'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import InputGroup from 'react-bootstrap/InputGroup'
+import Col from 'react-bootstrap/Col'
 
 import PageHorizontal from '../components/PageHorizontal'
-import NavBarPageHorizontal from '../components/NavBarPageHorizontal'
+import NavBar2 from '../components/NavBar2'
 
 import { IoIosSettings } from 'react-icons/io'
 import { GiSchoolBag } from 'react-icons/gi'
@@ -24,9 +26,10 @@ const MyInput = (props) => {
     rows,
     children
   } = props
+
   return (
     <div className="d-flex align-items-center">
-      <Form.Label column sm="3">
+      <Form.Label column lg="3" className="d-none d-lg-block">
         {type}
       </Form.Label>
       <Form.Control
@@ -34,7 +37,7 @@ const MyInput = (props) => {
         readOnly={readOnly}
         defaultValue={defaultValue}
         className={className}
-        placeholder={placeholder}
+        placeholder={placeholder || type}
         as={as}
         rows={rows}
       />
@@ -42,7 +45,7 @@ const MyInput = (props) => {
     </div>
   )
 }
-
+console.log(MyInput)
 MyInput.propTypes = {
   type: PropTypes.string
 }
@@ -87,17 +90,13 @@ const MyLink = (props) => {
 
 const SkillsRange = (props) => {
   return (
-    <Form.Group className="d-flex w-100">
-      <Form.Control
-        type="text"
-        placeholder="html"
-        style={{ fontSize: '.8rem' }}
-      />
-      <Form.Control
+    <InputGroup className="w-100 my-1">
+      <Form.Control type="text" placeholder="Skills" />
+      <InputGroup.Append
         as="select"
-        className="w-50 p-1 pl-1"
-        style={{ fontSize: '.8rem' }}
+        className="text-info border-left-0 border-info bg-dark rounded"
       >
+        <option>0</option>
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -108,156 +107,201 @@ const SkillsRange = (props) => {
         <option>8</option>
         <option>9</option>
         <option>10</option>
-      </Form.Control>
-      <Button className="d-flex text-light ml-1 mr-3 btn-info shadow-sm">
-        <ImUpload size={20} />
-      </Button>
-    </Form.Group>
+      </InputGroup.Append>
+    </InputGroup>
+  )
+}
+
+const UpLoadUrl = (props) => {
+  return (
+    <InputGroup className="w-100 my-1">
+      <Form.Control type="text" placeholder="twitter, github..." />
+      <InputGroup.Append role="button" className="text-info rounded">
+        <Button className="d-flex text-light btn-info">
+          <ImUpload size={15} />
+        </Button>
+      </InputGroup.Append>
+    </InputGroup>
   )
 }
 
 const StudentId = (props) => {
   return (
-    <PageHorizontal
-      title="Student id setting"
-      pageTitle="Student id setting"
-      imgUrl="/tools-5669031_1920.jpg"
-      childrenSize="w-75"
-    >
+    <PageHorizontal title="Student id setting" imgUrl="/tools-5669031_1920.jpg">
       <div className="mt-4 pt-4">
-        <NavBarPageHorizontal />
+        <NavBar2 />
       </div>
-      <Form className="bg-light p-2 rounded" style={{ opacity: '.7' }}>
-        <Form.Group className="d-flex">
-          <div className="d-flex flex-column align-items-center w-25">
-            <Link href="/studentSignUpPage">
-              <a href="#">
-                <GiSchoolBag
-                  size="100"
-                  className="rounded-circle text-secondary shadow"
-                />
-                <p
-                  style={{ fontSize: '.6rem' }}
-                  className="text-secondary text-center"
-                >
-                  change your photo
-                </p>
-              </a>
-            </Link>
-          </div>
-          <Form.Group className="d-flex flex-column w-100 mb-0">
-            <MyInput type={'Name'} defaultValue={'John'} readOnly={'readOnly'}>
-              <MyLink />
-            </MyInput>
-            <MyInput
-              type={'First name'}
-              defaultValue={'Doe'}
-              readOnly={'readOnly'}
-            >
-              <MyLink />
-            </MyInput>
-            <MyInput
-              type={'email'}
-              defaultValue={'john.doe@example.com'}
-              readOnly={'readOnly'}
-            >
-              <MyLink />
-            </MyInput>
-            <MyInput
-              type={'Phone'}
-              defaultValue={'06.06.06.06.06'}
-              readOnly={'readOnly'}
-            >
-              <MyLink />
-            </MyInput>
-            <MyInput
-              type={'Speciality'}
-              defaultValue={'Frontend/React/Node.Js'}
-              readOnly={'readOnly'}
-            >
-              <MyLink />
-            </MyInput>
-          </Form.Group>
-        </Form.Group>
-        <Form.Group className="border-top">
-          <MyInput
-            type={'Dreaming job:'}
-            placeholder={'I have a dream...'}
-            className={'bg-white shadow-sm rounded p-1 mt-3'}
-          />
-          <MyInput
-            type={'Current job:'}
-            placeholder={'Frontend engineer/Afpa...'}
-            className={'bg-white shadow-sm rounded p-1'}
-          />
-          <MyInput
-            type={'Citation:'}
-            placeholder={'in a few words...'}
-            className={'bg-white shadow-sm rounded p-1'}
-          />
-          <MyInput
-            type={'Presentation:'}
-            placeholder={'About you...'}
-            className={'bg-white shadow-sm rounded p-1'}
-            as="textarea"
-            rows={6}
-          />
-        </Form.Group>
-        <Form.Group className="d-flex mb-0">
-          <div className="d-flex ml-3">
-            <Form.Label className="w-25 mr-4 ">Skills:</Form.Label>
-            <div className="d-flex ml-4 ">
-              <Form.Group className="mb-0">
-                <div>
-                  <SkillsRange />
-                </div>
-                <div>
-                  <SkillsRange />
-                </div>
-              </Form.Group>
-              <Form.Group>
-                <div>
-                  <SkillsRange />
-                </div>
-                <div>
-                  <SkillsRange />
-                </div>
-              </Form.Group>
-
-              <Form.Group>
-                <div>
-                  <SkillsRange />
-                </div>
-                <div>
-                  <SkillsRange />
-                </div>
-              </Form.Group>
+      <div className="bg-transparent p-1 p-sm-4 px-lg-5 rounded shadow my-4 my-md-1">
+        <div className="d-flex justify-content-center h2 border-bottom border-info pb-3 mb-3">
+          Student id setting
+        </div>
+        <Form className="bg-light p-2 rounded">
+          <Form.Group className="d-flex flex-column flex-sm-row align-items-center">
+            <div className="d-flex flex-column align-items-center w-25 mr-3">
+              <Link href="/studentSignUpPage">
+                <a href="#" className="">
+                  <GiSchoolBag
+                    size="100"
+                    className="rounded-circle text-secondary shadow "
+                  />
+                  <p
+                    style={{ fontSize: '.6rem' }}
+                    className="text-secondary text-center"
+                  >
+                    change your photo
+                  </p>
+                </a>
+              </Link>
             </div>
-          </div>
-        </Form.Group>
-        <Form.Group>
-          <MyInput
-            type={'My urls:'}
-            placeholder={'jonh_do@twitter'}
-            className={'bg-white shadow-sm rounded p-1 w-75'}
-          >
-            <Button className="d-flex text-light ml-4 px-4 btn-info">
-              <ImUpload size={20} className="mr-2" />
-              Up!
-              <ImUpload size={20} className="ml-2" />
+            <Form.Group className="d-flex flex-column w-100 mb-0">
+              <div className="d-none d-lg-block">
+                <MyInput
+                  type={'Name'}
+                  defaultValue={'John'}
+                  readOnly={'readOnly'}
+                >
+                  <MyLink />
+                </MyInput>
+                <MyInput
+                  type={'First name'}
+                  defaultValue={'Doe'}
+                  readOnly={'readOnly'}
+                >
+                  <MyLink />
+                </MyInput>
+                <MyInput
+                  type={'email'}
+                  defaultValue={'john.doe@example.com'}
+                  readOnly={'readOnly'}
+                >
+                  <MyLink />
+                </MyInput>
+                <MyInput
+                  type={'Phone'}
+                  defaultValue={'06.06.06.06.06'}
+                  readOnly={'readOnly'}
+                >
+                  <MyLink />
+                </MyInput>
+                <MyInput
+                  type={'Speciality'}
+                  defaultValue={'Frontend/React/Node.Js'}
+                  readOnly={'readOnly'}
+                >
+                  <MyLink />
+                </MyInput>
+              </div>
+
+              <div className="d-block d-lg-none">
+                <MyInput defaultValue={'John'} readOnly={'readOnly'}>
+                  <MyLink />
+                </MyInput>
+                <MyInput defaultValue={'Doe'} readOnly={'readOnly'}>
+                  <MyLink />
+                </MyInput>
+                <MyInput
+                  defaultValue={'john.doe@example.com'}
+                  readOnly={'readOnly'}
+                >
+                  <MyLink />
+                </MyInput>
+                <MyInput defaultValue={'06.06.06.06.06'} readOnly={'readOnly'}>
+                  <MyLink />
+                </MyInput>
+                <MyInput
+                  defaultValue={'Frontend/React/Node.Js'}
+                  readOnly={'readOnly'}
+                >
+                  <MyLink />
+                </MyInput>
+              </div>
+            </Form.Group>
+          </Form.Group>
+
+          <Form.Group className="border-top">
+            <MyInput
+              type={'Dreaming job:'}
+              placeholder={'I have a dream...'}
+              className={'bg-white shadow-sm rounded p-1 mt-3'}
+            />
+            <MyInput
+              type={'Current job:'}
+              placeholder={'Current job...'}
+              className={'bg-white shadow-sm rounded p-1 mt-2'}
+            />
+            <MyInput
+              type={'Citation:'}
+              placeholder={'in a few words...'}
+              className={'bg-white shadow-sm rounded p-1 mt-2'}
+            />
+            <MyInput
+              type={'You are:'}
+              placeholder={'About you...'}
+              className={'bg-white shadow-sm rounded p-1 mt-2'}
+              as="textarea"
+              rows={6}
+            />
+          </Form.Group>
+
+          <Form.Group className="p-3 rounded shadow-sm px-4 border-top border-bottom border-info pt-4">
+            <Form.Group className="d-flex mb-3">
+              <div className="d-flex">
+                <Form.Label className="w-25">Skills:</Form.Label>
+                <div className="">
+                  <Form.Row className="mb-0">
+                    <Col xs={12} md={4}>
+                      <SkillsRange />
+                    </Col>
+                    <Col xs={12} md={4}>
+                      <SkillsRange />
+                    </Col>
+                    <Col xs={12} md={4}>
+                      <SkillsRange />
+                    </Col>
+                  </Form.Row>
+                  <Form.Row>
+                    <Col xs={12} md={4}>
+                      <SkillsRange />
+                    </Col>
+
+                    <Col xs={12} md={4}>
+                      <SkillsRange />
+                    </Col>
+                    <Col xs={12} md={4}>
+                      <SkillsRange />
+                    </Col>
+                  </Form.Row>
+                </div>
+              </div>
+            </Form.Group>
+            <Form.Group className="d-flex mb-3">
+              <div className="d-flex">
+                <Form.Label className="w-25">Web:</Form.Label>
+                <Form.Row className="mb-0">
+                  <Col xs={12} sm={4}>
+                    <UpLoadUrl />
+                  </Col>
+                  <Col xs={12} sm={4}>
+                    <UpLoadUrl />
+                  </Col>
+                  <Col xs={12} sm={4}>
+                    <UpLoadUrl />
+                  </Col>
+                </Form.Row>
+              </div>
+            </Form.Group>
+          </Form.Group>
+          <Form.Group className="d-flex justify-content-end border-top">
+            <Button
+              variant="outline-info"
+              type="submit"
+              className="w-25 mt-3 shadow-sm"
+            >
+              Submit
             </Button>
-          </MyInput>
-        </Form.Group>
-        <Form.Group className="d-flex justify-content-end  border-top">
-          <Button
-            variant="outline-info"
-            type="submit"
-            className="w-25 mt-3 shadow-sm"
-          >
-            Submit
-          </Button>
-        </Form.Group>
-      </Form>
+          </Form.Group>
+        </Form>
+      </div>
     </PageHorizontal>
   )
 }
