@@ -11,6 +11,27 @@ import PageVertical from './PageVertical'
 
 import NavBar from './NavBar'
 
+const OptionButtons = (props) => {
+  return (
+    <div className="mb-5 mt-5 w-50 mx-auto d-flex flex-column flex-md-row justify-content-around">
+      <SignButton
+        href="/selectRolePage"
+        variant={'outline-info'}
+        className={'px-4 shadow'}
+      >
+        Sign Up
+      </SignButton>
+      <SignButton
+        href={'/SignIn'}
+        variant={'outline-secondary'}
+        className={'px-4 shadow mt-3 mt-md-0'}
+      >
+        Sign In
+      </SignButton>
+    </div>
+  )
+}
+
 const Landing = (props) => {
   return (
     <PageVertical title={'Landing'}>
@@ -23,24 +44,7 @@ const Landing = (props) => {
         txt2={
           "So that the Afpa community can act on the world, let's get involved together!"
         }
-        option={
-          <div className="mt-5 w-50 mx-auto d-flex flex-column flex-md-row justify-content-around">
-            <SignButton
-              href="/selectRolePage"
-              variant={'outline-info'}
-              className={'px-4 shadow'}
-            >
-              Sign Up
-            </SignButton>
-            <SignButton
-              href={'/SignIn'}
-              variant={'outline-secondary'}
-              className={'px-4 shadow mt-3 mt-md-0'}
-            >
-              Sign In
-            </SignButton>
-          </div>
-        }
+        option={<OptionButtons />}
       />
       <JumberRole />
       <div className="d-none d-md-block">
@@ -79,24 +83,7 @@ const Landing = (props) => {
         txt2={
           'Keeping the link with the alumni is a beneficial mission for all. Students are guided and their professional integration promoted. Alumni, on the other hand, acquire their future collaborator and are part of a real network of professionals. Finally, the school can only encourage this initiative to find qualified speakers and improve its brand image. Tempted by the project?'
         }
-        option={
-          <div className="mt-5 mb-5 w-50 mx-auto d-flex flex-column flex-md-row justify-content-around">
-            <SignButton
-              href="/selectRolePage"
-              variant={'outline-info'}
-              className={'px-4 shadow'}
-            >
-              Sign Up
-            </SignButton>
-            <SignButton
-              href={'/SignIn'}
-              variant={'outline-secondary'}
-              className={'px-4 shadow mt-3 mt-md-0'}
-            >
-              Sign In
-            </SignButton>
-          </div>
-        }
+        option={<OptionButtons />}
       />
     </PageVertical>
   )
