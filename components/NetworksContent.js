@@ -124,7 +124,7 @@ const NetworksThumbnail = (props) => {
 
   const { src, firstName, lastName, role } = props
   return (
-    <Card className="shadow-sm p-2">
+    <Card className="shadow-sm p-2 mb-3">
       <div>
         <div className="d-flex justify-content-between p-1 bg-dark text-light shadow-sm">
           <div className="d-flex m-1">
@@ -206,7 +206,7 @@ const NetworksContent = (props) => {
     <CardGroup>
       <div className="my-5 container container-fluid ">
         <Row>
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-20.jpeg'}
               firstName={'Janne'}
@@ -214,7 +214,7 @@ const NetworksContent = (props) => {
               role={'Recruiter'}
             />
           </Col>
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-69.jpg'}
               firstName={'Janne'}
@@ -223,7 +223,7 @@ const NetworksContent = (props) => {
             />
           </Col>
 
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-102.jpg'}
               firstName={'Janne'}
@@ -231,7 +231,7 @@ const NetworksContent = (props) => {
               role={'Recruiter'}
             />
           </Col>
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/male-25.jpg'}
               firstName={'Janne'}
@@ -239,9 +239,7 @@ const NetworksContent = (props) => {
               role={'Student'}
             />
           </Col>
-        </Row>
-        <Row className="mt-4">
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-20.jpeg'}
               firstName={'Janne'}
@@ -249,7 +247,7 @@ const NetworksContent = (props) => {
               role={'Recruiter'}
             />
           </Col>
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-69.jpg'}
               firstName={'Janne'}
@@ -258,7 +256,7 @@ const NetworksContent = (props) => {
             />
           </Col>
 
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-102.jpg'}
               firstName={'Janne'}
@@ -266,7 +264,7 @@ const NetworksContent = (props) => {
               role={'Recruiter'}
             />
           </Col>
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/male-25.jpg'}
               firstName={'Janne'}
@@ -274,9 +272,7 @@ const NetworksContent = (props) => {
               role={'Student'}
             />
           </Col>
-        </Row>
-        <Row className="mt-4">
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-20.jpeg'}
               firstName={'Janne'}
@@ -284,7 +280,7 @@ const NetworksContent = (props) => {
               role={'Recruiter'}
             />
           </Col>
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-69.jpg'}
               firstName={'Janne'}
@@ -293,7 +289,7 @@ const NetworksContent = (props) => {
             />
           </Col>
 
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-102.jpg'}
               firstName={'Janne'}
@@ -301,7 +297,7 @@ const NetworksContent = (props) => {
               role={'Recruiter'}
             />
           </Col>
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/male-25.jpg'}
               firstName={'Janne'}
@@ -309,9 +305,7 @@ const NetworksContent = (props) => {
               role={'Student'}
             />
           </Col>
-        </Row>
-        <Row className="mt-4">
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-20.jpeg'}
               firstName={'Janne'}
@@ -319,7 +313,7 @@ const NetworksContent = (props) => {
               role={'Recruiter'}
             />
           </Col>
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-69.jpg'}
               firstName={'Janne'}
@@ -328,7 +322,7 @@ const NetworksContent = (props) => {
             />
           </Col>
 
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/female-102.jpg'}
               firstName={'Janne'}
@@ -336,7 +330,7 @@ const NetworksContent = (props) => {
               role={'Recruiter'}
             />
           </Col>
-          <Col md={3}>
+          <Col sm={12} md={6} lg={3}>
             <NetworksThumbnail
               src={'/portraits/male-25.jpg'}
               firstName={'Janne'}
