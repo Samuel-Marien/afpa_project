@@ -52,7 +52,7 @@ BoardMessage.propTypes = {
 
 const SearchBarMessage = (props) => {
   return (
-    <div className="container container-fluid d-flex flex-column align-items-between justify-content-around flex-md-row mx-auto rounded shadow-sm text-light bg-dark p-4">
+    <div className="col-12 col-md-8 container container-fluid d-flex flex-column align-items-between justify-content-around flex-md-row mx-auto rounded shadow-sm text-light bg-dark p-4">
       <BoardMessage />
 
       <div className="ml-0 ml-md-4 shadow p-3 w-100 rounded border-left border-info">

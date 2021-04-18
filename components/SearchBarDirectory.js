@@ -5,16 +5,21 @@ import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
+import { BiSearchAlt } from 'react-icons/bi'
+
 const SearchBarDirectory = (props) => {
   return (
-    <div className="w-50 ml-5 p-3 rounded m-3 bg-dark text-light mx-auto">
+    <div className="col-12 col-md-8 container container-fluid ml-5 p-3 rounded m-3 bg-dark text-light mx-auto">
       <h2>Talent&apos;s Directory</h2>
       <InputGroup>
         <InputGroup className="mb-3 mt-3">
-          <FormControl placeholder="What talent are you looking for?" />
+          <FormControl
+            className="col-12"
+            placeholder="What are you looking for?"
+          />
           <InputGroup.Append>
-            <Button className="px-5" type="submit" variant="outline-info">
-              search
+            <Button className="" type="submit" variant="outline-info">
+              <BiSearchAlt role="button" />
             </Button>
           </InputGroup.Append>
         </InputGroup>
