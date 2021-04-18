@@ -26,10 +26,6 @@ const DevTool = (props) => {
       </Dropdown.Item>
       <Dropdown.Item href="/settingStudentPage">student setting</Dropdown.Item>
       <Dropdown.Item href="/settingTeacherPage">teacher setting</Dropdown.Item>
-
-      <Dropdown.Item href="/selectRolePage">
-        select role before sigup
-      </Dropdown.Item>
       <Dropdown.Item href="/studentSignUpPage">student sign up</Dropdown.Item>
       <Dropdown.Item href="/teacherSignUpPage">teacher sign up</Dropdown.Item>
       <Dropdown.Item href="/recruiterSignUpPage">
