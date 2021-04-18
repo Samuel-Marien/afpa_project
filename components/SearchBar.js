@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 
-import { BiSearchAlt, BiMapPin } from 'react-icons/bi'
+import { BiSearchAlt } from 'react-icons/bi'
 
 const SearchBar = (props) => {
   return (
