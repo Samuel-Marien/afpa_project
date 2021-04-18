@@ -124,61 +124,63 @@ const NetworksThumbnail = (props) => {
 
   const { src, firstName, lastName, role } = props
   return (
-    <Card className="shadow-sm p-2 mb-3">
-      <div>
-        <div className="d-flex justify-content-between p-1 bg-dark text-light shadow-sm">
-          <div className="d-flex m-1">
-            <Card.Title>
-              {firstName}
-              <span className="text-muted" style={{ fontSize: '.9rem' }}>
-                {' '}
-                {lastName}
-              </span>
-            </Card.Title>
-            <Card.Title></Card.Title>
+    <Col sm={12} md={6} lg={3}>
+      <Card className="shadow-sm p-2 mb-3">
+        <div>
+          <div className="d-flex justify-content-between p-1 bg-dark text-light shadow-sm">
+            <div className="d-flex m-1">
+              <Card.Title>
+                {firstName}
+                <span className="text-muted" style={{ fontSize: '.9rem' }}>
+                  {' '}
+                  {lastName}
+                </span>
+              </Card.Title>
+              <Card.Title></Card.Title>
+            </div>
+
+            <IoTrash
+              role="button"
+              onClick={() => setTrashModalShow(true)}
+              className="mb-5 text-danger"
+            />
+            <TrashModal
+              show={trashModalShow}
+              onHide={() => setTrashModalShow(false)}
+            />
           </div>
+        </div>
+        <div className="d-flex justify-content-between">
+          <Image
+            src={src}
+            roundedCircle
+            fluid
+            className="border-dark p-1"
+            style={{
+              width: '80px',
+              transform: 'translateY(-50%)',
+              border: '3px solid '
+            }}
+          />
+          <div className="">
+            <Badge variant="info px-3">{role}</Badge>
+          </div>
+        </div>
 
-          <IoTrash
+        <div className="d-flex justify-content-between">
+          <IoIosMail
+            className="text-info"
             role="button"
-            onClick={() => setTrashModalShow(true)}
-            className="mb-5 text-danger"
+            size={25}
+            onClick={() => setModalShow(true)}
           />
-          <TrashModal
-            show={trashModalShow}
-            onHide={() => setTrashModalShow(false)}
-          />
+          <ResponseModal show={modalShow} onHide={() => setModalShow(false)} />
+          <a href="/studentVisualIdPage">
+            <IoIosEye size={25} role="button" className="text-info" />
+          </a>
         </div>
-      </div>
-      <div className="d-flex justify-content-between">
-        <Image
-          src={src}
-          roundedCircle
-          fluid
-          className="border-dark p-1"
-          style={{
-            width: '80px',
-            transform: 'translateY(-50%)',
-            border: '3px solid '
-          }}
-        />
-        <div className="">
-          <Badge variant="info px-3">{role}</Badge>
-        </div>
-      </div>
-
-      <div className="d-flex justify-content-between">
-        <IoIosMail
-          className="text-info"
-          role="button"
-          size={25}
-          onClick={() => setModalShow(true)}
-        />
-        <ResponseModal show={modalShow} onHide={() => setModalShow(false)} />
-        <a href="/studentVisualIdPage">
-          <IoIosEye size={25} role="button" className="text-info" />
-        </a>
-      </div>
-    </Card>
+      </Card>
+    </Col>
   )
 }
 
@@ -206,138 +208,102 @@ const NetworksContent = (props) => {
     <CardGroup>
       <div className="my-5 container container-fluid ">
         <Row>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-20.jpeg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Recruiter'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-69.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Student'}
-            />
-          </Col>
-
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-102.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Recruiter'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/male-25.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Student'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-20.jpeg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Recruiter'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-69.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Student'}
-            />
-          </Col>
-
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-102.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Recruiter'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/male-25.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Student'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-20.jpeg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Recruiter'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-69.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Student'}
-            />
-          </Col>
-
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-102.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Recruiter'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/male-25.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Student'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-20.jpeg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Recruiter'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-69.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Student'}
-            />
-          </Col>
-
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/female-102.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Recruiter'}
-            />
-          </Col>
-          <Col sm={12} md={6} lg={3}>
-            <NetworksThumbnail
-              src={'/portraits/male-25.jpg'}
-              firstName={'Janne'}
-              lastName={'Doe'}
-              role={'Student'}
-            />
-          </Col>
+          <NetworksThumbnail
+            src={'/portraits/female-20.jpeg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Recruiter'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-69.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Student'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-102.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Recruiter'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/male-25.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Student'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-20.jpeg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Recruiter'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-69.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Student'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-102.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Recruiter'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/male-25.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Student'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-20.jpeg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Recruiter'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-69.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Student'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-102.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Recruiter'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/male-25.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Student'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-20.jpeg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Recruiter'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-69.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Student'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/female-102.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Recruiter'}
+          />
+          <NetworksThumbnail
+            src={'/portraits/male-25.jpg'}
+            firstName={'Janne'}
+            lastName={'Doe'}
+            role={'Student'}
+          />
         </Row>
       </div>
     </CardGroup>
