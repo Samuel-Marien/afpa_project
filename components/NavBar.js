@@ -8,8 +8,10 @@ import Logo from './Logo'
 import SignButton from './SignButton'
 import DevTool from './DevTool'
 import LogOutBut from './LogOutBut'
+import RoleModal from './RoleModal'
 
 const NavBar = (props) => {
+  const [modalShow, setModalShow] = React.useState(false)
   return (
     <Navbar
       bg="dark"
@@ -29,9 +31,10 @@ const NavBar = (props) => {
         <Form inline className="d-flex  align-items-start">
           <DevTool />
           <SignButton
-            href="/selectRolePage"
+            href="#"
             variant={'outline-info'}
             className={'mr-3 p-1'}
+            onClick={() => setModalShow(true)}
           >
             Sign Up
           </SignButton>
@@ -46,6 +49,7 @@ const NavBar = (props) => {
             <LogOutBut />
           </Nav.Link>
         </Form>
+        <RoleModal show={modalShow} onHide={() => setModalShow(false)} />
       </Navbar.Collapse>
     </Navbar>
   )

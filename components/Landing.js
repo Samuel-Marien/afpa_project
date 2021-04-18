@@ -8,16 +8,18 @@ import MiddleCarousel from './MiddleCarousel'
 import ContentCards from './ContentCards'
 import ContentMiddle from './ContentMiddle'
 import PageVertical from './PageVertical'
-
 import NavBar from './NavBar'
+import RoleModal from './RoleModal'
 
 const OptionButtons = (props) => {
+  const [modalShow, setModalShow] = React.useState(false)
   return (
     <div className="mb-5 mt-5 w-50 mx-auto d-flex flex-column flex-md-row justify-content-around">
       <SignButton
-        href="/selectRolePage"
+        href="#"
         variant={'outline-info'}
         className={'px-4 shadow'}
+        onClick={() => setModalShow(true)}
       >
         Sign Up
       </SignButton>
@@ -28,6 +30,7 @@ const OptionButtons = (props) => {
       >
         Sign In
       </SignButton>
+      <RoleModal show={modalShow} onHide={() => setModalShow(false)} />
     </div>
   )
 }
