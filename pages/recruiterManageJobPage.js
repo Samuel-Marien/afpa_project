@@ -14,7 +14,7 @@ const ManageJob = (props) => {
       <div className="mt-5 pt-5">
         <NavBar2 />
       </div>
-      <div className=" bg-light p-md-4 p-0 rounded shadow my-3 my-md-1">
+      <div className="bg-light p-md-4 p-0 rounded shadow my-3 my-md-1">
         <div className="d-flex justify-content-center h2 border-bottom border-info pb-3 mb-3 text-center">
           Something new?
         </div>

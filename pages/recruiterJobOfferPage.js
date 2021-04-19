@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import { ImUpload } from 'react-icons/im'
 import Link from 'next/link'
-
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
@@ -14,8 +13,6 @@ import Badge from 'react-bootstrap/Badge'
 
 import PageHorizontal from '../components/PageHorizontal'
 import NavBar2 from '../components/NavBar2'
-
-import { ImUpload } from 'react-icons/im'
 
 const JobOffer = (props) => {
   const { companyLogo = '/logos/logo-ibm.png' } = props

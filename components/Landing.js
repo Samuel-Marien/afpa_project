@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import PropTypes from 'prop-types'
+import { Carousel } from 'react-bootstrap'
 
 import SignButton from './SignButton'
 import ContentTitle from './ContentTitle'
 import JumberRole from './JumberRole'
-import MiddleCarousel from './MiddleCarousel'
 import ContentCards from './ContentCards'
 import ContentMiddle from './ContentMiddle'
 import PageVertical from './PageVertical'
@@ -12,21 +12,23 @@ import NavBar from './NavBar'
 import RoleModal from './RoleModal'
 
 const OptionButtons = (props) => {
-  const [modalShow, setModalShow] = React.useState(false)
+  const [modalShow, setModalShow] = useState(false)
+  const handleSign = useCallback(() => setModalShow(true), [setModalShow])
+
   return (
     <div className="mb-5 mt-5 w-50 mx-auto d-flex flex-column flex-md-row justify-content-around">
       <SignButton
         href="#"
         variant={'outline-info'}
         className={'px-4 shadow'}
-        onClick={() => setModalShow(true)}
+        onClick={handleSign}
       >
         Sign Up
       </SignButton>
       <SignButton
-        href={'/SignIn'}
-        variant={'outline-secondary'}
-        className={'px-4 shadow mt-3 mt-md-0'}
+        href="/SignIn"
+        variant="outline-secondary"
+        className="px-4 shadow mt-3 mt-md-0"
       >
         Sign In
       </SignButton>
@@ -51,14 +53,22 @@ const Landing = (props) => {
       />
       <JumberRole />
       <div className="d-none d-md-block">
-        <MiddleCarousel
-          src={'/businessmen.jpg'}
-          alt={'cooperation picture'}
-          src1={'/work-5382501_1920.jpg'}
-          alt1={'cooperation picture'}
-          src2={'/hong-kong-1990268_1920.jpg'}
-          alt2={'cooperation picture'}
-        />
+        <Carousel controls={false}>
+          {[
+            { src: '/businessmen.jpg', alt: 'cooperation picture' },
+            { src: '/work-5382501_1920.jpg', alt: 'cooperation picture' },
+            { src: '/hong-kong-1990268_1920.jpg', alt: 'cooperation picture' }
+          ].map(({ src, alt }) => (
+            <Carousel.Item key={src}>
+              <img
+                className="d-block w-100"
+                src={src}
+                alt={alt}
+                style={{ height: '500px' }}
+              />
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </div>
       <div>
         <img
