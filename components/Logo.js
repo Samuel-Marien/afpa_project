@@ -21,10 +21,7 @@ const Logo = (props) => {
 }
 
 Logo.propTypes = {
-  size: PropTypes.number
-}
-
-Logo.propTypes = {
+  size: PropTypes.number,
   titleStyle: PropTypes.string
 }
 

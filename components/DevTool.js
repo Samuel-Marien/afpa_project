@@ -3,7 +3,7 @@ import React from 'react'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 
-const DevTool = (props) => {
+const DevTool = () => {
   return (
     <DropdownButton
       id="dropdown-basic-button"
@@ -38,6 +38,7 @@ const DevTool = (props) => {
       <Dropdown.Item href="/directoryPage">directory Page</Dropdown.Item>
       <Dropdown.Item href="/networksPage">networks Page</Dropdown.Item>
       <Dropdown.Item href="/testFormPage">test Form Page</Dropdown.Item>
+      <Dropdown.Item href="/testPage2">test Form Page 2</Dropdown.Item>
     </DropdownButton>
   )
 }

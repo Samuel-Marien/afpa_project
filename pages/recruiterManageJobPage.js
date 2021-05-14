@@ -5,7 +5,7 @@ import JobThumbnail from '../components/Jobthumbnail'
 
 import NavBar2 from '../components/NavBar2'
 
-const ManageJob = (props) => {
+const ManageJob = () => {
   return (
     <PageHorizontal
       title="Recruiter Manage Job offer"

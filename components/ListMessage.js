@@ -71,22 +71,12 @@ const MessageThumnail = (props) => {
 }
 
 MessageThumnail.propTypes = {
-  src: PropTypes.string
-}
-MessageThumnail.propTypes = {
+  src: PropTypes.string,
+  children: PropTypes.node,
+  txt: PropTypes.string,
+  date: PropTypes.string,
+  lastName: PropTypes.string,
   firstName: PropTypes.string
-}
-MessageThumnail.propTypes = {
-  lastName: PropTypes.string
-}
-MessageThumnail.propTypes = {
-  date: PropTypes.string
-}
-MessageThumnail.propTypes = {
-  txt: PropTypes.string
-}
-MessageThumnail.propTypes = {
-  children: PropTypes.node
 }
 
 const AnswerBlock = (props) => {
@@ -119,16 +109,12 @@ const AnswerBlock = (props) => {
 }
 
 AnswerBlock.propTypes = {
-  txt: PropTypes.string
-}
-AnswerBlock.propTypes = {
-  src: PropTypes.string
-}
-AnswerBlock.propTypes = {
+  txt: PropTypes.string,
+  src: PropTypes.string,
   date: PropTypes.string
 }
 
-const ResponseBlock = (props) => {
+const ResponseBlock = () => {
   return (
     <div
       className="bg-light mt-5 p-4 border-info"
@@ -186,7 +172,7 @@ MyModal.propTypes = {
   onHide: PropTypes.func
 }
 
-const ListMessage = (props) => {
+const ListMessage = () => {
   return (
     <ul className=" my-5 mx-auto container container-fluid">
       <MessageThumnail

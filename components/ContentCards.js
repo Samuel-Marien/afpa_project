@@ -3,7 +3,7 @@ import React from 'react'
 import Thumbnail from './Thumbnail'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
-const ContentCards = (props) => {
+const ContentCards = () => {
   return (
     <Jumbotron className="mt-5">
       <div className="d-flex flex-column flex-xl-row justify-content-center align-items-center">

@@ -30,10 +30,7 @@ const MyLi = (props) => {
 }
 
 MyLi.propTypes = {
-  href: PropTypes.string
-}
-
-MyLi.propTypes = {
+  href: PropTypes.string,
   nameLink: PropTypes.string
 }
 

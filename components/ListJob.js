@@ -21,10 +21,7 @@ const MyP = (props) => {
 }
 
 MyP.propTypes = {
-  className: PropTypes.string
-}
-
-MyP.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node
 }
 
@@ -106,33 +103,15 @@ const JobThumbnail = (props) => {
 }
 
 JobThumbnail.propTypes = {
-  companyLogo: PropTypes.string
-}
-JobThumbnail.propTypes = {
-  city: PropTypes.string
-}
-JobThumbnail.propTypes = {
-  jobNumber: PropTypes.string
-}
-JobThumbnail.propTypes = {
-  date: PropTypes.string
-}
-JobThumbnail.propTypes = {
-  keyword1: PropTypes.string
-}
-JobThumbnail.propTypes = {
-  keyword2: PropTypes.string
-}
-JobThumbnail.propTypes = {
-  keyword3: PropTypes.string
-}
-JobThumbnail.propTypes = {
-  typeContrat: PropTypes.string
-}
-JobThumbnail.propTypes = {
-  jobTitle: PropTypes.string
-}
-JobThumbnail.propTypes = {
+  companyLogo: PropTypes.string,
+  city: PropTypes.string,
+  jobNumber: PropTypes.string,
+  date: PropTypes.string,
+  keyword1: PropTypes.string,
+  keyword2: PropTypes.string,
+  keyword3: PropTypes.string,
+  typeContrat: PropTypes.string,
+  jobTitle: PropTypes.string,
   txt: PropTypes.string
 }
 
@@ -187,13 +166,11 @@ const ResponseModal = (props) => {
 }
 
 ResponseModal.propTypes = {
-  onHide: PropTypes.func
-}
-ResponseModal.propTypes = {
+  onHide: PropTypes.func,
   src: PropTypes.string
 }
 
-const ListJob = (props) => {
+const ListJob = () => {
   return (
     <ul className=" my-5 mx-auto container container-fluid">
       <JobThumbnail

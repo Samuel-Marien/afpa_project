@@ -2,7 +2,7 @@ import React from 'react'
 
 import Carousel from 'react-bootstrap/Carousel'
 
-const MyCarousel = (props) => {
+const MyCarousel = () => {
   return (
     <Carousel fade controls={false} pause={'hover'}>
       <Carousel.Item>

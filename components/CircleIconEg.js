@@ -21,14 +21,9 @@ const CircleIconEg = (props) => {
 }
 
 CircleIconEg.propTypes = {
-  src: PropTypes.node
-}
-
-CircleIconEg.propTypes = {
-  type: PropTypes.node
-}
-
-CircleIconEg.propTypes = {
+  src: PropTypes.node,
+  type: PropTypes.node,
   txt: PropTypes.node
 }
+
 export default CircleIconEg

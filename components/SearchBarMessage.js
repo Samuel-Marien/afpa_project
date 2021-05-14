@@ -38,19 +38,13 @@ const BoardMessage = (props) => {
   )
 }
 BoardMessage.propTypes = {
-  totalMessage: PropTypes.number
-}
-BoardMessage.propTypes = {
+  totalMessage: PropTypes.number,
+  recruiterMessage: PropTypes.number,
+  teacherMessage: PropTypes.number,
   studentMessage: PropTypes.number
 }
-BoardMessage.propTypes = {
-  teacherMessage: PropTypes.number
-}
-BoardMessage.propTypes = {
-  recruiterMessage: PropTypes.number
-}
 
-const SearchBarMessage = (props) => {
+const SearchBarMessage = () => {
   return (
     <div className="col-12 col-md-8 container container-fluid d-flex flex-column align-items-between justify-content-around flex-md-row mx-auto rounded shadow-sm text-light bg-dark p-4">
       <BoardMessage />

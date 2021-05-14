@@ -5,7 +5,7 @@ import NavBar2 from '../components/NavBar2'
 import SearchBarMessage from '../components/SearchBarMessage'
 import ListMessage from '../components/ListMessage'
 
-const Message = (props) => {
+const Message = () => {
   return (
     <PageVertical title={'Messages'} className={'w-100'}>
       <NavBar2 />

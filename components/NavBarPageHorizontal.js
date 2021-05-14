@@ -8,7 +8,7 @@ import LogOutBut from './LogOutBut'
 
 import { IoIosMail, IoIosSettings, IoIosHome } from 'react-icons/io'
 
-const NavBarPageHorizontal = (props) => {
+const NavBarPageHorizontal = () => {
   return (
     <Navbar
       bg="dark"

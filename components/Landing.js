@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from 'react'
-import PropTypes from 'prop-types'
 import { Carousel } from 'react-bootstrap'
 
 import SignButton from './SignButton'
@@ -11,7 +10,7 @@ import PageVertical from './PageVertical'
 import NavBar from './NavBar'
 import RoleModal from './RoleModal'
 
-const OptionButtons = (props) => {
+const OptionButtons = () => {
   const [modalShow, setModalShow] = useState(false)
   const handleSign = useCallback(() => setModalShow(true), [setModalShow])
 
@@ -37,7 +36,7 @@ const OptionButtons = (props) => {
   )
 }
 
-const Landing = (props) => {
+const Landing = () => {
   return (
     <PageVertical title={'Landing'}>
       <NavBar />
@@ -102,7 +101,4 @@ const Landing = (props) => {
   )
 }
 
-Landing.propTypes = {
-  title: PropTypes.string
-}
 export default Landing

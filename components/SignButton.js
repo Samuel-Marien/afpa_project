@@ -16,22 +16,11 @@ const SignButton = (props) => {
 }
 
 SignButton.propTypes = {
-  href: PropTypes.string
-}
-
-SignButton.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
   variant: PropTypes.string
 }
 
-SignButton.propTypes = {
-  className: PropTypes.string
-}
-
-SignButton.propTypes = {
-  onClick: PropTypes.func
-}
-
-SignButton.propTypes = {
-  children: PropTypes.node
-}
 export default SignButton

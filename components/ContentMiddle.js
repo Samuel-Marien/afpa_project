@@ -18,18 +18,9 @@ const ContentMiddle = (props) => {
 }
 
 ContentMiddle.propTypes = {
-  title: PropTypes.string
-}
-
-ContentMiddle.propTypes = {
-  txt1: PropTypes.string
-}
-
-ContentMiddle.propTypes = {
-  txt2: PropTypes.string
-}
-
-ContentMiddle.propTypes = {
+  title: PropTypes.string,
+  txt1: PropTypes.string,
+  txt2: PropTypes.string,
   option: PropTypes.node
 }
 

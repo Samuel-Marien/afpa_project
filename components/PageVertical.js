@@ -33,16 +33,10 @@ const PageVertical = (props) => {
 }
 
 PageVertical.propTypes = {
-  title: PropTypes.string
-}
-PageVertical.propTypes = {
+  title: PropTypes.string,
+  navBarType: PropTypes.node,
+  children: PropTypes.node,
   className: PropTypes.string
-}
-PageVertical.propTypes = {
-  children: PropTypes.node
-}
-PageVertical.propTypes = {
-  navBarType: PropTypes.node
 }
 
 export default PageVertical

@@ -41,14 +41,11 @@ const MyProgressBar = (props) => {
 }
 
 MyProgressBar.propTypes = {
-  children: PropTypes.string
-}
-
-MyProgressBar.propTypes = {
+  children: PropTypes.string,
   now: PropTypes.number
 }
 
-const VisualId = (props) => {
+const VisualId = () => {
   return (
     <PageHorizontal title="Student Id" imgUrl="/students.jpg">
       <div className="mt-5 pt-5">

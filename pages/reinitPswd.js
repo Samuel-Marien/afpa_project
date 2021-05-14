@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 
 import NavBar2 from '../components/NavBar2'
 
-const ReinitPaswd = (props) => {
+const ReinitPaswd = () => {
   return (
     <PageHorizontal title="Reset password" imgUrl="/tools-5669031_1920.jpg">
       <div className="mt-5 pt-5">

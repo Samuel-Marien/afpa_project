@@ -47,38 +47,17 @@ const MyInput = (props) => {
 }
 console.log(MyInput)
 MyInput.propTypes = {
-  type: PropTypes.string
-}
-
-MyInput.propTypes = {
+  type: PropTypes.string,
+  rows: PropTypes.number,
+  as: PropTypes.string,
+  placeholder: PropTypes.string,
+  readOnly: PropTypes.string,
+  children: PropTypes.string,
+  className: PropTypes.string,
   defaultValue: PropTypes.string
 }
 
-MyInput.propTypes = {
-  className: PropTypes.string
-}
-
-MyInput.propTypes = {
-  children: PropTypes.string
-}
-
-MyInput.propTypes = {
-  readOnly: PropTypes.string
-}
-
-MyInput.propTypes = {
-  placeholder: PropTypes.string
-}
-
-MyInput.propTypes = {
-  as: PropTypes.string
-}
-
-MyInput.propTypes = {
-  rows: PropTypes.number
-}
-
-const MyLink = (props) => {
+const MyLink = () => {
   return (
     <Link href="/settingStudentPage">
       <a>
@@ -88,7 +67,7 @@ const MyLink = (props) => {
   )
 }
 
-const SkillsRange = (props) => {
+const SkillsRange = () => {
   return (
     <InputGroup className="w-100 my-1">
       <Form.Control type="text" placeholder="Skills" />
@@ -112,7 +91,7 @@ const SkillsRange = (props) => {
   )
 }
 
-const UpLoadUrl = (props) => {
+const UpLoadUrl = () => {
   return (
     <InputGroup className="w-100 my-1">
       <Form.Control type="text" placeholder="twitter, github..." />
@@ -125,7 +104,7 @@ const UpLoadUrl = (props) => {
   )
 }
 
-const StudentId = (props) => {
+const StudentId = () => {
   return (
     <PageHorizontal title="Student id setting" imgUrl="/tools-5669031_1920.jpg">
       <div className="mt-4 pt-4">

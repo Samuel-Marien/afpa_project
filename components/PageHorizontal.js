@@ -25,23 +25,11 @@ const PageHorizontal = (props) => {
 }
 
 PageHorizontal.propTypes = {
-  title: PropTypes.string
-}
-
-PageHorizontal.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node,
+  childrenSize: PropTypes.string,
+  imgUrl: PropTypes.string,
   pageTitle: PropTypes.string
-}
-
-PageHorizontal.propTypes = {
-  imgUrl: PropTypes.string
-}
-
-PageHorizontal.propTypes = {
-  childrenSize: PropTypes.string
-}
-
-PageHorizontal.propTypes = {
-  children: PropTypes.node
 }
 
 export default PageHorizontal

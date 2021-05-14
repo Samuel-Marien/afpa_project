@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 
 import Link from 'next/link'
 
-const ConnectForm = (props) => {
+const ConnectForm = () => {
   return (
     <Form>
       <Form.Group controlId="formBasicEmail">

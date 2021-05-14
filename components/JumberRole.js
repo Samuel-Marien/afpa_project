@@ -5,7 +5,7 @@ import CircleIconEg from '../components/CircleIconEg'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container'
 
-const JumberRole = (props) => {
+const JumberRole = () => {
   return (
     <Jumbotron fluid className="mt-5 mb-0 text-center">
       <Container>

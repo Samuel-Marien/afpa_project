@@ -30,22 +30,14 @@ const MyLink = (props) => {
 }
 
 MyLink.propTypes = {
-  href: PropTypes.string
-}
-MyLink.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  text: PropTypes.string,
   icon: PropTypes.object
 }
-MyLink.propTypes = {
-  text: PropTypes.string
-}
-MyLink.propTypes = {
-  className: PropTypes.string
-}
-MyLink.propTypes = {
-  children: PropTypes.node
-}
 
-const NavBar2 = (props) => {
+const NavBar2 = () => {
   return (
     <Navbar
       bg="dark"

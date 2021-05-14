@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { GiSuitcase } from 'react-icons/gi'
 
-const CircleIconRecruiter = (props) => {
+const CircleIconRecruiter = () => {
   return (
     <div className="d-flex flex-column align-items-center">
       <Link href="/recruiterSignUpPage">

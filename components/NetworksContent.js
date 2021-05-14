@@ -66,16 +66,10 @@ const ResponseModal = (props) => {
 }
 
 ResponseModal.propTypes = {
-  onHide: PropTypes.func
-}
-ResponseModal.propTypes = {
+  onHide: PropTypes.func,
+  lastName: PropTypes.string,
+  firstName: PropTypes.string,
   src: PropTypes.string
-}
-ResponseModal.propTypes = {
-  firstName: PropTypes.string
-}
-ResponseModal.propTypes = {
-  lastName: PropTypes.string
 }
 
 const TrashModal = (props) => {
@@ -185,22 +179,12 @@ const NetworksThumbnail = (props) => {
 }
 
 NetworksThumbnail.propTypes = {
-  src: PropTypes.string
-}
-NetworksThumbnail.propTypes = {
+  src: PropTypes.string,
+  role: PropTypes.string,
+  txt: PropTypes.string,
+  date: PropTypes.string,
+  lastName: PropTypes.string,
   firstName: PropTypes.string
-}
-NetworksThumbnail.propTypes = {
-  lastName: PropTypes.string
-}
-NetworksThumbnail.propTypes = {
-  date: PropTypes.string
-}
-NetworksThumbnail.propTypes = {
-  txt: PropTypes.string
-}
-NetworksThumbnail.propTypes = {
-  role: PropTypes.string
 }
 
 const NetworksContent = (props) => {

@@ -9,7 +9,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 
 import { BiSearchAlt } from 'react-icons/bi'
 
-const SearchBar = (props) => {
+const SearchBar = () => {
   return (
     <div className="col-12 col-md-8 container container-fluid ml-5 p-3 rounded m-3 bg-dark text-light mx-auto">
       <h2>What job are you looking for?</h2>

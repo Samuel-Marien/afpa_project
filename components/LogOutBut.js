@@ -41,7 +41,7 @@ MyModal.propTypes = {
   onHide: PropTypes.func
 }
 
-const LogOutBut = (props) => {
+const LogOutBut = () => {
   const [show, setShow] = useState(false)
   return (
     <div>

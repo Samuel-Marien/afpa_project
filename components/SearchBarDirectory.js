@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form'
 
 import { BiSearchAlt } from 'react-icons/bi'
 
-const SearchBarDirectory = (props) => {
+const SearchBarDirectory = () => {
   return (
     <div className="col-12 col-md-8 container container-fluid ml-5 p-3 rounded m-3 bg-dark text-light mx-auto">
       <h2>Talent&apos;s Directory</h2>

@@ -63,16 +63,10 @@ const ResponseModal = (props) => {
 }
 
 ResponseModal.propTypes = {
-  onHide: PropTypes.func
-}
-ResponseModal.propTypes = {
+  onHide: PropTypes.func,
+  lastName: PropTypes.string,
+  firstName: PropTypes.string,
   src: PropTypes.string
-}
-ResponseModal.propTypes = {
-  firstName: PropTypes.string
-}
-ResponseModal.propTypes = {
-  lastName: PropTypes.string
 }
 
 const InvitModal = (props) => {
@@ -120,9 +114,7 @@ const InvitModal = (props) => {
 }
 
 InvitModal.propTypes = {
-  onHide: PropTypes.func
-}
-InvitModal.propTypes = {
+  onHide: PropTypes.func,
   src: PropTypes.string
 }
 
@@ -174,22 +166,11 @@ const Thumbnail = (props) => {
 }
 
 Thumbnail.propTypes = {
-  children: PropTypes.node
-}
-Thumbnail.propTypes = {
+  children: PropTypes.node,
+  txt1: PropTypes.string,
+  title: PropTypes.string,
+  role: PropTypes.string,
   src: PropTypes.string
-}
-
-Thumbnail.propTypes = {
-  role: PropTypes.string
-}
-
-Thumbnail.propTypes = {
-  title: PropTypes.string
-}
-
-Thumbnail.propTypes = {
-  txt1: PropTypes.string
 }
 
 export default Thumbnail

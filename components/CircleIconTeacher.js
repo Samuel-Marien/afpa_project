@@ -3,7 +3,7 @@ import React from 'react'
 
 import { GiSpellBook } from 'react-icons/gi'
 
-const CircleIconTeacher = (props) => {
+const CircleIconTeacher = () => {
   return (
     <div className="d-flex flex-column align-items-center">
       <Link href="/teacherSignUpPage">

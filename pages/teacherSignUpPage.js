@@ -7,7 +7,7 @@ import SignUpForm from '../components/SignUpForm'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 
-const OptionForm = (props) => {
+const OptionForm = () => {
   return (
     <div>
       <Form.Row className="mt-2">
@@ -30,7 +30,7 @@ const OptionForm = (props) => {
   )
 }
 
-const TeacherInscription = (props) => {
+const TeacherInscription = () => {
   return (
     <PageHorizontal
       title="Teacher Inscription"

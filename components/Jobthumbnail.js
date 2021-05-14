@@ -28,10 +28,7 @@ const MyP = (props) => {
 }
 
 MyP.propTypes = {
-  className: PropTypes.string
-}
-
-MyP.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node
 }
 
@@ -245,9 +242,7 @@ const MyEditModal = (props) => {
 }
 
 MyEditModal.propTypes = {
-  companyLogo: PropTypes.string
-}
-MyEditModal.propTypes = {
+  companyLogo: PropTypes.string,
   onHide: PropTypes.func
 }
 

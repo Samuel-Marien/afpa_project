@@ -8,7 +8,7 @@ import CircleIconRecruiter from '../components/CircleIconRecruiter'
 import SettingForm from '../components/SettingForm'
 import NavBar2 from '../components/NavBar2'
 
-const OptionForm = (props) => {
+const OptionForm = () => {
   return (
     <div>
       <Form.Row className="mt-2">
@@ -23,7 +23,7 @@ const OptionForm = (props) => {
   )
 }
 
-const RecruiterInscription = (props) => {
+const RecruiterInscription = () => {
   return (
     <PageHorizontal
       title="Recruiter setting"

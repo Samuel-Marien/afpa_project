@@ -10,7 +10,7 @@ import DevTool from './DevTool'
 import LogOutBut from './LogOutBut'
 import RoleModal from './RoleModal'
 
-const NavBar = (props) => {
+const NavBar = () => {
   const [modalShow, setModalShow] = React.useState(false)
   return (
     <Navbar

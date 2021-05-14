@@ -3,6 +3,8 @@ import React from 'react'
 
 import { useFormik } from 'formik'
 
+import PropTypes from 'prop-types'
+
 import PageHorizontal from '../components/PageHorizontal'
 import NavBar from '../components/NavBar'
 import Form from 'react-bootstrap/Form'
@@ -11,6 +13,18 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+const MyAlert = (props) => {
+  const { children } = props
+  return (
+    <div className="text-danger" style={{ fontSize: '.8rem' }}>
+      {children}
+    </div>
+  )
+}
+
+MyAlert.propTypes = {
+  children: PropTypes.node
+}
 // A custom validation function. This must return an object
 // which keys are symmetrical to our values/initialValues
 const validate = (values) => {
@@ -104,7 +118,7 @@ const SignupFormValidate = () => {
             value={formik.values.firstName}
           />
           {formik.errors.firstName ? (
-            <div className="text-danger">{formik.errors.firstName}</div>
+            <MyAlert>{formik.errors.firstName}</MyAlert>
           ) : null}
         </Col>
         <Col>
@@ -117,7 +131,7 @@ const SignupFormValidate = () => {
             value={formik.values.lastName}
           />
           {formik.errors.lastName ? (
-            <div className="text-danger">{formik.errors.lastName}</div>
+            <MyAlert>{formik.errors.lastName}</MyAlert>
           ) : null}
         </Col>
       </Row>
@@ -133,7 +147,7 @@ const SignupFormValidate = () => {
             value={formik.values.email}
           />
           {formik.errors.email ? (
-            <div className="text-danger">{formik.errors.email}</div>
+            <MyAlert>{formik.errors.email}</MyAlert>
           ) : null}
         </Col>
         <Col>
@@ -146,7 +160,7 @@ const SignupFormValidate = () => {
             value={formik.values.phone}
           />
           {formik.errors.phone ? (
-            <div className="text-danger">{formik.errors.phone}</div>
+            <MyAlert>{formik.errors.phone}</MyAlert>
           ) : null}
         </Col>
       </Row>
@@ -179,7 +193,7 @@ const SignupFormValidate = () => {
             </Dropdown.Menu>
           </Dropdown>
           {formik.errors.center ? (
-            <div className="text-danger">{formik.errors.center}</div>
+            <MyAlert>{formik.errors.center}</MyAlert>
           ) : null}
         </Col>
         <Col>
@@ -195,7 +209,7 @@ const SignupFormValidate = () => {
             </Dropdown.Menu>
           </Dropdown>
           {formik.errors.status ? (
-            <div className="text-danger">{formik.errors.status}</div>
+            <MyAlert>{formik.errors.status}</MyAlert>
           ) : null}
         </Col>
         <Col xs={6}>
@@ -210,7 +224,7 @@ const SignupFormValidate = () => {
                 value={formik.values.speciality}
               />
               {formik.errors.speciality ? (
-                <div className="text-danger">{formik.errors.speciality}</div>
+                <MyAlert>{formik.errors.speciality}</MyAlert>
               ) : null}
             </Col>
           </Form.Group>
@@ -227,7 +241,7 @@ const SignupFormValidate = () => {
           className="col-6"
         />
         {formik.errors.password ? (
-          <div className="text-danger">{formik.errors.password}</div>
+          <MyAlert>{formik.errors.password}</MyAlert>
         ) : null}
 
         <Form.Check
@@ -243,11 +257,7 @@ const SignupFormValidate = () => {
           ours terms and that you have read our Data Policy, incuding our
           Cookies Use.
         </p>
-        {formik.errors.terms ? (
-          <div className="text-danger" style={{ fontSize: '.7rem' }}>
-            {formik.errors.terms}
-          </div>
-        ) : null}
+        {formik.errors.terms ? <MyAlert>{formik.errors.terms}</MyAlert> : null}
       </div>
       <div className="d-flex justify-content-end">
         <Button type="submit">Submit</Button>

@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 
 import NavBar from '../components/NavBar'
 
-const Forgotpswd = (props) => {
+const Forgotpswd = () => {
   return (
     <PageHorizontal title="forgot password" imgUrl="/tools-5669031_1920.jpg">
       <div className="mt-5 pt-5">

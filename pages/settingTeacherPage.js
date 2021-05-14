@@ -8,7 +8,7 @@ import NavBar2 from '../components/NavBar2'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 
-const OptionForm = (props) => {
+const OptionForm = () => {
   return (
     <Form.Row className="mt-2">
       <Col xs={12} sm={6}>
@@ -29,7 +29,7 @@ const OptionForm = (props) => {
   )
 }
 
-const TeacherInscription = (props) => {
+const TeacherInscription = () => {
   return (
     <PageHorizontal title="Teacher setting" imgUrl="/startup-593341_1920.jpg">
       <div className="mt-5 pt-5">

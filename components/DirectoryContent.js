@@ -4,7 +4,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 
 import Thumbnail from './Thumbnail'
 
-const DirectoryContent = (props) => {
+const DirectoryContent = () => {
   return (
     <Jumbotron variant="bg-danger" className="mt-5">
       <div className="d-flex justify-content-center flex-wrap align-items-between px-0 px-md-5">

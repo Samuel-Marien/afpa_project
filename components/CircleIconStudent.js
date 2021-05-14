@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { GiSchoolBag } from 'react-icons/gi'
 
-const CircleIconStudent = (props) => {
+const CircleIconStudent = () => {
   return (
     <div className="d-flex flex-column align-items-center">
       <Link href="/studentSignUpPage">

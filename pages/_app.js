@@ -8,10 +8,7 @@ function MyApp({ Component, pageProps }) {
 }
 
 MyApp.propTypes = {
-  Component: PropTypes.string
-}
-
-MyApp.propTypes = {
+  Component: PropTypes.string,
   pageProps: PropTypes.object
 }
 

@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 
 import NavBar2 from '../components/NavBar2'
 
-const NewPswd = (props) => {
+const NewPswd = () => {
   return (
     <PageHorizontal
       title="New password"
