@@ -137,7 +137,6 @@ const MyEditModal = (props) => {
             />
           </Col>
         </Form.Group>
-
         <Form.Group>
           <Form.Row className="my-3">
             <Col xs={12} md={4}>
@@ -202,7 +201,6 @@ const MyEditModal = (props) => {
             </Col>
           </Form.Row>
         </Form.Group>
-
         <Form.Group className="d-flex justify-content-end">
           <Button type="submit" className="w-25 shadow bg-info">
             Update!
@@ -232,7 +230,6 @@ const MyEditModal = (props) => {
             Delete this job
           </Button>
         )}
-
         <Button onClick={props.onHide} variant="outline-info w-25">
           Back
         </Button>

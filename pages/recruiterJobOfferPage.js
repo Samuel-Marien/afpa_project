@@ -75,7 +75,6 @@ const JobOffer = (props) => {
               />
             </Col>
           </Form.Group>
-
           <Form.Group>
             <Form.Row className="my-3">
               <Col xs={12} md={4}>

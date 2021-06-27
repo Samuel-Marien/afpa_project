@@ -4,12 +4,6 @@ import React from 'react'
 import PageHorizontal from '../components/PageHorizontal'
 import NavBar from '../components/NavBar'
 
-// import Form from 'react-bootstrap/Form'
-// import Button from 'react-bootstrap/Button'
-// import Dropdown from 'react-bootstrap/Dropdown'
-// import Row from 'react-bootstrap/Row'
-// import Col from 'react-bootstrap/Col'
-
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 

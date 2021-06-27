@@ -170,7 +170,6 @@ const StudentId = () => {
                   <MyLink />
                 </MyInput>
               </div>
-
               <div className="d-block d-lg-none">
                 <MyInput defaultValue={'John'} readOnly={'readOnly'}>
                   <MyLink />
@@ -196,7 +195,6 @@ const StudentId = () => {
               </div>
             </Form.Group>
           </Form.Group>
-
           <Form.Group className="border-top">
             <MyInput
               type={'Dreaming job:'}

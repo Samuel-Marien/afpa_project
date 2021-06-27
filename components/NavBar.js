@@ -27,7 +27,6 @@ const NavBar = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto"></Nav>
-
         <Form inline className="d-flex  align-items-start">
           <DevTool />
           <SignButton

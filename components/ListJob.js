@@ -86,7 +86,6 @@ const JobThumbnail = (props) => {
                     >
                       Contact
                     </Button>
-
                     <ResponseModal
                       show={modalShow}
                       onHide={() => setModalShow(false)}

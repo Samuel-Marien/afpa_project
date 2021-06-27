@@ -243,7 +243,6 @@ const SignupFormValidate = () => {
         {formik.errors.password ? (
           <MyAlert>{formik.errors.password}</MyAlert>
         ) : null}
-
         <Form.Check
           name="terms"
           onChange={formik.handleChange}

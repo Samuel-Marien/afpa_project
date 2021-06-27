@@ -43,10 +43,8 @@ const SearchBarNetworks = () => {
   return (
     <div className="col-12 col-md-8 container container-fluid d-flex flex-column align-items-between justify-content-around flex-md-row mx-auto rounded shadow-sm text-light bg-dark p-4">
       <BoardMessage />
-
       <div className="ml-0 ml-md-4 shadow p-3 w-100 rounded border-left border-info">
         <h2>Your networks</h2>
-
         <InputGroup className="mb-3 mt-3">
           <FormControl
             className="col-12"
@@ -58,7 +56,6 @@ const SearchBarNetworks = () => {
             </Button>
           </InputGroup.Append>
         </InputGroup>
-
         <InputGroup className="d-flex justify-content-between align-items-start p-0">
           <Form.Check type="checkbox" label="All" id="" />
           <Form.Check type="checkbox" label="Student" id="" />
